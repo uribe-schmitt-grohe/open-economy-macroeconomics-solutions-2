@@ -1,31 +1,44 @@
-name: Build & Deploy Quarto Site
+name: Build and Deploy Quarto Website
 
 on:
   push:
     branches: [ main ]
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: quarto check install
 
-      - name: Render site
-        run: quarto render --no-cache
+      - name: Render Website
+        run: quarto render
 
-      - name: Publish to GitHub Pages
-        uses: quarto-dev/quarto-actions/publish@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          publish-method: gh-pages
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
