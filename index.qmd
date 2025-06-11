@@ -1,0 +1,25 @@
+---
+title: "Welcome to Open‑Economy Macroeconomics Solutions"
+---
+
+# Welcome!
+
+This site offers solutions for **Open‑Economy Macroeconomics** exercises including analytical derivations and code examples (Python and MATLAB).
+
+---
+
+## 📚 Chapters
+
+- [Chapter 1 – Basics of Open Economy](chapters/ch01/index.html)
+
+---
+
+## 💬 Discussions
+
+Each page features an independent comment section. Feel free to share questions or feedback below each exercise, or browse [Discussions] for full threads.
+
+---
+
+## 🤝 Contribute
+
+Contributions welcome! Please open a pull request on GitHub.

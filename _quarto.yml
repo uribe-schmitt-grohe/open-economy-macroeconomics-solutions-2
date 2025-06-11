@@ -1,0 +1,28 @@
+project:
+  type: website
+
+website:
+  title: "Open‑Economy Macroeconomics Solutions"
+  navbar:
+    right:
+      - text: "Home"
+        href: index.qmd
+      - text: "Discussions"
+        href: https://github.com/uribe‑schmitt‑grohe/open‑economy‑macroeconomics‑solutions-2/discussions
+
+format:
+  html:
+    code-tools: true
+    code-copy: hover
+    code-line-numbers: true
+    code-fold: true
+
+comments:
+  giscus:
+    repo: "uribe-schmitt-grohe/open-economy-macroeconomics-solutions-2"
+    repo-id: "R_kgDOO6HT_w"
+    category: "General"
+    category-id: "DIC_kwDOO6HT_84CrWvF"
+    mapping: pathname
+    reactions-enabled: true
+    input-position: bottom

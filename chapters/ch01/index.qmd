@@ -1,0 +1,10 @@
+---
+title: "Chapter 1 – Basics of Open Economy"
+listing:
+  contents: .
+  type: default
+---
+
+This chapter covers introductory exercises.
+
+[List of questions appears here.]

@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to Open‑Economy Macroeconomics Solutions",
+    "section": "",
+    "text": "This site offers solutions for Open‑Economy Macroeconomics exercises including analytical derivations and code examples (Python and MATLAB).\n\n\n\n\nChapter 1 – Basics of Open Economy\n\n\n\n\n\nEach page features an independent comment section. Feel free to share questions or feedback below each exercise, or browse [Discussions] for full threads.\n\n\n\n\nContributions welcome! Please open a pull request on GitHub."
+  },
+  {
+    "objectID": "index.html#chapters",
+    "href": "index.html#chapters",
+    "title": "Welcome to Open‑Economy Macroeconomics Solutions",
+    "section": "",
+    "text": "Chapter 1 – Basics of Open Economy"
+  },
+  {
+    "objectID": "index.html#discussions",
+    "href": "index.html#discussions",
+    "title": "Welcome to Open‑Economy Macroeconomics Solutions",
+    "section": "",
+    "text": "Each page features an independent comment section. Feel free to share questions or feedback below each exercise, or browse [Discussions] for full threads."
+  },
+  {
+    "objectID": "index.html#contribute",
+    "href": "index.html#contribute",
+    "title": "Welcome to Open‑Economy Macroeconomics Solutions",
+    "section": "",
+    "text": "Contributions welcome! Please open a pull request on GitHub."
+  },
+  {
+    "objectID": "chapters/ch01/1_1.html",
+    "href": "chapters/ch01/1_1.html",
+    "title": "Question 1.1",
+    "section": "",
+    "text": "Describe the exercise here."
+  },
+  {
+    "objectID": "chapters/ch01/1_1.html#problem",
+    "href": "chapters/ch01/1_1.html#problem",
+    "title": "Question 1.1",
+    "section": "",
+    "text": "Describe the exercise here."
+  },
+  {
+    "objectID": "chapters/ch01/1_1.html#python-solution",
+    "href": "chapters/ch01/1_1.html#python-solution",
+    "title": "Question 1.1",
+    "section": "Python Solution",
+    "text": "Python Solution\nimport numpy as np print(np.mean([1,2,3,4]))"
+  },
+  {
+    "objectID": "chapters/ch01/index.html",
+    "href": "chapters/ch01/index.html",
+    "title": "Chapter 1 – Basics of Open Economy",
+    "section": "",
+    "text": "This chapter covers introductory exercises.\n[List of questions appears here.]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion 1.1\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  }
+]
