@@ -1,0 +1,210 @@
+---
+title: "Exercise 2.10"
+subtitle: "Impatience and the Current Account"
+---
+<a class="return-button" href="index.qmd">⬅ Return</a>
+
+## Problem
+
+Consider a small open endowment economy populated by a large number of identical consumers with preferences described by the utility function
+
+$$
+\sum_{t=0}^{\infty} \beta^t \ln(c_t - \bar{c}),
+$$
+
+with the usual notation, except that $\bar{c} > 0$ denotes a subsistence level of consumption. Consumers have access to the international debt market, where the interest rate, denoted by $r$, is positive, constant, and satisfies
+
+$$
+\beta(1 + r) < 1.
+$$
+
+Consumers start period 0 with an outstanding debt, including interest, of $(1+r)d_{-1}$. It is forbidden to violate the constraint
+
+$$
+\lim_{t \to \infty}(1 + r)^{-j} d_{t+j} \leq 0.
+$$
+
+Each period, everybody receives a positive amount of consumption goods $y > 0$, which is nonstorable.
+
+1. State the optimization problem of the representative consumer.
+
+2. Derive the consumer’s optimality conditions.
+
+3. Derive a maximum value of initial debt, $d_{-1}$, beyond which an equilibrium cannot exist. Assume that $d_{-1}$ is less than this threshold.
+
+4. Characterize the long-run equilibrium of this economy, that is, find $\lim_{t \to \infty} x_t$, for $x_t = c_t, d_t, tb_t$, and $ca_t$. Note that in this economy the long-run value of external debt is not history dependent. Comment on the factors determining this property of the model.
+
+5. Derive explicit formulas for the equilibrium dynamic paths of consumption, debt, the trade balance, and the current account as functions of $t$, $d_{-1}$, $r$, $\beta$, $\bar{c}$, and $y$.
+
+6. Now assume that in period 0 the outstanding debt, $d_{-1}$, is at its long-run limit level, and that, unexpectedly, all consumers receive a permanent increase in the endowment from $y$ to $y' > y$. Compute the initial response of all endogenous variables. Discuss your result, paying particular attention to possible differences with the case $\beta(1 + r) = 1$.
+
+7. Characterize the economy’s dynamics after period 0.
+
+## Answer
+
+#### 1.
+
+::: {.callout-important title="Final Answer Summary – Optimization Problem"}
+Maximize discounted utility:
+$$
+\max_{\{c_t, d_t\}} \sum_{t=0}^{\infty} \beta^t \ln(c_t - \bar{c})
+$$
+subject to:
+$$
+c_t + (1 + r)d_{t-1} = y + d_t,\quad \lim_{j \to \infty} \frac{d_{t+j}}{(1 + r)^j} \leq 0
+$$
+:::
+
+#### 2.
+
+::: {.callout-important title="Final Answer Summary – Optimality Conditions"}
+- Euler equation:
+  $$
+  c_{t+1} - \bar{c} = \beta(1 + r)(c_t - \bar{c})
+  $$
+- Transversality condition:
+  $$
+  \lim_{j \to \infty} \frac{d_{t+j}}{(1 + r)^j} = 0
+  $$
+:::
+
+#### 3.
+
+Intertemporal budget constraint:
+
+$$
+(1 + r)d_{-1} = \sum_{t=0}^{\infty} \frac{y - c_t}{(1 + r)^t}
+$$
+
+Use $c_t = \bar{c} + (\beta(1 + r))^t(c_0 - \bar{c})$
+
+$$
+c_0 - \bar{c} = \frac{(1 - \beta)(1 + r)}{r} [y - \bar{c} - r d_{-1}] \tag{2.33}
+$$
+
+$c_0 \geq \bar{c}$ iff $d_{-1} \leq \frac{y - \bar{c}}{r}$
+
+::: {.callout-important title="Final Answer Summary – Maximal Initial Debt"}
+An equilibrium exists if:
+$$
+d_{-1} \leq \frac{y - \bar{c}}{r}
+$$
+This ensures $c_0 \geq \bar{c}$ given the solution for $c_0$ from the intertemporal budget constraint.
+:::
+
+#### 4.
+
+::: {.callout-important title="Final Answer Summary – Long-Run Equilibrium"}
+- $\lim_{t \to \infty} c_t = \bar{c}$
+- $\lim_{t \to \infty} d_t = \frac{y - \bar{c}}{r}$
+- $\lim_{t \to \infty} tb_t = y - \bar{c}$
+- $\lim_{t \to \infty} ca_t = 0$
+
+Long-run debt is independent of initial $d_{-1}$ because $\beta(1 + r) < 1$ ensures eventual convergence.
+If instead $\beta(1 + r) = 1$, then in the present economy $d_t = d_{-1}$ for all $t \geq 0$, that is, the long-run value of external debt would be dependent on initial conditions.
+:::
+
+#### 5.
+
+::: {.callout-important title="Final Answer Summary – Dynamic Equilibrium Paths"}
+- Consumption:
+  $$
+    c_t = \bar{c} + (\beta(1 + r))^t(c_0 - \bar{c}); \quad \text{with } c_0 \text{ given in (2.33)}
+    $$
+- Debt:
+  $$
+  d_t = c_t + (1 + r)d_{t-1} - y
+  $$
+- Trade Balance:
+  $$
+  tb_t = y - c_t
+  $$
+- Current Account:
+  $$
+  ca_t = d_{t-1} - d_t
+  $$
+:::
+
+#### 6.
+
+Set $d_{-1} = \frac{y - \bar{c}}{r}$. Let $x'_0$ denote the value of variable $x$ in period 0 after the permanent increase in $y$. By (2.33):
+
+$$
+c'_0 - c_0 = \frac{(1 - \beta)(1 + r)}{r}(y' - y) > (y' - y)
+$$
+
+Because $\beta(1 + r) < 1$, we have $(1 - \beta)(1 + r) > r$, that is, $c_0$ increases by more than one-for-one in response of the output shock. By contrast, if $\beta(1 + r) = 1$, then in response to a permanent increase in $y$, $c_0$ increases one for one.
+
+$$
+tb'_0 - tb_0 = (y' - y) - (c'_0 - c_0) < 0
+$$
+
+The trade balance deteriorates.
+
+$$
+ca'_0 - ca_0 = tb'_0 - tb_0 < 0
+$$
+
+The current account deteriorates.
+
+$$
+d'_0 - d_0 = (c'_0 - c_0) - (y' - y) > 0
+$$
+
+Debt expands on impact.
+
+
+::: {.callout-important title="Final Answer Summary – Impact of Permanent Endowment Shock"}
+- $c_0$ increases more than one-for-one with $y'$ due to $\beta(1 + r) < 1$
+- $tb_0$ and $ca_0$ deteriorate on impact
+- $d_0$ increases due to higher consumption than income
+- Compared to $\beta(1 + r) = 1$, consumption responds more strongly
+:::
+
+#### 7.
+
+Consumption declines over time and converges again to $\bar{c}$.
+
+$$
+\begin{aligned}
+c'_t - \bar{c} &= (\beta(1 + r))^t(c'_0 - \bar{c}) \\ 
+c'_t - c_t &= (\beta(1 + r))^t(c'_0 - c_0)
+\end{aligned}
+$$
+
+The response of debt is monotonically increasing and converges to $(y' - y)/r$:
+
+$$
+d'_t - d_t = \left[ 1 - [\beta(1 + r)]^{t+1} \right] \cdot \frac{y' - y}{r}
+$$
+
+Since $d_t = d_{-1} = \frac{y - \bar{c}}{r}$ this means that external debt keeps growing and converges to the higher value:
+
+$$
+\frac{y' - y}{r} + \frac{y - \bar{c}}{r} = \frac{y' - \bar{c}}{r} > \frac{y - \bar{c}}{r}
+$$
+
+The response of current account is negative and converges to 0:
+
+$$
+ca'_t - ca_t = - \frac{y' - y}{r} [\beta(1 + r)]^t (1 - \beta(1 + r))
+$$
+
+Since $ca_t = 0$ for all $t$, it follows that $ca'_t$ is negative on impact and that it converges monotonically from below to 0, that is, it is monotonically increasing.
+
+The trade balance:
+
+$$
+\begin{aligned}
+tb'_t &= y' - \bar{c} - (\beta(1 + r))^t(c'_0 - \bar{c})\\ 
+tb'_t - tb_t &= (y' - y) \left[ 1 - \frac{(\beta(1 + r))^t (1 - \beta)(1 + r)}{r} \right]
+\end{aligned}
+$$
+
+In the long run the difference in the trade balance converges to $y' - y$. This means that the entirety of the increase in output will go to pay interest on the permanently higher level of external debt. Note that initially the response of the trade balance is negative, but at some $t$ it flips sign from negative to positive. That is, first it deteriorates relative to before the shock, and later the trade balance is higher than before the shock.
+
+::: {.callout-important title="Final Answer Summary – Post-Shock Dynamics"}
+- $c_t \to \bar{c}$, $ca_t \to 0$, $d_t \to \frac{y' - \bar{c}}{r}$
+- $tb_t \to y' - \bar{c}$
+- Debt grows, trade balance flips from negative to positive relative to pre-shock
+:::

@@ -8,7 +8,7 @@ website:
       - text: "Home"
         href: index.qmd
       - text: "Discussions"
-        href: https://github.com/uribe‑schmitt‑grohe/open‑economy‑macroeconomics‑solutions-2/discussions
+        href: https://github.com/uribe-schmitt-grohe/open-economy-macroeconomics-solutions-2/discussions
 
 format:
   html:
@@ -16,6 +16,8 @@ format:
     code-copy: hover
     code-line-numbers: true
     code-fold: true
+    breadcrumbs: true
+    css: styles.css
 
 comments:
   giscus:

@@ -1,0 +1,163 @@
+---
+title: "Exercise 3.5"
+subtitle: "Unbalanced Growth"
+---
+<a class="return-button" href="index.qmd">⬅ Return</a>
+
+## Problem
+
+Consider the same economy as in exercise 3.4, except that the interest rate and the subjective discount factor now satisfy
+
+$$
+\beta(1 + r) = 1,
+$$
+
+and $r > 0$.
+
+1. Characterize the equilibrium dynamics of output, consumption, investment, the trade balance, the current account, and external debt.
+
+2. Does a balanced growth path exist?
+
+3. Considering jointly the results obtained in this exercise and in exercise 3.4, what general conclusion can you derive?
+
+
+## Answer
+
+#### 1.
+
+The equilibrium conditions are the same, that is, (3.10)–(3.13).
+
+By (3.11), $\Lambda_t = \Lambda_0$ for all $t \geq 0$.  
+By (3.10), $C_t = C_0$ for all $t \geq 0$.  
+By (3.12)
+
+$$
+k_{t+1} = k_1; \quad \text{where } k_1 \text{ solves } r = \alpha k_1^{\alpha - 1}
+$$
+
+and
+
+$$
+K_{t+1} = A_{t+1} k_1
+$$
+
+With the path of $K_t$ in hand, we find the path for
+
+$$
+Y_t = A_t^{1 - \alpha} K_t^{\alpha} = A_t k_1^{\alpha}
+$$
+
+For $t > 0$, the path of investment is
+
+$$
+I_t = K_{t+1} - K_t = A_t (\gamma - 1) k_1
+$$
+
+For $t = 0$,
+
+$$
+I_0 = A_1 k_1 - K_0 / A_0
+$$
+
+To find $C_0$ use the intertemporal budget constraint we derived above
+
+$$
+\sum_{t=0}^{\infty} \frac{A_t^{1 - \alpha} K_t^{\alpha} + K_t - K_{t+1} - C_t}{(1 + r)^t} = (1 + r) D_{-1}
+$$
+
+$$
+A_0 (K_0 / A_0)^{\alpha} + K_0 - A_1 k_1 +
+\sum_{t=1}^{\infty} \frac{A_t [k_1^{\alpha} + k_1 (1 - \gamma)]}{(1 + r)^t}
+- \frac{1 + r}{r} C_0 = (1 + r) D_{-1}
+$$
+
+$$
+A_0 (K_0 / A_0)^{\alpha} + K_0 - A_1 k_1 +
+A_0 \cdot \frac{\gamma}{1 + r - \gamma} [k_1^{\alpha} + k_1 (1 - \gamma)] - (1 + r) D_{-1}
+= \frac{1 + r}{r} C_0
+$$
+
+The trade balance:
+
+$$
+TB_t = Y_t - I_t - C_0
+$$
+
+How to find the path to $D_t$? We know the path of $Y_t$, $K_t$, $I_t$, and $C_t$. Use the sequential budget constraint (3.9) to construct the path of $D_t$ sequentially. With $D_t$ in hand, find the current account
+
+$$
+CA_t = -D_t + D_{t-1}
+$$
+
+::: {.callout-important title="Final Answer Summary – Equilibrium Dynamics under Unbalanced Growth"}
+- Capital: $K_t = A_t k_1$, with $k_1$ solving $r = \alpha k_1^{\alpha - 1}$
+- Output: $Y_t = A_t k_1^{\alpha}$ ⇒ grows at rate $\gamma$
+- Investment: $I_t = A_t (\gamma - 1) k_1$ for $t > 0$; $I_0 = A_1 k_1 - K_0 / A_0$
+- Consumption: $C_t = C_0$ constant ⇒ $c_t = C_t / A_t$ declines over time
+- Trade Balance: $TB_t = Y_t - I_t - C_0$
+- Debt: solved recursively from sequential budget constraint
+- Current Account: $CA_t = -D_t + D_{t-1}$
+:::
+
+#### 2.
+
+Balanced growth for $Y_t$, $I_t$, $K_t$, that is, investment and the capital stock grow at the same rate as output.
+
+No balanced growth for consumption, the trade balance, external debt, and the current account.
+
+$$
+TB_t = Y_t - I_t - C_0
+$$
+
+Consumption does not grow at all. This implies that the consumption-output ratio is not constant over time. In fact, it converges to 0.
+
+The trade balance-to-output ratio is also not constant over time, it converges to
+
+$$
+1 - \frac{(\gamma - 1)\alpha}{r} > 0
+$$
+
+And the debt-to-output ratio is not constant over time either.  
+Since debt is not growing at a constant rate, the current account won’t either.
+
+Therefore, overall no balanced growth path exists.
+
+::: {.callout-important title="Final Answer Summary – No Balanced Growth Path"}
+- $C_t$ is constant, $Y_t$ grows ⇒ $C_t / Y_t \to 0$
+- $TB_t / Y_t \to 1 - \frac{(\gamma - 1)\alpha}{r} > 0$
+- $D_t / Y_t$ not constant
+- $CA_t$ not growing at constant rate
+- ⇒ No balanced growth for consumption, TB, debt, or CA
+:::
+
+#### 3.
+
+For a balanced growth path for consumption to exist and to be able to express the economy in terms of stationary variables it is necessary that
+
+$$
+\beta(1 + r) = \sqrt{\gamma}
+$$
+
+or for a general CRRA utility of the form
+
+$$
+\frac{c^{1 - \sigma} - 1}{1 - \sigma}
+$$
+
+that
+
+$$
+\beta(1 + r) = \gamma^{\sigma}
+$$
+
+::: {.callout-important title="Final Answer Summary – Condition for Balanced Growth of Consumption"}
+- For constant $c_t = C_t / A_t$, require $C_t \propto A_t$
+- Necessary condition:  
+  $$
+  \beta(1 + r) = \sqrt{\gamma}
+  $$
+- In CRRA case:  
+  $$
+  \beta(1 + r) = \gamma^{\sigma}
+  $$
+:::  

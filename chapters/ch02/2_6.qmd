@@ -1,0 +1,261 @@
+---
+title: "Exercise 2.6"
+subtitle: "Anticipated Interest Rate Decline"
+---
+<a class="return-button" href="index.qmd">⬅ Return</a>
+
+## Problem
+
+Consider a small open endowment economy enjoying free capital mobility. Preferences are described by the utility function
+
+$$
+\sum_{t=0}^{\infty} \beta^t \ln c_t,
+$$
+
+with $\beta \in (0, 1)$. Agents have access to an internationally traded bond paying the interest rate $r_t$ when held from period $t$ to $t+1$. The representative household starts period zero with an asset position $b_{-1}$. Each period $t \geq 0$, the household receives an endowment $y_t$. Households know the time paths of $\{r_t\}$ and $\{y_t\}$ with certainty. The sequential budget constraint of the household is given by:
+
+$$
+c_t + \frac{b_t}{1 + r_t} = y_t + b_{t-1}.
+$$
+
+And the household’s borrowing limit is:
+
+$$
+\lim_{j \to \infty} \frac{b_{t+j}}{\prod_{s=0}^{j}(1 + r_{t+s})} \geq 0.
+$$
+
+1. Derive the household’s present value budget constraint.
+
+2. Derive the equilibrium paths of consumption and assets in terms of $y_t$, $r_t$ and $b_{-1}$.
+
+Assume now that in period 0 it is learned that in period $t^* \geq 0$ the interest rate will decline temporarily. Specifically, the new path of the interest rate is
+
+$$
+r'_t =
+\begin{cases}
+r_t & \text{for all } t \geq 0 \text{ and } t \neq t^* \\
+r'_{t^*} < r_{t^*} & \text{for } t = t^*
+\end{cases}
+$$
+
+3. Find the impact effect of this anticipated interest rate cut on consumption, that is, find $\ln (c'_0 / c_0)$, where $c'_t$ denotes the equilibrium path of consumption under the new interest rate path and $c_t$ denotes the equilibrium path of consumption under the old interest rate path.
+Distinguish two cases. First consider a storage economy with $y_t = 0$ for all $t$ and $b_{-1} > 0$. Discuss whether the anticipated future rate cut stimulates demand at the time it is announced. Provide intuition.
+Then consider an endowment economy with $b_{-1} = 0$ and $y_t = y > 0$ for all $t$. Analyze whether the response of consumption in period 0 is equal in size to the anticipated rate cut and whether it depends on the anticipation horizon $t^*$. In particular, do anticipated interest rate cuts have a smaller stimulating effect on current consumption the further in the future they will take place, that is, the larger $t^*$ is? Provide intuition for your findings.
+
+4. Relate the insights obtained in this exercise to the debate on Forward Guidance as a monetary policy strategy. In particular, interpret the present real economy as a monetary economy with rigid nominal prices and a central bank that deploys the necessary monetary policy to fully control the real interest rate $r_t$. Address in particular the question of whether forward guidance is an effective tool to stimulate aggregate demand.
+
+## Answer
+
+#### 1.
+
+We can begin from the household’s sequential budget constraint at time 0 and solve for $b_0$
+
+$$
+c_0 + \frac{b_0}{1 + r_0} = y_0 + b_{-1}
+\quad \Rightarrow \quad b_0 = (1 + r_0)(y_0 + b_{-1} - c_0),
+$$
+
+we can also rearrange this equation at time 1 to get
+
+$$
+b_1 = \frac{b_2}{1 + r_1} + c_2 - y_2.
+$$
+
+We then plug these expressions into the sequential budget constraint at time 1:
+
+$$
+c_0 + \frac{c_1}{1 + r_0} + \frac{c_2}{(1 + r_0)(1 + r_1)} + \frac{b_2}{\prod_{s=0}^{2}(1 + r_s)} = b_{-1} + y_0 + \frac{y_1}{1 + r_0} + \frac{y_2}{(1 + r_0)(1 + r_1)}.
+$$
+
+Iterating this equation forward, we get the PVBC at time 0
+
+$$
+\sum_{t=0}^{\infty} \left( \frac{c_t}{\prod_{s=0}^{t-1}(1 + r_s)} \right) = b_{-1} + \sum_{t=0}^{\infty} \left( \frac{y_t}{\prod_{s=0}^{t-1}(1 + r_s)} \right)
+$$
+
+where, in an abuse of notation, we set $r_{-1} = 0$. This PVBC must hold in every time period, meaning we can write this as
+
+$$
+\sum_{j=0}^{\infty} \left( \frac{c_{t+j}}{\prod_{s=0}^{j-1}(1 + r_{t+s})} \right) = b_{t-1} + \sum_{j=0}^{\infty} \left( \frac{y_{t+j}}{\prod_{s=0}^{j-1}(1 + r_{t+s})} \right), \tag{1}
+$$
+
+which says that the PDV of consumption is equal to the sum of the initial asset position and the PDV of the endowment stream.
+
+
+::: {.callout-important title="Final Answer Summary – Present Value Budget Constraint"}
+The household’s intertemporal budget constraint is:
+
+$$
+\sum_{j=0}^{\infty} \left( \frac{c_{t+j}}{\prod_{s=0}^{j-1}(1 + r_{t+s})} \right) = b_{t-1} + \sum_{j=0}^{\infty} \left( \frac{y_{t+j}}{\prod_{s=0}^{j-1}(1 + r_{t+s})} \right)
+$$
+
+This states that the PDV of consumption must equal the sum of initial assets and the PDV of future income.
+:::
+
+#### 2.
+
+To derive the equilibrium paths we first write the Lagrangian for the consumer
+
+$$
+\mathcal{L} = \sum_{t=0}^{\infty} \beta^t \left\{ \ln c_t + \lambda_t \left[ y_t + b_{t-1} - c_t - \frac{b_t}{1 + r_t} \right] \right\}.
+$$
+
+This Lagrangian has first order conditions with respect to $c_t$ and $b_{t+1}$ respectively
+
+$$
+\frac{1}{c_t} = \lambda_t
+$$
+
+$$
+\frac{\lambda_t}{1 + r_t} = \beta \lambda_{t+1}.
+$$
+
+An equilibrium is paths $\{c_t, b_t\}_{t=0}^{\infty}$ such that for all $t \geq 0$ we have the combined first order conditions, sequential budget constraint, and the no-Ponzi game condition
+
+$$
+c_{t+1} = \beta(1 + r_t)c_t \tag{2}
+$$
+
+$$
+c_t + \frac{b_t}{1 + r_t} = y_t + b_{t-1} \tag{3}
+$$
+
+$$
+\lim_{j \to \infty} \frac{b_{t+j}}{\prod_{s=0}^j (1 + r_{t+s})} = 0 \tag{4}
+$$
+
+given $\{r_t\}_{t=0}^{\infty}$, $\{y_t\}_{t=0}^{\infty}$, and $b_{-1}$.
+
+Equivalently, equilibrium is a $c_0$ such that
+
+$$
+c_0 = (1 - \beta)b_{-1} + (1 - \beta) \sum_{t=0}^{\infty} \left( \frac{y_t}{\prod_{s=0}^{t-1}(1 + r_s)} \right). \tag{5}
+$$
+
+To see this, iterate (2.34) backwards to obtain
+
+$$
+c_t = \beta^t \left( \prod_{s=0}^{t-1} (1 + r_s) \right) c_0. \tag{6}
+$$
+
+Rearranging yields
+
+$$
+\frac{c_t}{\prod_{s=0}^{t-1}(1 + r_s)} = \beta^t c_0.
+$$
+
+Now we can sum both sides from $t = 0$ to $\infty$ to obtain
+
+$$
+\sum_{t=0}^{\infty} \frac{c_t}{\prod_{s=0}^{t-1}(1 + r_s)} = \sum_{t=0}^{\infty} \beta^t c_0 = \frac{1}{1 - \beta}c_0
+$$
+
+by expanding the geometric sum on the right-hand side. Now use this expression in the PVBC at time 0 to obtain
+
+$$
+\frac{1}{1 - \beta}c_0 = b_{-1} + \sum_{t=0}^{\infty} \left( \frac{y_t}{\prod_{s=0}^{t-1}(1 + r_s)} \right)
+$$
+
+which yields the equation (5).
+
+
+How to find the associated path of $b_t$ and $c_t$? Use (3) evaluated at $t = 0$. This gives $b_0$. Then use (5) evaluated at $t = 0$. This gives $c_1$. With $b_0$ and $c_1$ in hand evaluate (3) for $t = 1$ to obtain $b_1$. Continue in this way to construct the sequences $\{c_t\}_{t=0}^{\infty}$ and $\{b_t\}_{t=0}^{\infty}$.
+
+::: {.callout-important title="Final Answer Summary – Equilibrium Paths"}
+- Euler equation:
+  $$
+  c_{t+1} = \beta(1 + r_t)c_t
+  $$
+- Budget constraint:
+  $$
+  c_t + \frac{b_t}{1 + r_t} = y_t + b_{t-1}
+  $$
+- Closed-form for $c_0$:
+  $$
+  c_0 = (1 - \beta) \left[ b_{-1} + \sum_{t=0}^{\infty} \left( \frac{y_t}{\prod_{s=0}^{t-1}(1 + r_s)} \right) \right]
+  $$
+These determine the full equilibrium consumption and asset paths.
+:::
+
+#### 3. 
+
+Storage Economy: $y = 0$ and $b_{-1} > 0$.
+
+Plug these conditions into (5) for both interest rate paths
+
+$$
+c_0 = (1 - \beta)b_{-1}
+$$
+
+$$
+c'_0 = (1 - \beta)b_{-1}
+$$
+
+and we see that the anticipated rate cut has no effect on consumption today. Now we can plug these expressions into (6) to find the whole consumption paths
+
+$$
+\frac{c'_t}{c_t} =
+\begin{cases}
+1 & \text{for all } t \leq t^* \\
+\left( \frac{1 + r'_{t^*}}{1 + r_{t^*}} \right) < 1 & \text{for all } t > t^*
+\end{cases}
+$$
+
+So the anticipated rate cut leaves current consumption unchanged and lowers future consumption. The rate cut has a substitution effect (SE) whereby current consumption rises and future consumption falls. But it also has an income effect (IE). Here the IE is negative because the positive stock of bonds will pay lower interest rate in the future. With log utility, SE exactly cancels IE effect and the future rate cut fails to stimulate the current economy.
+
+::: {.callout-important title="Final Answer Summary – Storage Economy"}
+- When $y = 0$ and $b_{-1} > 0$, then:
+  $$
+  c_0 = c_0' = (1 - \beta) b_{-1}
+  $$
+- So,
+  $$
+  \ln \left( \frac{c_0'}{c_0} \right) = 0
+  $$
+- The anticipated interest rate cut has **no effect** on current consumption.
+:::
+
+#### 4.
+
+Endowment Economy: $y_t = y > 0$ for all $t$ and $b_{-1} = 0$.
+
+These conditions we can use (5) to get
+
+$$
+c_0 = (1 - \beta) \sum_{t=0}^{\infty} \left( \frac{y_t}{q_{0,t}} \right)
+= (1 - \beta) \sum_{t=0}^{t^*} \left( \frac{y_t}{q_{0,t}} \right)
++ (1 - \beta) \sum_{t=t^*+1}^{\infty} \left( \frac{y_t}{q_{0,t}} \right)
+$$
+
+where we discount income at period $t$ to period 0 using $q_{0,t}$, which is simply the product of the interest rate terms. Now with the alternative interest rate path,
+
+$$
+c'_0 = (1 - \beta) \sum_{t=0}^{\infty} \left( \frac{y_t}{q'_{0,t}} \right)
+= (1 - \beta) \sum_{t=0}^{t^*} \left( \frac{y_t}{q_{0,t}} \right)
++ (1 - \beta) \frac{1 + r_{t^*}}{1 + r'_{t^*}} \sum_{t=t^*+1}^{\infty} \left( \frac{y_t}{q_{0,t}} \right)
+$$
+
+where we multiply and divide by the new interest rate in period $t$ in order to cancel terms in the product $q_{0,t}$. We can combine these expressions above to get
+
+$$
+c'_0 - c_0 = (1 - \beta) \sum_{t=t^*+1}^{\infty} \left( \frac{y_t}{q_{0,t}} \right) \left[ \frac{1 + r_{t^*}}{1 + r'_{t^*}} - 1 \right] > 0
+$$
+
+which must be positive as $r_{t^*} > r'_{t^*}$.
+
+What is different now? There is a positive income effect associated with the expected future rate cut because the PDV of endowment stream is higher. Thus, SE and IE reinforce each other for $t \leq t^*$ and pull in opposite directions for $t > t^*$.
+
+
+
+
+::: {.callout-important title="Final Answer Summary – Endowment Economy"}
+- When $y_t = y > 0$ and $b_{-1} = 0$, then:
+  $$
+  c_0' - c_0 = (1 - \beta) \sum_{t = t^* + 1}^{\infty} \left( \frac{y}{q_{0,t}} \right) \left( \frac{1 + r_{t^*}}{1 + r_{t^*}'} - 1 \right) > 0
+  $$
+- Hence,
+  $$
+  \ln \left( \frac{c_0'}{c_0} \right) > 0
+  $$
+- The farther into the future the interest rate cut (i.e., larger $t^*$), the **smaller** the current consumption response.
+:::

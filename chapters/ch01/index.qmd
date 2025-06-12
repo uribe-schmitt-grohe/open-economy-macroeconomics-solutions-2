@@ -1,10 +1,5 @@
 ---
-title: "Chapter 1 – Basics of Open Economy"
-listing:
-  contents: .
-  type: default
+title: "Chapter 1 – Business-Cycle Facts Around the world"
 ---
 
-This chapter covers introductory exercises.
-
-[List of questions appears here.]
+- [Exercise 1.1(Business-Sysle Regularities in South Korea and the United States)](1_1.qmd)

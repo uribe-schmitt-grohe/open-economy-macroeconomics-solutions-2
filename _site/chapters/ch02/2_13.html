@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Exercise 2.13 – Open‑Economy Macroeconomics Solutions</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-a14e3238c51140e99ccc48519b6ed9ce.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Open‑Economy Macroeconomics Solutions</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/uribe-schmitt-grohe/open-economy-macroeconomics-solutions-2/discussions"> 
+<span class="menu-text">Discussions</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Exercise 2.13</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Determinants of the World Interest Rate</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><a class="return-button" href="../../chapters/ch02/index.html">⬅ Return</a></p>
+<section id="problem" class="level2">
+<h2 class="anchored" data-anchor-id="problem">Problem</h2>
+<p>Throughout this chapter, we have studied small open economies in which the world interest rate is given. This exercise aims at illustrating the forces determining this variable.</p>
+<p>Consider a two-period world composed of a continuum of countries indexed by <span class="math inline">\(i \in [0, 1]\)</span>. Each country is populated by a large number of identical households with preferences given by</p>
+<p><span class="math display">\[
+\ln(c_{i1}) + \beta \ln(c_{i2}),
+\]</span></p>
+<p>where <span class="math inline">\(c_{i1}\)</span> and <span class="math inline">\(c_{i2}\)</span> denote consumption of a perishable good in country <span class="math inline">\(i\)</span> in periods 1 and 2, respectively, and <span class="math inline">\(\beta \in (0, 1)\)</span> is the subjective discount factor. Households start period 1 with a nil net debt position. In period 1, they can borrow or lend in the international financial market via a debt instrument, denoted <span class="math inline">\(d_{i1}\)</span>, that matures in period 2 and carries the interest rate <span class="math inline">\(r\)</span>. The interest rate <span class="math inline">\(r\)</span> is exogenous to each country <span class="math inline">\(i\)</span>.</p>
+<p>In period 1, each household receives an endowment of goods <span class="math inline">\(y_{i1} = y_1 + \varepsilon_i\)</span>, where <span class="math inline">\(y_1\)</span> is the world component of the endowment and <span class="math inline">\(\varepsilon_i\)</span> is a country-specific component satisfying</p>
+<p><span class="math display">\[
+\int_0^1 \varepsilon_i di = 0.
+\]</span></p>
+<p>In period 2, the endowment has no idiosyncratic component and is given by <span class="math inline">\(y_{i2} = y_2\)</span>. Finally, households are subject to a no-Ponzi-game constraint that forbids them to end period 2 with a positive debt position, that is, they are subject to the constraint <span class="math inline">\(d_{i2} \leq 0\)</span>, where <span class="math inline">\(d_{i2}\)</span> denotes the debt assumed in period 2.</p>
+<ol type="1">
+<li><p>Write down and solve the household’s optimization problem in country <span class="math inline">\(i\)</span>, given <span class="math inline">\(r\)</span>.</p></li>
+<li><p>Derive the equilibrium levels of the trade balance, the current account, and external debt in periods 1 and 2 in country <span class="math inline">\(i\)</span> given <span class="math inline">\(r\)</span>.</p></li>
+<li><p>Write down the world resource constraints in periods 1 and 2.</p></li>
+<li><p>Derive the equilibrium level of the world interest rate, <span class="math inline">\(r\)</span>.</p></li>
+<li><p>Suppose now that output in period 1 in country <span class="math inline">\(i\)</span> increases by <span class="math inline">\(x &gt; 0\)</span>, that is, <span class="math inline">\(\Delta y_{i1} = x\)</span>. Derive the effect of this shock on the trade balance and the level of external debt in period 1 in country <span class="math inline">\(i\)</span> and on the world interest rate under the following two alternative cases:</p>
+<ol type="a">
+<li><p>A country-specific endowment shock, <span class="math inline">\(\Delta y_{i1} = \Delta \varepsilon_i = x\)</span> and <span class="math inline">\(\Delta y_1 = 0\)</span>.</p></li>
+<li><p>A world endowment shock, <span class="math inline">\(\Delta y_{i1} = \Delta y_1 = x\)</span>, and <span class="math inline">\(\Delta \varepsilon_i = 0\)</span>.</p></li>
+</ol>
+<p>Provide a discussion of your results.</p></li>
+</ol>
+</section>
+<section id="answer" class="level2">
+<h2 class="anchored" data-anchor-id="answer">Answer</h2>
+<section id="section" class="level4">
+<h4 class="anchored" data-anchor-id="section">1.</h4>
+<p><span class="math display">\[
+\max \ln(c_{i1}) + \beta \ln(c_{i2})
+\]</span></p>
+<p>subject to:</p>
+<p><span class="math display">\[
+c_{i1} = y_{i1} + d_{i1}
+\]</span></p>
+<p><span class="math display">\[
+c_{i2} + (1 + r) d_{i1} = y_{i2}
+\]</span></p>
+<p><span class="math display">\[
+d_{i2} \leq 0
+\]</span></p>
+<p>Note that the last condition should hold with equality. So, using that the debt in the second period is equal to zero, the optimization problem becomes:</p>
+<p><span class="math display">\[
+\max \ln(c_{i1}) + \beta \ln(c_{i2})
+\]</span></p>
+<p>subject to:</p>
+<p><span class="math display">\[
+c_{i1} = y_{i1} + d_{i1}
+\]</span></p>
+<p><span class="math display">\[
+c_{i2} + (1 + r) d_{i1} = y_{i2}
+\]</span></p>
+<p>Lagrangian:</p>
+<p><span class="math display">\[
+\mathcal{L} = \ln(c_{i1}) + \beta \ln(c_{i2}) - \lambda_1 (c_{i1} - y_{i1} - d_{i1}) - \lambda_2 (c_{i2} + (1 + r) d_{i1} - y_{i2})
+\]</span></p>
+<p>First-order conditions:</p>
+<p><span class="math display">\[
+\frac{1}{c_{i1}} - \lambda_1 = 0
+\]</span></p>
+<p><span class="math display">\[
+\frac{\beta}{c_{i2}} - \lambda_2 = 0
+\]</span></p>
+<p><span class="math display">\[
+\lambda_1 - (1 + r) \lambda_2 = 0
+\]</span></p>
+<p>Substituting gives Euler equation:</p>
+<p><span class="math display">\[
+\frac{1}{c_{i1}} = (1 + r) \beta \frac{1}{c_{i2}} \quad \Rightarrow \quad c_{i2} = c_{i1} (1 + r) \beta
+\]</span></p>
+<p>Then using the budget constraints, we obtain:</p>
+<p><span class="math display">\[
+c_{i1} = \frac{1}{(1 + r)(1 + \beta)} (y_{i2} + (1 + r) y_{i1})
+\]</span></p>
+<p><span class="math display">\[
+c_{i2} = \frac{\beta}{1 + \beta} (y_{i2} + (1 + r) y_{i1})
+\]</span></p>
+<p><span class="math display">\[
+d_{i1} = \frac{1}{(1 + r)(1 + \beta)} (y_{i2} - \beta(1 + r) y_{i1})
+\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Final Answer Summary – Optimal Consumption and Debt">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Final Answer Summary – Optimal Consumption and Debt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Euler equation: <span class="math display">\[
+\frac{1}{c_{i1}} = (1 + r)\beta \cdot \frac{1}{c_{i2}} \quad \Rightarrow \quad c_{i2} = (1 + r)\beta \cdot c_{i1}
+\]</span></li>
+<li>Optimal consumption: <span class="math display">\[
+c_{i1} = \frac{1}{(1 + r)(1 + \beta)} (y_{i2} + (1 + r) y_{i1}), \quad
+c_{i2} = \frac{\beta}{1 + \beta} (y_{i2} + (1 + r) y_{i1})
+\]</span></li>
+<li>Debt: <span class="math display">\[
+d_{i1} = \frac{1}{(1 + r)(1 + \beta)} (y_{i2} - \beta(1 + r)y_{i1})
+\]</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="section-1" class="level4">
+<h4 class="anchored" data-anchor-id="section-1">2.</h4>
+<p>External debt:</p>
+<p><span class="math display">\[
+d_{i1} = \frac{1}{(1 + r)(1 + \beta)} (y_{i2} - \beta(1 + r) y_{i1}), \quad d_{i2} = 0
+\]</span></p>
+<p>Trade balance:</p>
+<p><span class="math display">\[
+tb_{i1} = y_{i1} - c_{i1} = \frac{1}{(1 + r)(1 + \beta)} ( \beta(1 + r) y_{i1} - y_{i2} )
+\]</span></p>
+<p><span class="math display">\[
+tb_{i2} = y_{i2} - c_{i2} = \frac{1}{1 + \beta} ( y_{i2} - \beta(1 + r) y_{i1} )
+\]</span></p>
+<p>Current account:</p>
+<p><span class="math display">\[
+ca_{i1} = tb_{i1} - r d_{i0} = \frac{1}{(1 + r)(1 + \beta)} ( \beta(1 + r) y_{i1} - y_{i2} )
+\]</span></p>
+<p><span class="math display">\[
+ca_{i2} = tb_{i2} - r d_{i1} = \frac{1}{(1 + r)(1 + \beta)} ( y_{i2} - \beta(1 + r) y_{i1} )
+\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Final Answer Summary – External Balances">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Final Answer Summary – External Balances
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>External debt: <span class="math display">\[
+d_{i1} = \frac{1}{(1 + r)(1 + \beta)} (y_{i2} - \beta(1 + r) y_{i1}), \quad d_{i2} = 0
+\]</span></li>
+<li>Trade balance: <span class="math display">\[
+tb_{i1} = y_{i1} - c_{i1}, \quad tb_{i2} = y_{i2} - c_{i2}
+\]</span></li>
+<li>Current account: <span class="math display">\[
+ca_{i1} = tb_{i1}, \quad ca_{i2} = tb_{i2}
+\]</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="section-2" class="level4">
+<h4 class="anchored" data-anchor-id="section-2">3.</h4>
+<p>Single country constraints:</p>
+<p><span class="math display">\[
+c_{i1} = y_{i1} + d_{i1}, \quad c_{i2} + (1 + r) d_{i1} = y_{i2}
+\]</span></p>
+<p>Aggregate over all countries:</p>
+<p><span class="math display">\[
+\int c_{i1} di = \int y_{i1} di + \int d_{i1} di
+\]</span></p>
+<p><span class="math display">\[
+\int c_{i2} di + (1 + r) \int d_{i1} di = \int y_{i2} di
+\]</span></p>
+<p>Bonds are in zero-net supply, so:</p>
+<p><span class="math display">\[
+\int d_{i1} di = 0
+\]</span></p>
+<p>And:</p>
+<p><span class="math display">\[
+\int y_{i1} di = y_1, \quad \int y_{i2} di = y_2
+\]</span></p>
+<p>Therefore:</p>
+<p><span class="math display">\[
+c_1 = y_1, \quad c_2 = y_2
+\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Final Answer Summary – World Resource Constraints">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Final Answer Summary – World Resource Constraints
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>No-aggregate-debt condition: <span class="math display">\[
+\int d_{i1} \, di = 0
+\]</span></li>
+<li>Aggregate constraints: <span class="math display">\[
+\int c_{i1} \, di = y_1, \quad \int c_{i2} \, di = y_2
+\]</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="section-3" class="level4">
+<h4 class="anchored" data-anchor-id="section-3">4.</h4>
+<p>From individual optimality condition:</p>
+<p><span class="math display">\[
+d_{i1} = \frac{1}{(1 + r)(1 + \beta)} ( y_2 - \beta(1 + r) y_1 )
+\]</span></p>
+<p>Integrating:</p>
+<p><span class="math display">\[
+0 = \frac{1}{(1 + r)(1 + \beta)} ( y_2 - \beta(1 + r) y_1 )
+\]</span></p>
+<p>Solving:</p>
+<p><span class="math display">\[
+r = \frac{y_2}{\beta y_1} - 1
+\]</span></p>
+<p>If <span class="math inline">\(y_1 = y_2\)</span>, then <span class="math inline">\((1 + r)\beta = 1\)</span>. If <span class="math inline">\(y_1 &gt; y_2\)</span>, then <span class="math inline">\((1 + r)\beta &lt; 1\)</span> ⇒ interest rate falls to encourage less consumption tomorrow.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Final Answer Summary – Equilibrium Interest Rate">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Final Answer Summary – Equilibrium Interest Rate
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Zero net foreign asset condition: <span class="math display">\[
+\int d_{i1} \, di = 0
+\]</span></li>
+<li>Solving yields: <span class="math display">\[
+r = \frac{y_2}{\beta y_1} - 1
+\]</span></li>
+<li>Interpretation:
+<ul>
+<li>If <span class="math inline">\(y_1 = y_2\)</span>, then <span class="math inline">\((1 + r)\beta = 1\)</span></li>
+<li>If <span class="math inline">\(y_1 &gt; y_2\)</span>, then <span class="math inline">\(r\)</span> decreases to encourage intertemporal smoothing</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="section-4" class="level4">
+<h4 class="anchored" data-anchor-id="section-4">5.</h4>
+<p>Two cases:</p>
+<p><strong>(a)</strong> Country-specific shock: <span class="math inline">\(\Delta \varepsilon_i = x\)</span>, <span class="math inline">\(\Delta y_1 = 0\)</span>.</p>
+<p>Since world interest rate doesn’t depend on idiosyncratic shocks:</p>
+<p><span class="math display">\[
+r \text{ unchanged}
+\]</span></p>
+<p>From above:</p>
+<p><span class="math display">\[
+d_{i1} = - \frac{\beta \varepsilon_{i1}}{1 + \beta}
+\]</span></p>
+<p>So:</p>
+<p><span class="math display">\[
+\Delta d_{i1} &lt; 0, \quad \Delta tb_{i1} = \Delta ca_{i1} = \frac{\beta \varepsilon_{i1}}{1 + \beta}
+\]</span></p>
+<p>Trade balance and current account increase.</p>
+<p><strong>(b)</strong> World shock: <span class="math inline">\(\Delta y_1 = x\)</span>, <span class="math inline">\(\Delta \varepsilon_i = 0\)</span>.</p>
+<p>From world interest rate formula:</p>
+<p><span class="math display">\[
+r = \frac{y_2}{\beta y_1} - 1 \Rightarrow \Delta y_1 ↑ \Rightarrow r ↓
+\]</span></p>
+<p>Substitute <span class="math inline">\(r\)</span> back:</p>
+<p><span class="math display">\[
+d_{i1} = - \frac{\beta \varepsilon_{i1}}{1 + \beta}
+\]</span></p>
+<p>No change in country <span class="math inline">\(i\)</span>’s external debt, trade balance, or current account.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Final Answer Summary – Impact of Endowment Shocks">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Final Answer Summary – Impact of Endowment Shocks
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><ol type="a">
+<li>Country-specific shock:</li>
+</ol>
+<ul>
+<li><span class="math inline">\(r\)</span>: unchanged</li>
+<li><span class="math inline">\(d_{i1}\)</span>: decreases</li>
+<li><span class="math inline">\(tb_{i1}\)</span> and <span class="math inline">\(ca_{i1}\)</span>: increase</li>
+</ul></li>
+<li><ol start="2" type="a">
+<li>World shock:</li>
+</ol>
+<ul>
+<li><span class="math inline">\(r\)</span>: decreases</li>
+<li><span class="math inline">\(d_{i1}\)</span>, <span class="math inline">\(tb_{i1}\)</span>, <span class="math inline">\(ca_{i1}\)</span>: unchanged</li>
+</ul></li>
+<li>Comparison:
+<ul>
+<li>In a world shock, all countries want to save more ⇒ interest rate adjusts;<br>
+</li>
+<li>In a country-specific shock, world interest rate doesn’t react ⇒ only affected country adjusts behavior</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+<!-- -->
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "uribe-schmitt-grohe/open-economy-macroeconomics-solutions-2";
+    script.dataset.repoId = "R_kgDOO6HT_w";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOO6HT_84CrWvF";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "bottom";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "Exercise 2.13"</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="an">subtitle:</span><span class="co"> "Determinants of the World Interest Rate"</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co">---</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> class</span><span class="op">=</span><span class="st">"return-button"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"index.qmd"</span><span class="dt">&gt;</span>⬅ Return<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="fu">## Problem</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a>Throughout this chapter, we have studied small open economies in which the world interest rate is given. This exercise aims at illustrating the forces determining this variable.</span>
+<span id="cb1-10"><a href="#cb1-10"></a></span>
+<span id="cb1-11"><a href="#cb1-11"></a>Consider a two-period world composed of a continuum of countries indexed by $i \in <span class="co">[</span><span class="ot">0, 1</span><span class="co">]</span>$. Each country is populated by a large number of identical households with preferences given by</span>
+<span id="cb1-12"><a href="#cb1-12"></a></span>
+<span id="cb1-13"><a href="#cb1-13"></a>$$</span>
+<span id="cb1-14"><a href="#cb1-14"></a>\ln(c_{i1}) + \beta \ln(c_{i2}),</span>
+<span id="cb1-15"><a href="#cb1-15"></a>$$</span>
+<span id="cb1-16"><a href="#cb1-16"></a></span>
+<span id="cb1-17"><a href="#cb1-17"></a>where $c_{i1}$ and $c_{i2}$ denote consumption of a perishable good in country $i$ in periods 1 and 2, respectively, and $\beta \in (0, 1)$ is the subjective discount factor. Households start period 1 with a nil net debt position. In period 1, they can borrow or lend in the international financial market via a debt instrument, denoted $d_{i1}$, that matures in period 2 and carries the interest rate $r$. The interest rate $r$ is exogenous to each country $i$.</span>
+<span id="cb1-18"><a href="#cb1-18"></a></span>
+<span id="cb1-19"><a href="#cb1-19"></a>In period 1, each household receives an endowment of goods $y_{i1} = y_1 + \varepsilon_i$, where $y_1$ is the world component of the endowment and $\varepsilon_i$ is a country-specific component satisfying</span>
+<span id="cb1-20"><a href="#cb1-20"></a></span>
+<span id="cb1-21"><a href="#cb1-21"></a>$$</span>
+<span id="cb1-22"><a href="#cb1-22"></a>\int_0^1 \varepsilon_i di = 0.</span>
+<span id="cb1-23"><a href="#cb1-23"></a>$$</span>
+<span id="cb1-24"><a href="#cb1-24"></a></span>
+<span id="cb1-25"><a href="#cb1-25"></a>In period 2, the endowment has no idiosyncratic component and is given by $y_{i2} = y_2$. Finally, households are subject to a no-Ponzi-game constraint that forbids them to end period 2 with a positive debt position, that is, they are subject to the constraint $d_{i2} \leq 0$, where $d_{i2}$ denotes the debt assumed in period 2.</span>
+<span id="cb1-26"><a href="#cb1-26"></a></span>
+<span id="cb1-27"><a href="#cb1-27"></a><span class="ss">1. </span>Write down and solve the household’s optimization problem in country $i$, given $r$.</span>
+<span id="cb1-28"><a href="#cb1-28"></a></span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="ss">2. </span>Derive the equilibrium levels of the trade balance, the current account, and external debt in periods 1 and 2 in country $i$ given $r$.</span>
+<span id="cb1-30"><a href="#cb1-30"></a></span>
+<span id="cb1-31"><a href="#cb1-31"></a><span class="ss">3. </span>Write down the world resource constraints in periods 1 and 2.</span>
+<span id="cb1-32"><a href="#cb1-32"></a></span>
+<span id="cb1-33"><a href="#cb1-33"></a><span class="ss">4. </span>Derive the equilibrium level of the world interest rate, $r$.</span>
+<span id="cb1-34"><a href="#cb1-34"></a></span>
+<span id="cb1-35"><a href="#cb1-35"></a><span class="ss">5. </span>Suppose now that output in period 1 in country $i$ increases by $x &gt; 0$, that is, $\Delta y_{i1} = x$. Derive the effect of this shock on the trade balance and the level of external debt in period 1 in country $i$ and on the world interest rate under the following two alternative cases:</span>
+<span id="cb1-36"><a href="#cb1-36"></a></span>
+<span id="cb1-37"><a href="#cb1-37"></a>    (a) A country-specific endowment shock, $\Delta y_{i1} = \Delta \varepsilon_i = x$ and $\Delta y_1 = 0$.</span>
+<span id="cb1-38"><a href="#cb1-38"></a></span>
+<span id="cb1-39"><a href="#cb1-39"></a>    (b) A world endowment shock, $\Delta y_{i1} = \Delta y_1 = x$, and $\Delta \varepsilon_i = 0$.</span>
+<span id="cb1-40"><a href="#cb1-40"></a></span>
+<span id="cb1-41"><a href="#cb1-41"></a>    Provide a discussion of your results.  </span>
+<span id="cb1-42"><a href="#cb1-42"></a></span>
+<span id="cb1-43"><a href="#cb1-43"></a></span>
+<span id="cb1-44"><a href="#cb1-44"></a></span>
+<span id="cb1-45"><a href="#cb1-45"></a><span class="fu">## Answer</span></span>
+<span id="cb1-46"><a href="#cb1-46"></a></span>
+<span id="cb1-47"><a href="#cb1-47"></a><span class="fu">#### 1.</span></span>
+<span id="cb1-48"><a href="#cb1-48"></a></span>
+<span id="cb1-49"><a href="#cb1-49"></a>$$</span>
+<span id="cb1-50"><a href="#cb1-50"></a>\max \ln(c_{i1}) + \beta \ln(c_{i2})</span>
+<span id="cb1-51"><a href="#cb1-51"></a>$$</span>
+<span id="cb1-52"><a href="#cb1-52"></a></span>
+<span id="cb1-53"><a href="#cb1-53"></a>subject to:</span>
+<span id="cb1-54"><a href="#cb1-54"></a></span>
+<span id="cb1-55"><a href="#cb1-55"></a>$$</span>
+<span id="cb1-56"><a href="#cb1-56"></a>c_{i1} = y_{i1} + d_{i1}</span>
+<span id="cb1-57"><a href="#cb1-57"></a>$$</span>
+<span id="cb1-58"><a href="#cb1-58"></a></span>
+<span id="cb1-59"><a href="#cb1-59"></a>$$</span>
+<span id="cb1-60"><a href="#cb1-60"></a>c_{i2} + (1 + r) d_{i1} = y_{i2}</span>
+<span id="cb1-61"><a href="#cb1-61"></a>$$</span>
+<span id="cb1-62"><a href="#cb1-62"></a></span>
+<span id="cb1-63"><a href="#cb1-63"></a>$$</span>
+<span id="cb1-64"><a href="#cb1-64"></a>d_{i2} \leq 0</span>
+<span id="cb1-65"><a href="#cb1-65"></a>$$</span>
+<span id="cb1-66"><a href="#cb1-66"></a></span>
+<span id="cb1-67"><a href="#cb1-67"></a>Note that the last condition should hold with equality. So, using that the debt in the second period is equal to zero, the optimization problem becomes:</span>
+<span id="cb1-68"><a href="#cb1-68"></a></span>
+<span id="cb1-69"><a href="#cb1-69"></a>$$</span>
+<span id="cb1-70"><a href="#cb1-70"></a>\max \ln(c_{i1}) + \beta \ln(c_{i2})</span>
+<span id="cb1-71"><a href="#cb1-71"></a>$$</span>
+<span id="cb1-72"><a href="#cb1-72"></a></span>
+<span id="cb1-73"><a href="#cb1-73"></a>subject to:</span>
+<span id="cb1-74"><a href="#cb1-74"></a></span>
+<span id="cb1-75"><a href="#cb1-75"></a>$$</span>
+<span id="cb1-76"><a href="#cb1-76"></a>c_{i1} = y_{i1} + d_{i1}</span>
+<span id="cb1-77"><a href="#cb1-77"></a>$$</span>
+<span id="cb1-78"><a href="#cb1-78"></a></span>
+<span id="cb1-79"><a href="#cb1-79"></a>$$</span>
+<span id="cb1-80"><a href="#cb1-80"></a>c_{i2} + (1 + r) d_{i1} = y_{i2}</span>
+<span id="cb1-81"><a href="#cb1-81"></a>$$</span>
+<span id="cb1-82"><a href="#cb1-82"></a></span>
+<span id="cb1-83"><a href="#cb1-83"></a>Lagrangian:</span>
+<span id="cb1-84"><a href="#cb1-84"></a></span>
+<span id="cb1-85"><a href="#cb1-85"></a>$$</span>
+<span id="cb1-86"><a href="#cb1-86"></a>\mathcal{L} = \ln(c_{i1}) + \beta \ln(c_{i2}) - \lambda_1 (c_{i1} - y_{i1} - d_{i1}) - \lambda_2 (c_{i2} + (1 + r) d_{i1} - y_{i2})</span>
+<span id="cb1-87"><a href="#cb1-87"></a>$$</span>
+<span id="cb1-88"><a href="#cb1-88"></a></span>
+<span id="cb1-89"><a href="#cb1-89"></a>First-order conditions:</span>
+<span id="cb1-90"><a href="#cb1-90"></a></span>
+<span id="cb1-91"><a href="#cb1-91"></a>$$</span>
+<span id="cb1-92"><a href="#cb1-92"></a>\frac{1}{c_{i1}} - \lambda_1 = 0</span>
+<span id="cb1-93"><a href="#cb1-93"></a>$$</span>
+<span id="cb1-94"><a href="#cb1-94"></a></span>
+<span id="cb1-95"><a href="#cb1-95"></a>$$</span>
+<span id="cb1-96"><a href="#cb1-96"></a>\frac{\beta}{c_{i2}} - \lambda_2 = 0</span>
+<span id="cb1-97"><a href="#cb1-97"></a>$$</span>
+<span id="cb1-98"><a href="#cb1-98"></a></span>
+<span id="cb1-99"><a href="#cb1-99"></a>$$</span>
+<span id="cb1-100"><a href="#cb1-100"></a>\lambda_1 - (1 + r) \lambda_2 = 0</span>
+<span id="cb1-101"><a href="#cb1-101"></a>$$</span>
+<span id="cb1-102"><a href="#cb1-102"></a></span>
+<span id="cb1-103"><a href="#cb1-103"></a>Substituting gives Euler equation:</span>
+<span id="cb1-104"><a href="#cb1-104"></a></span>
+<span id="cb1-105"><a href="#cb1-105"></a>$$</span>
+<span id="cb1-106"><a href="#cb1-106"></a>\frac{1}{c_{i1}} = (1 + r) \beta \frac{1}{c_{i2}} \quad \Rightarrow \quad c_{i2} = c_{i1} (1 + r) \beta</span>
+<span id="cb1-107"><a href="#cb1-107"></a>$$</span>
+<span id="cb1-108"><a href="#cb1-108"></a></span>
+<span id="cb1-109"><a href="#cb1-109"></a>Then using the budget constraints, we obtain:</span>
+<span id="cb1-110"><a href="#cb1-110"></a></span>
+<span id="cb1-111"><a href="#cb1-111"></a>$$</span>
+<span id="cb1-112"><a href="#cb1-112"></a>c_{i1} = \frac{1}{(1 + r)(1 + \beta)} (y_{i2} + (1 + r) y_{i1})</span>
+<span id="cb1-113"><a href="#cb1-113"></a>$$</span>
+<span id="cb1-114"><a href="#cb1-114"></a></span>
+<span id="cb1-115"><a href="#cb1-115"></a>$$</span>
+<span id="cb1-116"><a href="#cb1-116"></a>c_{i2} = \frac{\beta}{1 + \beta} (y_{i2} + (1 + r) y_{i1})</span>
+<span id="cb1-117"><a href="#cb1-117"></a>$$</span>
+<span id="cb1-118"><a href="#cb1-118"></a></span>
+<span id="cb1-119"><a href="#cb1-119"></a>$$</span>
+<span id="cb1-120"><a href="#cb1-120"></a>d_{i1} = \frac{1}{(1 + r)(1 + \beta)} (y_{i2} - \beta(1 + r) y_{i1})</span>
+<span id="cb1-121"><a href="#cb1-121"></a>$$</span>
+<span id="cb1-122"><a href="#cb1-122"></a></span>
+<span id="cb1-123"><a href="#cb1-123"></a>::: {.callout-important title="Final Answer Summary – Optimal Consumption and Debt"}</span>
+<span id="cb1-124"><a href="#cb1-124"></a><span class="ss">- </span>Euler equation:</span>
+<span id="cb1-125"><a href="#cb1-125"></a>  $$</span>
+<span id="cb1-126"><a href="#cb1-126"></a>  \frac{1}{c_{i1}} = (1 + r)\beta \cdot \frac{1}{c_{i2}} \quad \Rightarrow \quad c_{i2} = (1 + r)\beta \cdot c_{i1}</span>
+<span id="cb1-127"><a href="#cb1-127"></a>  $$</span>
+<span id="cb1-128"><a href="#cb1-128"></a><span class="ss">- </span>Optimal consumption:</span>
+<span id="cb1-129"><a href="#cb1-129"></a>  $$</span>
+<span id="cb1-130"><a href="#cb1-130"></a>  c_{i1} = \frac{1}{(1 + r)(1 + \beta)} (y_{i2} + (1 + r) y_{i1}), \quad</span>
+<span id="cb1-131"><a href="#cb1-131"></a>  c_{i2} = \frac{\beta}{1 + \beta} (y_{i2} + (1 + r) y_{i1})</span>
+<span id="cb1-132"><a href="#cb1-132"></a>  $$</span>
+<span id="cb1-133"><a href="#cb1-133"></a><span class="ss">- </span>Debt:</span>
+<span id="cb1-134"><a href="#cb1-134"></a>  $$</span>
+<span id="cb1-135"><a href="#cb1-135"></a>  d_{i1} = \frac{1}{(1 + r)(1 + \beta)} (y_{i2} - \beta(1 + r)y_{i1})</span>
+<span id="cb1-136"><a href="#cb1-136"></a>  $$</span>
+<span id="cb1-137"><a href="#cb1-137"></a>:::</span>
+<span id="cb1-138"><a href="#cb1-138"></a></span>
+<span id="cb1-139"><a href="#cb1-139"></a><span class="fu">#### 2.</span></span>
+<span id="cb1-140"><a href="#cb1-140"></a></span>
+<span id="cb1-141"><a href="#cb1-141"></a>External debt:</span>
+<span id="cb1-142"><a href="#cb1-142"></a></span>
+<span id="cb1-143"><a href="#cb1-143"></a>$$</span>
+<span id="cb1-144"><a href="#cb1-144"></a>d_{i1} = \frac{1}{(1 + r)(1 + \beta)} (y_{i2} - \beta(1 + r) y_{i1}), \quad d_{i2} = 0</span>
+<span id="cb1-145"><a href="#cb1-145"></a>$$</span>
+<span id="cb1-146"><a href="#cb1-146"></a></span>
+<span id="cb1-147"><a href="#cb1-147"></a>Trade balance:</span>
+<span id="cb1-148"><a href="#cb1-148"></a></span>
+<span id="cb1-149"><a href="#cb1-149"></a>$$</span>
+<span id="cb1-150"><a href="#cb1-150"></a>tb_{i1} = y_{i1} - c_{i1} = \frac{1}{(1 + r)(1 + \beta)} ( \beta(1 + r) y_{i1} - y_{i2} )</span>
+<span id="cb1-151"><a href="#cb1-151"></a>$$</span>
+<span id="cb1-152"><a href="#cb1-152"></a></span>
+<span id="cb1-153"><a href="#cb1-153"></a>$$</span>
+<span id="cb1-154"><a href="#cb1-154"></a>tb_{i2} = y_{i2} - c_{i2} = \frac{1}{1 + \beta} ( y_{i2} - \beta(1 + r) y_{i1} )</span>
+<span id="cb1-155"><a href="#cb1-155"></a>$$</span>
+<span id="cb1-156"><a href="#cb1-156"></a></span>
+<span id="cb1-157"><a href="#cb1-157"></a>Current account:</span>
+<span id="cb1-158"><a href="#cb1-158"></a></span>
+<span id="cb1-159"><a href="#cb1-159"></a>$$</span>
+<span id="cb1-160"><a href="#cb1-160"></a>ca_{i1} = tb_{i1} - r d_{i0} = \frac{1}{(1 + r)(1 + \beta)} ( \beta(1 + r) y_{i1} - y_{i2} )</span>
+<span id="cb1-161"><a href="#cb1-161"></a>$$</span>
+<span id="cb1-162"><a href="#cb1-162"></a></span>
+<span id="cb1-163"><a href="#cb1-163"></a>$$</span>
+<span id="cb1-164"><a href="#cb1-164"></a>ca_{i2} = tb_{i2} - r d_{i1} = \frac{1}{(1 + r)(1 + \beta)} ( y_{i2} - \beta(1 + r) y_{i1} )</span>
+<span id="cb1-165"><a href="#cb1-165"></a>$$</span>
+<span id="cb1-166"><a href="#cb1-166"></a></span>
+<span id="cb1-167"><a href="#cb1-167"></a>::: {.callout-important title="Final Answer Summary – External Balances"}</span>
+<span id="cb1-168"><a href="#cb1-168"></a><span class="ss">- </span>External debt:</span>
+<span id="cb1-169"><a href="#cb1-169"></a>  $$</span>
+<span id="cb1-170"><a href="#cb1-170"></a>  d_{i1} = \frac{1}{(1 + r)(1 + \beta)} (y_{i2} - \beta(1 + r) y_{i1}), \quad d_{i2} = 0</span>
+<span id="cb1-171"><a href="#cb1-171"></a>  $$</span>
+<span id="cb1-172"><a href="#cb1-172"></a><span class="ss">- </span>Trade balance:</span>
+<span id="cb1-173"><a href="#cb1-173"></a>  $$</span>
+<span id="cb1-174"><a href="#cb1-174"></a>  tb_{i1} = y_{i1} - c_{i1}, \quad tb_{i2} = y_{i2} - c_{i2}</span>
+<span id="cb1-175"><a href="#cb1-175"></a>  $$</span>
+<span id="cb1-176"><a href="#cb1-176"></a><span class="ss">- </span>Current account:</span>
+<span id="cb1-177"><a href="#cb1-177"></a>  $$</span>
+<span id="cb1-178"><a href="#cb1-178"></a>  ca_{i1} = tb_{i1}, \quad ca_{i2} = tb_{i2}</span>
+<span id="cb1-179"><a href="#cb1-179"></a>  $$</span>
+<span id="cb1-180"><a href="#cb1-180"></a>:::</span>
+<span id="cb1-181"><a href="#cb1-181"></a></span>
+<span id="cb1-182"><a href="#cb1-182"></a><span class="fu">#### 3.</span></span>
+<span id="cb1-183"><a href="#cb1-183"></a></span>
+<span id="cb1-184"><a href="#cb1-184"></a>Single country constraints:</span>
+<span id="cb1-185"><a href="#cb1-185"></a></span>
+<span id="cb1-186"><a href="#cb1-186"></a>$$</span>
+<span id="cb1-187"><a href="#cb1-187"></a>c_{i1} = y_{i1} + d_{i1}, \quad c_{i2} + (1 + r) d_{i1} = y_{i2}</span>
+<span id="cb1-188"><a href="#cb1-188"></a>$$</span>
+<span id="cb1-189"><a href="#cb1-189"></a></span>
+<span id="cb1-190"><a href="#cb1-190"></a>Aggregate over all countries:</span>
+<span id="cb1-191"><a href="#cb1-191"></a></span>
+<span id="cb1-192"><a href="#cb1-192"></a>$$</span>
+<span id="cb1-193"><a href="#cb1-193"></a>\int c_{i1} di = \int y_{i1} di + \int d_{i1} di</span>
+<span id="cb1-194"><a href="#cb1-194"></a>$$</span>
+<span id="cb1-195"><a href="#cb1-195"></a></span>
+<span id="cb1-196"><a href="#cb1-196"></a>$$</span>
+<span id="cb1-197"><a href="#cb1-197"></a>\int c_{i2} di + (1 + r) \int d_{i1} di = \int y_{i2} di</span>
+<span id="cb1-198"><a href="#cb1-198"></a>$$</span>
+<span id="cb1-199"><a href="#cb1-199"></a></span>
+<span id="cb1-200"><a href="#cb1-200"></a>Bonds are in zero-net supply, so:</span>
+<span id="cb1-201"><a href="#cb1-201"></a></span>
+<span id="cb1-202"><a href="#cb1-202"></a>$$</span>
+<span id="cb1-203"><a href="#cb1-203"></a>\int d_{i1} di = 0</span>
+<span id="cb1-204"><a href="#cb1-204"></a>$$</span>
+<span id="cb1-205"><a href="#cb1-205"></a></span>
+<span id="cb1-206"><a href="#cb1-206"></a>And:</span>
+<span id="cb1-207"><a href="#cb1-207"></a></span>
+<span id="cb1-208"><a href="#cb1-208"></a>$$</span>
+<span id="cb1-209"><a href="#cb1-209"></a>\int y_{i1} di = y_1, \quad \int y_{i2} di = y_2</span>
+<span id="cb1-210"><a href="#cb1-210"></a>$$</span>
+<span id="cb1-211"><a href="#cb1-211"></a></span>
+<span id="cb1-212"><a href="#cb1-212"></a>Therefore:</span>
+<span id="cb1-213"><a href="#cb1-213"></a></span>
+<span id="cb1-214"><a href="#cb1-214"></a>$$</span>
+<span id="cb1-215"><a href="#cb1-215"></a>c_1 = y_1, \quad c_2 = y_2</span>
+<span id="cb1-216"><a href="#cb1-216"></a>$$</span>
+<span id="cb1-217"><a href="#cb1-217"></a></span>
+<span id="cb1-218"><a href="#cb1-218"></a>::: {.callout-important title="Final Answer Summary – World Resource Constraints"}</span>
+<span id="cb1-219"><a href="#cb1-219"></a><span class="ss">- </span>No-aggregate-debt condition:</span>
+<span id="cb1-220"><a href="#cb1-220"></a>  $$</span>
+<span id="cb1-221"><a href="#cb1-221"></a>  \int d_{i1} \, di = 0</span>
+<span id="cb1-222"><a href="#cb1-222"></a>  $$</span>
+<span id="cb1-223"><a href="#cb1-223"></a><span class="ss">- </span>Aggregate constraints:</span>
+<span id="cb1-224"><a href="#cb1-224"></a>  $$</span>
+<span id="cb1-225"><a href="#cb1-225"></a>  \int c_{i1} \, di = y_1, \quad \int c_{i2} \, di = y_2</span>
+<span id="cb1-226"><a href="#cb1-226"></a>  $$</span>
+<span id="cb1-227"><a href="#cb1-227"></a>:::</span>
+<span id="cb1-228"><a href="#cb1-228"></a></span>
+<span id="cb1-229"><a href="#cb1-229"></a><span class="fu">#### 4.</span></span>
+<span id="cb1-230"><a href="#cb1-230"></a></span>
+<span id="cb1-231"><a href="#cb1-231"></a>From individual optimality condition:</span>
+<span id="cb1-232"><a href="#cb1-232"></a></span>
+<span id="cb1-233"><a href="#cb1-233"></a>$$</span>
+<span id="cb1-234"><a href="#cb1-234"></a>d_{i1} = \frac{1}{(1 + r)(1 + \beta)} ( y_2 - \beta(1 + r) y_1 )</span>
+<span id="cb1-235"><a href="#cb1-235"></a>$$</span>
+<span id="cb1-236"><a href="#cb1-236"></a></span>
+<span id="cb1-237"><a href="#cb1-237"></a>Integrating:</span>
+<span id="cb1-238"><a href="#cb1-238"></a></span>
+<span id="cb1-239"><a href="#cb1-239"></a>$$</span>
+<span id="cb1-240"><a href="#cb1-240"></a>0 = \frac{1}{(1 + r)(1 + \beta)} ( y_2 - \beta(1 + r) y_1 )</span>
+<span id="cb1-241"><a href="#cb1-241"></a>$$</span>
+<span id="cb1-242"><a href="#cb1-242"></a></span>
+<span id="cb1-243"><a href="#cb1-243"></a>Solving:</span>
+<span id="cb1-244"><a href="#cb1-244"></a></span>
+<span id="cb1-245"><a href="#cb1-245"></a>$$</span>
+<span id="cb1-246"><a href="#cb1-246"></a>r = \frac{y_2}{\beta y_1} - 1</span>
+<span id="cb1-247"><a href="#cb1-247"></a>$$</span>
+<span id="cb1-248"><a href="#cb1-248"></a></span>
+<span id="cb1-249"><a href="#cb1-249"></a>If $y_1 = y_2$, then $(1 + r)\beta = 1$. If $y_1 &gt; y_2$, then $(1 + r)\beta &lt; 1$ ⇒ interest rate falls to encourage less consumption tomorrow.</span>
+<span id="cb1-250"><a href="#cb1-250"></a></span>
+<span id="cb1-251"><a href="#cb1-251"></a>::: {.callout-important title="Final Answer Summary – Equilibrium Interest Rate"}</span>
+<span id="cb1-252"><a href="#cb1-252"></a><span class="ss">- </span>Zero net foreign asset condition:</span>
+<span id="cb1-253"><a href="#cb1-253"></a>  $$</span>
+<span id="cb1-254"><a href="#cb1-254"></a>  \int d_{i1} \, di = 0</span>
+<span id="cb1-255"><a href="#cb1-255"></a>  $$</span>
+<span id="cb1-256"><a href="#cb1-256"></a><span class="ss">- </span>Solving yields:</span>
+<span id="cb1-257"><a href="#cb1-257"></a>  $$</span>
+<span id="cb1-258"><a href="#cb1-258"></a>  r = \frac{y_2}{\beta y_1} - 1</span>
+<span id="cb1-259"><a href="#cb1-259"></a>  $$</span>
+<span id="cb1-260"><a href="#cb1-260"></a><span class="ss">- </span>Interpretation:</span>
+<span id="cb1-261"><a href="#cb1-261"></a><span class="ss">  - </span>If $y_1 = y_2$, then $(1 + r)\beta = 1$</span>
+<span id="cb1-262"><a href="#cb1-262"></a><span class="ss">  - </span>If $y_1 &gt; y_2$, then $r$ decreases to encourage intertemporal smoothing</span>
+<span id="cb1-263"><a href="#cb1-263"></a>:::</span>
+<span id="cb1-264"><a href="#cb1-264"></a></span>
+<span id="cb1-265"><a href="#cb1-265"></a><span class="fu">#### 5.</span></span>
+<span id="cb1-266"><a href="#cb1-266"></a></span>
+<span id="cb1-267"><a href="#cb1-267"></a>Two cases:</span>
+<span id="cb1-268"><a href="#cb1-268"></a></span>
+<span id="cb1-269"><a href="#cb1-269"></a>**(a)** Country-specific shock: $\Delta \varepsilon_i = x$, $\Delta y_1 = 0$.</span>
+<span id="cb1-270"><a href="#cb1-270"></a></span>
+<span id="cb1-271"><a href="#cb1-271"></a>Since world interest rate doesn't depend on idiosyncratic shocks:</span>
+<span id="cb1-272"><a href="#cb1-272"></a></span>
+<span id="cb1-273"><a href="#cb1-273"></a>$$</span>
+<span id="cb1-274"><a href="#cb1-274"></a>r \text{ unchanged}</span>
+<span id="cb1-275"><a href="#cb1-275"></a>$$</span>
+<span id="cb1-276"><a href="#cb1-276"></a></span>
+<span id="cb1-277"><a href="#cb1-277"></a>From above:</span>
+<span id="cb1-278"><a href="#cb1-278"></a></span>
+<span id="cb1-279"><a href="#cb1-279"></a>$$</span>
+<span id="cb1-280"><a href="#cb1-280"></a>d_{i1} = - \frac{\beta \varepsilon_{i1}}{1 + \beta}</span>
+<span id="cb1-281"><a href="#cb1-281"></a>$$</span>
+<span id="cb1-282"><a href="#cb1-282"></a></span>
+<span id="cb1-283"><a href="#cb1-283"></a>So:</span>
+<span id="cb1-284"><a href="#cb1-284"></a></span>
+<span id="cb1-285"><a href="#cb1-285"></a>$$</span>
+<span id="cb1-286"><a href="#cb1-286"></a>\Delta d_{i1} &lt; 0, \quad \Delta tb_{i1} = \Delta ca_{i1} = \frac{\beta \varepsilon_{i1}}{1 + \beta}</span>
+<span id="cb1-287"><a href="#cb1-287"></a>$$</span>
+<span id="cb1-288"><a href="#cb1-288"></a></span>
+<span id="cb1-289"><a href="#cb1-289"></a>Trade balance and current account increase.</span>
+<span id="cb1-290"><a href="#cb1-290"></a></span>
+<span id="cb1-291"><a href="#cb1-291"></a>**(b)** World shock: $\Delta y_1 = x$, $\Delta \varepsilon_i = 0$.</span>
+<span id="cb1-292"><a href="#cb1-292"></a></span>
+<span id="cb1-293"><a href="#cb1-293"></a>From world interest rate formula:</span>
+<span id="cb1-294"><a href="#cb1-294"></a></span>
+<span id="cb1-295"><a href="#cb1-295"></a>$$</span>
+<span id="cb1-296"><a href="#cb1-296"></a>r = \frac{y_2}{\beta y_1} - 1 \Rightarrow \Delta y_1 ↑ \Rightarrow r ↓</span>
+<span id="cb1-297"><a href="#cb1-297"></a>$$</span>
+<span id="cb1-298"><a href="#cb1-298"></a></span>
+<span id="cb1-299"><a href="#cb1-299"></a>Substitute $r$ back:</span>
+<span id="cb1-300"><a href="#cb1-300"></a></span>
+<span id="cb1-301"><a href="#cb1-301"></a>$$</span>
+<span id="cb1-302"><a href="#cb1-302"></a>d_{i1} = - \frac{\beta \varepsilon_{i1}}{1 + \beta}</span>
+<span id="cb1-303"><a href="#cb1-303"></a>$$</span>
+<span id="cb1-304"><a href="#cb1-304"></a></span>
+<span id="cb1-305"><a href="#cb1-305"></a>No change in country $i$'s external debt, trade balance, or current account.</span>
+<span id="cb1-306"><a href="#cb1-306"></a></span>
+<span id="cb1-307"><a href="#cb1-307"></a>::: {.callout-important title="Final Answer Summary – Impact of Endowment Shocks"}</span>
+<span id="cb1-308"><a href="#cb1-308"></a><span class="ss">- </span>(a) Country-specific shock:</span>
+<span id="cb1-309"><a href="#cb1-309"></a><span class="ss">  - </span>$r$: unchanged</span>
+<span id="cb1-310"><a href="#cb1-310"></a><span class="ss">  - </span>$d_{i1}$: decreases</span>
+<span id="cb1-311"><a href="#cb1-311"></a><span class="ss">  - </span>$tb_{i1}$ and $ca_{i1}$: increase</span>
+<span id="cb1-312"><a href="#cb1-312"></a><span class="ss">- </span>(b) World shock:</span>
+<span id="cb1-313"><a href="#cb1-313"></a><span class="ss">  - </span>$r$: decreases</span>
+<span id="cb1-314"><a href="#cb1-314"></a><span class="ss">  - </span>$d_{i1}$, $tb_{i1}$, $ca_{i1}$: unchanged</span>
+<span id="cb1-315"><a href="#cb1-315"></a><span class="ss">- </span>Comparison:</span>
+<span id="cb1-316"><a href="#cb1-316"></a><span class="ss">    - </span>In a world shock, all countries want to save more ⇒ interest rate adjusts;  </span>
+<span id="cb1-317"><a href="#cb1-317"></a><span class="ss">    - </span>In a country-specific shock, world interest rate doesn't react ⇒ only affected country adjusts behavior</span>
+<span id="cb1-318"><a href="#cb1-318"></a>:::  </span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,230 @@
+---
+title: "Exercise 2.14"
+subtitle: "Leontief Preferences Over Discounted Period Utilities"
+---
+<a class="return-button" href="index.qmd">⬅ Return</a>
+
+## Problem
+
+Consider a perfect-foresight small open economy populated by a large number of identical households with preferences described by the utility function
+
+$$
+\min_{t \geq 0} \left\{ \beta^t c_t \right\},
+$$
+
+where $c_t$ denotes consumption in period $t$, and $\beta \in (0, 1)$ is a parameter. Households have access to the international financial market, where they can borrow or lend at the constant interest rate $r$. Assume that
+
+$$
+\beta(1 + r) = 1 + \gamma,
+$$
+
+where $\gamma > 0$ is a parameter. Households are endowed with a constant amount of consumption goods denoted by $y$ each period and start period 0 with a level of debt equal to $d_{-1} > 0$. Finally, households are subject to a no-Ponzi-game constraint of the form
+
+$$
+\lim_{t \to \infty}(1 + r)^{-t} d_t \leq 0,
+$$
+
+where $d_t$ denotes one-period debt acquired in period $t$ and maturing in $t+1$.
+
+1. Formulate the household’s maximization problem.
+
+2. Write down the complete set of optimality conditions.
+
+3. Characterize the equilibrium paths of consumption and debt in this economy. In particular, express the equilibrium levels of $c_t$ and $d_t$, for $t \geq 0$, in terms of the structural parameters (possibly $\beta$, $r$, $\gamma$, and $y$) and the initial condition $d_{-1}$.
+
+4. What is the equilibrium asymptotic growth rate of the economy’s net asset position? How does it compare to the equilibrium growth rate of consumption?
+
+5. Suppose that in period 0 the economy unexpectedly experiences a permanent increase in the endowment from $y$ to $y + \Delta y$, with $\Delta y > 0$. Derive the impact response of the trade balance. Briefly discuss your result.
+
+6. Characterize the equilibrium under the assumption that $\gamma = 0$.
+
+## Answer
+
+#### 1.
+
+::: {.callout-important title="Final Answer Summary – Household Problem"}
+
+$$
+\max \left\{ \min_{t \geq 0} \left\{ \beta^t c_t \right\} \right\}
+$$
+
+subject to
+
+$$
+c_t + (1 + r) d_{t-1} = y + d_t \quad \text{(Budget constraint)}
+$$
+
+$$
+\lim_{t \to \infty}(1 + r)^{-t} d_t \leq 0 \quad \text{(No-Ponzi-game condition)}
+$$
+
+$$
+d_{-1} > 0 \quad \text{(Initial debt)}
+$$
+
+:::
+
+#### 2.
+
+::: {.callout-important title="Final Answer Summary – Optimality Conditions"}
+
+$$
+\beta^t c_t = \beta^{t'} c_{t'} \quad \text{for all } t, t' \geq 0.
+$$
+
+Intertemporal budget constraint:
+
+$$
+(1 + r) d_{-1} = \sum_{t=0}^{\infty} \frac{y - c_t}{(1 + r)^t}
+$$
+
+:::
+
+#### 3.
+
+$$
+c_t = \beta^{-t} c_0.
+$$
+
+Lifetime utility then is
+
+$$
+\min_{t \geq 0} \left\{ \beta^t (\beta^{-t} c_0) \right\} = c_0.
+$$
+
+Pick $c_0$ so that it satisfies the equilibrium intertemporal budget constraint.
+
+Intermediate steps:
+
+$$
+\sum_{t=0}^{\infty} \frac{y}{(1 + r)^t} = \frac{1 + r}{r} y
+$$
+
+$$
+\sum_{t=0}^{\infty} \frac{c_t}{(1 + r)^t} = \sum_{t=0}^{\infty} \frac{c_0}{[\beta(1 + r)]^t} = \sum_{t=0}^{\infty} \frac{c_0}{(1 + \gamma)^t} = \frac{1 + \gamma}{\gamma} c_0
+$$
+
+So the budget constraint becomes:
+
+$$
+(1 + r) d_{-1} = \frac{1 + r}{r} y - \frac{1 + \gamma}{\gamma} c_0
+$$
+
+Solve for $c_0$:
+
+$$
+c_0 = \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right)(y - r d_{-1})
+$$
+
+Then for $t \geq 0$:
+
+$$
+c_t = \beta^{-t} c_0
+$$
+
+To find the path of $d_t$, use:
+
+- At $t = 0$, solve for $d_0$ from the budget constraint using known $c_0$, $y$, and $d_{-1}$;
+- At $t = 1$, use $d_0$ and $c_1$ to solve for $d_1$;
+- Continue recursively for full $\{d_t\}$ sequence.
+
+::: {.callout-important title="Final Answer Summary – Equilibrium Paths"}
+- Consumption: $c_t = \beta^{-t} c_0$
+- Budget constraint implies:
+  $$
+  c_0 = \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right)(y - r d_{-1})
+  $$
+- Debt path: compute recursively from $c_t$ and budget constraint
+:::
+
+#### 4.
+
+The equilibrium intertemporal budget constraint must hold at any $t \geq 0$, so:
+
+$$
+c_t = \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right)(y - r d_{t-1})
+$$
+
+From the budget constraint:
+
+$$
+c_t + (1 + r) d_{t-1} = y + d_t
+$$
+
+Rewriting and plugging in $c_t$:
+
+$$
+-d_t + d_{t-1} = y - r d_{t-1} - c_t = y - r d_{t-1} - \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right)(y - r d_{t-1})
+$$
+
+$$
+= \left[ 1 - \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) \right](y - r d_{t-1}) > 0
+$$
+
+The bracketed term is positive because $0 < \gamma < r$. Since $y - r d_{-1} > 0$, the current account is initially positive, and debt declines over time.
+
+As $d_t$ falls and turns into assets, asymptotically the growth rate of $-d_t$ is:
+
+$$
+\lim_{t \to \infty} \frac{(-d_t) - (-d_{t-1})}{-d_{t-1}} = r \left[ 1 - \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) \right]
+$$
+
+Thus gross growth rate of $-d_t$:
+
+$$
+1 + r \left[ 1 - \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) \right] = \frac{1 + r}{1 + \gamma} < 1 + r
+$$
+
+Growth rate of consumption is:
+
+$$
+\beta^{-1} = \frac{1 + r}{1 + \gamma}
+$$
+
+which matches the growth rate of net assets $-d_t$.
+
+::: {.callout-important title="Final Answer Summary – Growth Rates"}
+- Consumption growth: $\frac{c_{t+1}}{c_t} = \beta^{-1} = \frac{1 + r}{1 + \gamma}$
+- Net asset growth: identical to consumption growth
+- Both grow at rate $< 1 + r$
+:::
+
+#### 5.
+
+Step 1: Impact on consumption:
+
+$$
+\Delta c_0 = \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) \Delta y < \Delta y
+$$
+
+because:
+
+$$
+\left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) < 1
+$$
+
+(Since $\beta = \frac{1 + \gamma}{1 + r} < 1$)
+
+Step 2: Impact on trade balance:
+
+$$
+\Delta tb_0 = \Delta y - \Delta c_0 = \left[ 1 - \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) \right] \Delta y > 0
+$$
+
+Conclusion: a permanent increase in income leads to an increase in the trade balance.
+
+This contrasts with standard time-separable models where trade balance is unchanged. With Leontief preferences and relatively patient agents ($\beta > 1/(1 + r)$), consumption is increasing over time, so to fund this, households save more in $t = 0$.
+
+::: {.callout-important title="Final Answer Summary – Impact of Endowment Shock"}
+- $\Delta c_0 < \Delta y$
+- $\Delta tb_0 = \left[1 - \left( \frac{\gamma}{1 + \gamma} \right)\left( \frac{1 + r}{r} \right)\right] \Delta y > 0$
+- Households save more at $t = 0$ to support growing future $c_t$
+:::
+
+#### 6.
+
+::: {.callout-important title="Final Answer Summary – No Equilibrium When $\gamma = 0$"}
+- If $\gamma = 0$, then $\beta(1 + r) = 1$
+- Utility becomes flat in all $t$, Leontief preferences fail to determine a unique consumption plan
+- No well-defined maximum ⇒ no equilibrium
+:::

@@ -1,0 +1,74 @@
+---
+title: "Exercise 2.7"
+subtitle: "Predicted Second Moments"
+---
+<a class="return-button" href="index.qmd">⬅ Return</a>
+
+## Problem
+
+In Chapter 1, we showed that two empirical regularities that characterize emerging economies are the countercyclicality of the trade balance-to-output ratio and the fact that consumption growth appears to be more volatile than output growth. In this chapter, we developed a simple small open endowment economy and provided intuitive arguments suggesting that this economy fails to account for these two stylized facts. However, that model does not allow for closed-form solutions of second moments of output growth, consumption growth, or the trade balance-to-output ratio. The goal of this exercise is to obtain these implied statistics numerically.
+
+To this end, consider the following parameterization of the model developed in the present chapter:
+
+$$
+y_t - \bar{y} = \rho(y_{t-1} - \bar{y}) + \epsilon_t,
+$$
+
+with $\rho=0.9$, $\bar{y}=1$, and $\epsilon_t$ is distributed normally with mean 0 and standard deviation 0.03. Note that the parameter $\bar{y}$, which earlier in this chapter was implicitly assumed to be zero, represents the deterministic steady state of the output process. Assume further that $r=\frac{1}{\beta}-1=0.1$, $d_{-1}=\bar{y}/2$, and $y_{-1}=\bar{y}$.
+
+
+1. Simulate the economy for 100 years.
+
+2. Discard the first 50 years of artificial data to minimize the dependence of the results on initial conditions.
+
+3. Compute the growth rates of output and consumption and the trade balance-to-output ratio.
+
+4. Compute the sample standard deviations of output growth and consumption growth and the correlation between output growth and the trade balance-to-output ratio. Here we denote these three statistics by $\sigma_{gy}$, $\sigma_{gc}$, and $\rho_{gy,tby}$, respectively.
+
+5. Replicate steps 1 to 4 10,000 times. For each replication, keep record of $\sigma_{gy}$, $\sigma_{gc}$, and $\rho_{gy,tby}$.
+
+6. Report the average of $\sigma_{gc} / \sigma_{gy}$, and $\rho_{gy,tby}$ over the 10,000 replications.
+
+7. Discuss your results.
+
+
+## Answer
+
+#### 1-4: Stimulate the economy for 100 years
+
+::: {.callout-important title="Simulation Results (Single Run)"}
+$$
+\sigma_{gy} = 3.2897
+$$
+$$
+\sigma_{gc} = 1.7388
+$$
+$$
+\frac{\sigma_{gc}}{\sigma_{gy}} = 0.5285
+$$
+$$
+\rho_{gy,tby} = 0.2564
+$$
+:::
+
+#### 6-7: Replicate 10,000 times
+
+::: {.callout-important title="Simulation Results (Average of 10,000 Replications)"}
+$$
+\sigma_{gy} = 3.1075
+$$
+$$
+\sigma_{gc} = 1.6207
+$$
+$$
+\frac{\sigma_{gc}}{\sigma_{gy}} = 0.5220
+$$
+$$
+\rho_{gy,tby} = 0.2955
+$$
+:::
+
+
+<a href="code/2_7.py" download style="display:inline-block;padding:8px 16px;background:#007acc;color:white;text-decoration:none;border-radius:5px;">
+📥 Download Python Code (2_7.py)
+</a>

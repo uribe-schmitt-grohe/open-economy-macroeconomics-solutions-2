@@ -1,0 +1,72 @@
+---
+title: "Exercise 2.1"
+subtitle: "Consumption Innovations"
+---
+<a class="return-button" href="index.qmd">⬅ Return</a>
+
+## Problem
+
+In the economy with AR(1) endowment shocks studied in section 2.2, we found that $E_{t}c_{t+1}=c_{t}$, which means that $c_{t+1} = c_{t}+\mu_{t+1}$, where $\mu_{t+1}$ is a white noise process that is unforecastable given information available in t. Derive the innovation $\mu_{t+1}$ as a function of r, $\rho$, and $\epsilon_{t+1}$. 
+
+## Answer
+
+Using equation (2.18), we have:
+
+$$
+c_{t+1} = \frac{r}{1 + r - \rho} y_{t+1} - r d_t \quad \text{(1)}
+$$
+
+$$
+c_t = \frac{r}{1 + r - \rho} y_t - r d_{t-1} \quad \text{(2)}
+$$
+
+Subtracting (2) from (1):
+
+$$
+c_{t+1} - c_t = \frac{r}{1 + r - \rho} (y_{t+1} - y_t) - r (d_t - d_{t-1}) \quad \text{(3)}
+$$
+
+Now plug in the AR(1) process for $y_t$:
+
+$$
+y_{t+1} = \rho y_t + \epsilon_{t+1}
+$$
+
+So:
+
+$$
+y_{t+1} - y_t = (\rho - 1) y_t + \epsilon_{t+1}
+$$
+
+Then:
+
+$$
+c_{t+1} - c_t = \frac{r}{1 + r - \rho} ((\rho - 1) y_t + \epsilon_{t+1}) - r(d_t - d_{t-1}) \quad \text{(4)}
+$$
+
+Now use the law of motion for external debt (equation 2.21):
+
+$$
+d_t - d_{t-1} = \frac{1 - \rho}{1 + r - \rho} y_t
+$$
+
+Substitute into the equation:
+
+$$
+c_{t+1} - c_t = \frac{r}{1 + r - \rho} ((\rho - 1) y_t + \epsilon_{t+1}) - r \cdot \frac{1 - \rho}{1 + r - \rho} y_t \quad \text{(5)}
+$$
+
+The terms involving \( y_t \) cancel:
+
+$$
+c_{t+1} - c_t = \frac{r}{1 + r - \rho} \epsilon_{t+1} \quad \text{(6)}
+$$
+
+::: {.callout-important title="Final Answer Summary"}
+The innovation term is:
+
+$$
+\mu_{t+1} = c_{t+1} - c_t = \frac{r}{1 + r - \rho} \epsilon_{t+1}
+$$
+:::
+

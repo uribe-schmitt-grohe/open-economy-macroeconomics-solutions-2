@@ -1,0 +1,123 @@
+---
+title: "Exercise 2.4"
+subtitle: "An Open Economy With Habit Formation"
+---
+<a class="return-button" href="index.qmd">⬅ Return</a>
+
+## Problem
+
+Section 2.2 characterizes the equilibrium dynamics of a small open economy with time separable preferences driven by stationary endowment shocks. It shows that a positive endowment shock induces an improvement in the trade balance on impact. This prediction, we argued, was at odds with the empirical evidence presented in Chapter 1. Consider now a variant of the aforementioned model economy in which the representative consumer has time nonseparable preferences described by the utility function
+
+$$
+- \frac{1}{2} \mathbb{E}_t \sum_{j=0}^{\infty} \beta^j [c_{t+j} - \alpha \tilde{c}_{t+j-1} - c]^2; \quad t \geq 0,
+$$
+
+where $c_t$ denotes consumption in period $t$, $\tilde{c}_t$ denotes the cross-sectional average level of consumption in period $t$, $\mathbb{E}_t$ denotes the mathematical expectations operator conditional on information available in period $t$, and $\beta \in (0, 1)$, $\alpha \in (-1, 1)$, and $c > 0$ are parameters. The case $\alpha = 0$ corresponds to time separable preferences, which is studied in the main text. Households take as given the evolution of $\tilde{c}_t$. Households can borrow and lend in international financial markets at the constant interest rate $r$. For simplicity, assume that $(1 + r)\beta$ equals unity. In addition, each period $t = 0, 1, \ldots$ the household is endowed with an exogenous and stochastic amount of goods $y_t$. The endowment stream follows an AR(1) process of the form
+
+$$
+y_{t+1} = \rho y_t + \varepsilon_{t+1},
+$$
+
+where $\rho \in [0, 1)$ is a parameter and $\varepsilon_t$ is a mean-zero i.i.d. shock. Households are subject to the no-Ponzi-game constraint
+
+$$
+\lim_{j \to \infty} \mathbb{E}_t \frac{d_{t+j}}{(1 + r)^j} \leq 0,
+$$
+
+where $d_t$ denotes the representative household’s net debt position at date $t$. At the beginning of period 0, the household inherits a stock of debt equal to $d_{-1}$.
+
+1. Derive the initial equilibrium response of consumption to a unit endowment shock in period 0.
+
+2. Discuss conditions (i.e., parameter restrictions), if any, under which a positive output shock can lead to a deterioration of the trade balance.
+
+
+## Answer
+
+#### 1.
+
+The equilibrium conditions of this model are
+
+$$
+x_t = \mathbb{E}_t x_{t+1} \tag{1}
+$$
+
+$$
+x_t \equiv c_t - \alpha c_{t-1} \tag{2}
+$$
+
+$$
+d_t = (1 + r) d_{t-1} + c_t - y_t \tag{3}
+$$
+
+$$
+\lim_{j \to \infty} \mathbb{E}_t \frac{d_{t+j}}{(1 + r)^j} = 0 \tag{4}
+$$
+
+From (1) and (2) we get
+
+$$
+\mathbb{E}_t c_{t+j} = \alpha^{j+1} c_{t-1} + \frac{1 - \alpha^{j+1}}{1 - \alpha} x_t
+$$
+
+It follows that
+
+$$
+\mathbb{E}_t \sum_{j=0}^{\infty} \beta^j c_{t+j} =
+\frac{\alpha}{1 - \alpha \beta} c_{t-1} + \left[ \frac{1}{1 - \beta} - \frac{\alpha}{1 - \alpha \beta} \right] x_t
+$$
+
+$$
+= \frac{\alpha}{1 - \alpha \beta} c_{t-1} + \frac{1}{(1 - \beta)(1 - \alpha \beta)} x_t
+$$
+
+From (3) and (4) we get
+
+$$
+(1 + r) d_{t-1} = \sum_{j=0}^{\infty} \beta^j y_{t+j} - \sum_{j=0}^{\infty} \beta^j c_{t+j}
+$$
+
+$$
+= \frac{1}{1 - \rho \beta} y_t - \frac{\alpha}{1 - \alpha \beta} c_{t-1} - \frac{1}{(1 - \beta)(1 - \alpha \beta)} (c_t - \alpha c_{t-1})
+$$
+
+$$
+= \frac{1}{1 - \rho \beta} y_t + \frac{\alpha \beta}{(1 - \alpha \beta)(1 - \beta)} c_{t-1} - \frac{1}{(1 - \beta)(1 - \alpha \beta)} c_t
+$$
+
+So we have
+
+$$
+\frac{d c_t}{d y_t} = \frac{(1 - \beta)(1 - \alpha \beta)}{1 - \rho \beta}
+$$
+
+::: {.callout-important title="Final Answer Summary (Impact Consumption Response)"}
+A unit endowment shock in period 0 raises consumption by:
+
+$$
+\frac{d c_t}{d y_t} = \frac{(1 - \beta)(1 - \alpha \beta)}{1 - \rho \beta}
+$$
+
+:::
+
+
+#### 2.
+
+For $dtb_t/dy_t$ to be negative, we need the above expression to be larger than unity.  
+This requires
+
+$$
+\alpha < \frac{\rho - 1}{1 - \beta}
+$$
+
+So $\alpha$ must be negative. As $\rho \to 1$, $\alpha < 0$ is enough.
+
+
+::: {.callout-important title="Final Answer Summary (Trade Balance Response)"}
+A positive endowment shock worsens the trade balance if:
+
+$$
+\alpha < \frac{\rho - 1}{1 - \beta}
+$$
+
+That is, habit formation must be sufficiently negative (external habits).
+:::

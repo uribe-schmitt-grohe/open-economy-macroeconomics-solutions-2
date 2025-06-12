@@ -1,0 +1,183 @@
+---
+title: "Exercise 2.11"
+subtitle: "Impatience and the Current Account"
+---
+<a class="return-button" href="index.qmd">⬅ Return</a>
+
+## Problem
+
+Consider an open economy inhabited by a large number of identical, infinitely-lived households with preferences given by the utility function
+
+$$
+\sum_{t=0}^{\infty} \beta^t \ln c_t,
+$$
+
+where $c_t$ denotes consumption in period $t$, $\beta \in (0, 1)$ denotes the subjective discount factor, and $\ln$ denotes the natural logarithm operator. Households are endowed with a constant amount of goods $y$ each period and can borrow or lend at the constant world interest rate $r > 0$ using one-period bonds. Let $d_t$ denote the amount of debt acquired by the household in period $t$, and $(1 + r) d_t$, the associated gross obligation in $t + 1$. Assume that households start period 0 with no debts or assets ($d_{-1} = 0$) and that they are subject to a no-Ponzi-game constraint of the form
+
+$$
+\lim_{t \to \infty} (1 + r)^{-t} d_t \leq 0.
+$$
+
+Suppose that
+
+$$
+\beta(1 + r) < 1.
+$$
+
+1. Characterize the equilibrium path of consumption. In particular, calculate $c_0$, $c_{t+1}/c_t$ for $t \geq 0$, and $\lim_{t \to \infty} c_t$ as functions of the structural parameters of the model, $\beta$, $r$, and $y$. Compare this answer to the one that would obtain under the more standard assumption $\beta(1 + r) = 1$ and provide intuition.
+
+2. Characterize the equilibrium path of net external debt. In particular, deduce whether debt is increasing, decreasing, or constant over time and calculate $\lim_{t \to \infty} d_t$. Solve for the equilibrium level of $d_t$ as a function of $t$ and the structural parameters of the model.
+
+3. Define the trade balance, denoted $tb_t$, and characterize its equilibrium dynamics. In particular, deduce whether it is increasing, decreasing, or constant, positive or negative, and compute $\lim_{t \to \infty} tb_t$, as a function of the structural parameters of the model.
+
+## Answer
+
+#### 1.
+
+The sequential resource constraint is
+
+$$
+d_t = (1 + r) d_{t-1} + c_t - y.
+$$
+
+Iterating forward and using the no-Ponzi-game constraint and the assumption that $d_{-1} = 0$, yields
+
+$$
+0 = \sum_{t=0}^{\infty} (1 + r)^{-t} (y - c_t).
+$$
+
+The path of consumption is the solution of the problem of maximizing the utility function subject to this constraint. The first-order condition associated with this problem is
+
+$$
+\beta^t c_t^{-1} = \lambda (1 + r)^{-t},
+$$
+
+for $t \geq 0$, where $\lambda$ is an endogenously determined constant. This expression implies that
+
+$$
+\frac{c_{t+1}}{c_t} = \beta(1 + r) < 1,
+$$
+
+for $t \geq 0$, which, in turn, implies that
+
+$$
+\lim_{t \to \infty} c_t = 0.
+$$
+
+Plugging these two results in the intertemporal resource constraint derived above gives
+
+$$
+0 = \sum_{t=0}^{\infty} (1 + r)^{-t} \left\{ y - [\beta(1 + r)]^t c_0 \right\}
+= y \sum_{t=0}^{\infty} (1 + r)^{-t} - c_0 \sum_{t=0}^{\infty} \beta^t
+= \frac{1 + r}{r} y - \frac{1}{1 - \beta} c_0,
+$$
+
+which implies the following solution for the initial level of consumption:
+
+$$
+c_0 = (1 - \beta) \frac{1 + r}{r} y > y.
+$$
+
+Recall that $y$ is the constant equilibrium path of consumption under the more standard assumption $\beta(1 + r) = 1$. Thus, summing up, we have that when $\beta(1 + r) < 1$, consumption is initially higher than its equilibrium value under the assumption $\beta(1 + r) = 1$, and then gradually falls to zero at the gross rate $\beta(1 + r) < 1$.
+
+Intuitively, households in this economy are impatient relative to the market discount factor $1/(1 + r)$, and, as a result, consume a lot at the beginning and nothing at the ‘end’ of their never-ending lives. A story similar to that in the 1995 movie *Leaving Las Vegas*, but in infinite horizon.
+
+::: {.callout-important title="Final Answer Summary – Consumption Path"}
+- Consumption growth:
+  $$
+  \frac{c_{t+1}}{c_t} = \beta(1 + r) < 1
+  $$
+- Long-run consumption:
+  $$
+  \lim_{t \to \infty} c_t = 0
+  $$
+- Initial consumption:
+  $$
+  c_0 = (1 - \beta) \frac{1 + r}{r} y > y
+  $$
+- Comparison:
+  - When $\beta(1 + r) = 1$, $c_t = y$ for all $t$;
+  - When $\beta(1 + r) < 1$, consumption starts above $y$ and declines over time.
+:::
+
+#### 2.
+
+In period 0, we have that
+
+$$
+d_0 = c_0 - y = \frac{y}{r} - \beta \frac{1 + r}{r} y.
+$$
+
+We calculated before that $c_0 > y$, so we have that $d_0 > 0 = d_{-1}$. Thus, debt increases in period 0.
+
+Now consider the long run. Taking the limit of the left- and right-hand sides of the sequential resource constraint for $t \to \infty$, we get
+
+$$
+\lim_{t \to \infty} d_t = (1 + r) \lim_{t \to \infty} d_t + \lim_{t \to \infty} c_t - y.
+$$
+
+Recalling that $\lim_{t \to \infty} c_t = 0$, we obtain
+
+$$
+\lim_{t \to \infty} d_t = \frac{y}{r} > d_0.
+$$
+
+The long-run value of debt is higher than its value in period 0. It can be shown that the convergence is monotonic and dictated by the equation
+
+$$
+d_t = \frac{y}{r} \left\{ 1 - [\beta(1 + r)]^{t+1} \right\}.
+$$
+
+The proof is by induction. We already showed that it holds for $t = 0$, that is,
+
+$$
+d_0 = \left\{ 1 - [\beta(1 + r)]^{1+0} \right\} \frac{y}{r}.
+$$
+
+Suppose it holds for an arbitrary $t \geq 0$, then we need to show it also holds for $t + 1$. By the budget constraint:
+
+$$
+\begin{aligned}
+d_{t+1} &= (1 + r) d_t + c_{t+1} - y \\
+&= (1 + r) d_t + \beta^{t+1} (1 + r)^{t+1} (1 - \beta) \frac{1 + r}{r} y - y \\
+&= (1 + r) \left[ 1 - \beta^{t+1}(1 + r)^{t+1} \right] \frac{y}{r} + \beta^{t+1} (1 + r)^{t+2} (1 - \beta) \frac{y}{r} - y \\
+&= \left[ 1 - \beta^{t+1}(1 + r)^{t+2} \right] \frac{y}{r} + \beta^{t+1} (1 + r)^{t+2} (1 - \beta) \frac{y}{r} \\
+&= \left[ 1 - \beta^{t+2} (1 + r)^{t+2} \right] \frac{y}{r}
+\end{aligned}
+$$
+
+Suppose one had been unsure that debt converges to a constant, the above solution for $d_t$ also shows it.
+
+::: {.callout-important title="Final Answer Summary – Debt Dynamics"}
+- Initial debt:
+  $$
+  d_0 = \left( 1 - \beta(1 + r) \right) \frac{y}{r} > 0
+  $$
+- Long-run debt:
+  $$
+  \lim_{t \to \infty} d_t = \frac{y}{r}
+  $$
+- Debt increases monotonically and converges to its steady-state level:
+  $$
+  d_t = \frac{y}{r} \left[ 1 - (\beta(1 + r))^{t+1} \right]
+  $$
+:::
+
+#### 3.
+
+
+The trade balance is defined as $tb_t = y - c_t$. The initial trade balance is negative, since, as shown above, $c_0 > y$. Since consumption is monotonically decreasing, we have that the trade balance improves monotonically. At some point it turns into a surplus. In the long run, the trade balance equals the endowment $y$.
+
+::: {.callout-important title="Final Answer Summary – Trade Balance Dynamics"}
+- Trade balance:
+  $$
+  tb_t = y - c_t
+  $$
+- Initially negative since $c_0 > y$
+- Improves monotonically as $c_t$ declines
+- Eventually turns positive
+- Long-run value:
+  $$
+  \lim_{t \to \infty} tb_t = y
+  $$
+:::  

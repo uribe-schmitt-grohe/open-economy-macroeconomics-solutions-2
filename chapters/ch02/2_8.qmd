@@ -1,0 +1,43 @@
+---
+title: "Exercise 2.8"
+subtitle: "Empirical Plausibility of an AR(2) Output Specification"
+---
+<a class="return-button" href="index.qmd">⬅ Return</a>
+
+## Problem
+
+The purpose of this exercise is to obtain econometric estimates of the AR(2) output process given in equation (1) and then check whether the estimated values of $\rho_1$ and $\rho_2$ satisfy the requirement for permanent income to increase by more than current income in response to an innovation in current income. The satisfaction of this condition guarantees a countercyclical response of the trade balance and the current account to output innovations in the model.
+
+1. Download the quarterly data for Chapter 1 posted on the book’s Web site. For each country, extract GDP per capita at constant local currency units (LCU). Denote this series $\tilde{y}_t$.
+
+2. For each country, obtain a log-quadratically detrended output series, denoted $\hat{y}_t$, by running the OLS regression
+
+$$
+\ln \tilde{y}_t = a_0 + a_1 t + a_2 t^2 + \hat{y}_t,
+$$
+
+where $\hat{y}_t$ is the regression residual.
+
+3. In the model, output is defined in levels. So, for each country, produce the transformed variable
+
+$$
+y_t \equiv \exp(\hat{y}_t).
+$$
+
+4. For each country, use the time series $y_t$ to estimate the AR(2) process
+
+$$
+y_t = \rho_0 + \rho_1 y_{t-1} + \rho_2 y_{t-2} + \varepsilon_t
+$$
+
+by OLS.
+
+5. Ignore the parameter $\rho_0$. Set the interest rate $r$ at 2 percent per quarter. Using the analysis of Section 2.3, establish, for each country, whether the condition for permanent income to increase by more than current income in response to an innovation in current income is met. Present your results in the form of a table, with one row for country and columns displaying, in this order, $\rho_1$, $\rho_2$, and yes/no to indicate whether the condition is met or not. Discuss your findings.
+
+6. Change the quarterly interest rate to 1 percent, and recalculate the table. What do you learn and what is the intuition behind your results?
+
+7. Redo the exercise using the annual data for real GDP per capita at constant LCU used in Chapter 1 and available on the book’s Web site. Make sure to adjust the interest rate in accordance with the change of frequency. Discuss your results.
+
+## Answer
+
+To be added.

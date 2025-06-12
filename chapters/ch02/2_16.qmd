@@ -1,0 +1,229 @@
+---
+title: "Exercise 2.16"
+subtitle: "Permanent Income Versus Beveridge-Nelson Decomposition"
+---
+<a class="return-button" href="index.qmd">⬅ Return</a>
+
+## Problem
+
+The file `endowment_exercise_Beverage_Nelson.dat` posted online with the materials for the chapter contains a time series for output, which will be denoted $y_t$, for country X. The data is monthly from 1900:1 to 2020:12.
+
+1. Using OLS, estimate the AR(2) process for $\Delta y_t$:
+
+2. Is the estimated process for $\Delta y_t$ stationary? Show your work.
+
+3. Compute the coefficients of the cyclical component of the Beveridge-Nelson decomposition, which is given by $y^c_t = y_t - \lim_{j \to \infty} \mathbb{E}_t y_{t+j}$.  (Hint: $y^c_t$ is a linear function of $\Delta y_t$ and $\Delta y_{t-1}$.)
+
+4. Make a plot showing $y_t$ and its trend component.  (Hint: Use your answer to the last question and data to construct a time series for $y^c_t$. Then demean $y^c_t$ before subtracting it from $y_t$.)
+
+5. Now compute the coefficients of the permanent component of output according to the open endowment economy model studied in this chapter, which we denoted $y^p_t$. To this end, assume that the world interest rate is 4 percent per year ($r = 1.041^{1/12} - 1$).
+
+6. On the same graph, plot the trend according to the model, $y^p_t$. Comment on any differences you can optically identify about the two ways to compute the trend.
+
+7. According to the open economy model of studied in this chapter, does this estimated endowment process (1) generate a countercyclical current account, as observed in the data?  (Hint: Calculate the effect of a unit increase in $\varepsilon_t$ on $ca_t$, and interpret it.)
+
+8. According to the open economy model studied in this chapter, does the estimated endowment process (1) generate excess consumption volatility?  (Hint: Calculate $\sigma_{\Delta c} / \sigma_{\Delta y}$ and provide interpretation.)
+
+## Answer
+
+#### 1.
+
+| Variable | Coefficient | (Std. Error) |
+|----------|-------------|--------------|
+| $\Delta y_{t-1}$ | 0.518 | (0.026) |
+| $\Delta y_{t-2}$ | 0.169 | (0.026) |
+| Constant | 0.000 | (0.000) |
+
+::: {.callout-important title="Final Answer Summary – AR(2) Estimation"}
+- $\Delta y_t = 0.518 \cdot \Delta y_{t-1} + 0.169 \cdot \Delta y_{t-2} + \varepsilon_t$
+:::
+
+#### 2.
+
+::: {.callout-important title="Final Answer Summary – Stationarity Conditions"}
+- Conditions for AR(2) stationarity:
+  $$
+  \rho_2 > -1,\quad \rho_2 < 1 - \rho_1,\quad \rho_2 < 1 + \rho_1
+  $$
+- All satisfied with estimated values ⇒ $\Delta y_t$ is stationary
+:::
+
+#### 3.
+
+After some algebra, the Beveridge-Nelson decomposition can be written as:
+
+$$
+y^c_t = - \sum_{j=1}^{\infty} \mathbb{E}_t \Delta y_{t+j}
+$$
+
+Let
+
+$$
+Y_t =
+\begin{bmatrix}
+\Delta y_t \\
+\Delta y_{t-1}
+\end{bmatrix}, \quad
+R =
+\begin{bmatrix}
+\rho_1 & \rho_2 \\
+1 & 0
+\end{bmatrix}
+$$
+
+Then the AR(2) process becomes:
+
+$$
+Y_t = R Y_{t-1} + 
+\begin{bmatrix}
+\varepsilon_t \\
+0
+\end{bmatrix}
+$$
+
+Then:
+
+$$
+\mathbb{E}_t Y_{t+j} = R^j Y_t
+$$
+
+So:
+
+$$
+y^c_t = - [1 \quad 0] \sum_{j=1}^{\infty} R^j Y_t = - [1 \quad 0] R(I - R)^{-1} Y_t
+$$
+
+Therefore:
+
+$$
+y^c_t = - \frac{1}{1 - \rho_1 - \rho_2} \left[ (\rho_1 + \rho_2) \Delta y_t + \rho_2 \Delta y_{t-1} \right]
+$$
+
+Coefficients:
+
+- $\Delta y_t$: −2.194  
+- $\Delta y_{t-1}$: −0.538
+
+::: {.callout-important title="Final Answer Summary – Beveridge-Nelson Cyclical Component"}
+- $y^c_t = - \frac{1}{1 - \rho_1 - \rho_2} \left[ (\rho_1 + \rho_2) \Delta y_t + \rho_2 \Delta y_{t-1} \right]$
+- Coefficients:
+  - $\Delta y_t$: −2.194
+  - $\Delta y_{t-1}$: −0.538
+:::
+
+#### 4.
+
+Run the Stata code `endowment_exercise_Beverage_nelson.do` (to be complete)
+
+#### 5.
+
+Recall that:
+
+$$
+y^p_t = \frac{r}{1 + r} \sum_{j=0}^{\infty} \frac{\mathbb{E}_t y_{t+j}}{(1 + r)^j}
+$$
+
+Note that:
+
+$$
+y_{t+j} = y_t + \sum_{k=1}^j \Delta y_{t+k}
+$$
+
+So:
+
+$$
+y^p_t = y_t + \frac{r}{1 + r} \sum_{j=0}^{\infty} \frac{ \sum_{k=1}^j \mathbb{E}_t \Delta y_{t+k} }{(1 + r)^j}
+$$
+
+Recall that:
+
+$$
+\mathbb{E}_t \Delta y_{t+k} = [1 \quad 0] R^k Y_t
+$$
+
+And:
+
+$$
+\sum_{k=1}^j \mathbb{E}_t \Delta y_{t+k} = [1 \quad 0] R (I - R^{j+1})(I - R)^{-1} Y_t
+$$
+
+Then:
+
+$$
+y^p_t = y_t + [1 \quad 0] R(I - R)^{-1} Y_t + [1 \quad 0] R^2(I - R)^{-1} \sum_{j=0}^{\infty} \frac{R^j}{(1 + r)^j} Y_t
+$$
+
+Simplifying:
+
+$$
+\begin{aligned}
+y^p_t = y_t &+ \frac{1}{1 - \rho_1 - \rho_2} \left[ (\rho_1 + \rho_2) \Delta y_t + \rho_2 \Delta y_{t-1} \right] \\
+&+ \frac{1 + r}{(1 - \rho_1 - \rho_2)(1 + r - \rho_1 - \rho_2)}
+\left[ ((\rho_1 + \rho_2)^2 + \rho_2)\Delta y_t + (\rho_1 \rho_2 + \rho_2^2 + \frac{\rho_2^2}{1 + r}) \Delta y_{t-1} \right]
+\end{aligned}
+$$
+
+Coefficients:
+
+- $\Delta y_t$: 8.681  
+- $\Delta y_{t-1}$: 1.998
+
+::: {.callout-important title="Final Answer Summary – Permanent Component ($y^p_t$)"}
+- Two-part expression:
+  - Direct projection + discounted future $\Delta y_t$ terms
+- Coefficients:
+  - $\Delta y_t$: 8.681
+  - $\Delta y_{t-1}$: 1.998
+- $y^p_t$ is more forward-looking and volatile than $y_t$
+:::
+
+#### 6.
+
+Run the Stata code `endowment_exercise_Beverage_nelson.do`  
+The second computation yields a more volatile time series.
+
+#### 7.
+
+Recall that:
+
+$$
+ca_t = y_t - y^p_t
+$$
+
+The effect of $\varepsilon_t$ on the current account is equal to:
+
+$$
+ca_t = -\left[
+\frac{1}{1 - \rho_1 - \rho_2} (\rho_1 + \rho_2) +
+\frac{1 + r}{(1 - \rho_1 - \rho_2)(1 + r - \rho_1 - \rho_2)} ((\rho_1 + \rho_2)^2 + \rho_2)
+\right] \varepsilon_t = -\mu \varepsilon_t
+$$
+
+Since coefficient is negative, the response of the current account is countercyclical.
+
+::: {.callout-important title="Final Answer Summary – Current Account Response"}
+- $ca_t = y_t - y^p_t = -\mu \varepsilon_t$
+- Since $\mu > 0$, $ca_t$ responds negatively to positive shock ⇒ **countercyclical**
+:::
+
+#### 8.
+
+Recall that:
+
+$$
+\Delta c_t = \Delta y^p_t
+$$
+
+Then:
+
+$$
+\text{var}(\Delta c_t) = \text{var}(\Delta y^p_t) = \text{var}(\Delta y_t + \mu (\Delta y_t - \Delta y_{t-1})) = (1 + \mu)^2 \cdot \text{var}(\Delta y_t)
+$$
+
+Since $\mu > 0$, this process generates excess consumption volatility.
+
+::: {.callout-important title="Final Answer Summary – Excess Consumption Volatility"}
+- $\Delta c_t = \Delta y^p_t = (1 + \mu)(\Delta y_t - \mu \Delta y_{t-1})$
+- $\text{var}(\Delta c_t) = (1 + \mu)^2 \cdot \text{var}(\Delta y_t)$
+- If $\mu > 0$, then $\sigma_{\Delta c} > \sigma_{\Delta y}$ ⇒ **excess volatility**
+:::

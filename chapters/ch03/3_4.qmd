@@ -1,0 +1,223 @@
+---
+title: "Exercise 3.4"
+subtitle: "Balanced Growth"
+---
+<a class="return-button" href="index.qmd">⬅ Return</a>
+
+## Problem
+
+A small open economy is populated by infinitely-lived families with preferences given by
+
+$$
+\sum_{t=0}^{\infty} \beta^t \sqrt{C_t},
+$$
+
+where $C_t$ denotes consumption of a perishable good in period $t$ and $\beta \in (0, 1)$ is the subjective discount factor. Households can produce goods domestically via the technology
+
+$$
+Y_t = A_t^{1 - \alpha} K_t^{\alpha},
+$$
+
+with $\alpha \in (0, 1)$, where $Y_t$ denotes output, $K_t$ denotes the stock of physical capital, and $A_t$ denotes a technological factor that grows at the constant gross rate $\gamma > 1$, that is,
+
+$$
+A_{t+1} = \gamma A_t,
+$$
+
+with $A_0 > 0$ given. The law of motion of the capital stock is given by
+
+$$
+K_{t+1} = K_t + I_t,
+$$
+
+with $K_0 > 0$ given, where $I_t$ denotes net investment. Families have access to world financial markets. Each period $t \geq 0$, they can take on one-period debt, denoted $D_t$, that matures in period $t + 1$. The interest, denoted $r$, is constant and satisfies
+
+$$
+\beta(1 + r) = \sqrt{\gamma}.
+$$
+
+Households start period 0 with outstanding debt, including interest, of $(1 + r)D_{-1} > 0$. Debt accumulation is subject to the terminal condition
+
+$$
+\lim_{t \to \infty} (1 + r)^{-t} D_t \leq 0.
+$$
+
+1. Write down the household’s optimization problem.
+
+2. Derive the associated optimality conditions.
+
+3. Characterize the equilibrium dynamics of all variables in the model. Make sure to also consider the equilibrium dynamics of the trade balance and the current account. (You might want to first devise a scaling of variables that makes the equilibrium stationary. After characterizing the equilibrium cast in scaled variables, you can go back to the original variables.)
+
+4. What variables display a trend in equilibrium?
+
+5. Establish whether the equilibrium displays balanced growth. That is, discuss whether consumption, investment, and the capital stock share a common trend with output. Do the trade balance, the current account, and external debt have a trend?
+
+## Answer
+
+#### 1.
+
+$$
+\max_{\{C_t, D_t, K_{t+1}\}_{t=0}^{\infty}} \sum_{t=0}^{\infty} \beta^t \sqrt{C_t}
+$$
+
+subject to
+
+$$
+A_t^{1 - \alpha} K_t^{\alpha} + D_t = C_t + K_{t+1} - K_t + \frac{1 + r}{\gamma} D_{t-1},
+$$
+
+given $D_{-1}, K_0, A_0$, and $A_{t+1} = \gamma A_t$ for all $t$.
+
+#### 2.
+
+Let $\Lambda_t$ denote the Lagrange multiplier on the household’s budget constraint. The first-order conditions wrt $C_t$, $D_t$, $K_{t+1}$ and the transversality condition are
+
+$$
+\frac{1}{2} C_t^{-1/2} = \Lambda_t \tag{3.10}
+$$
+
+$$
+\Lambda_t = \beta(1 + r) \Lambda_{t+1} \tag{3.11}
+$$
+
+$$
+\Lambda_t = \beta \Lambda_{t+1} \left[ \alpha A_{t+1}^{1 - \alpha} K_{t+1}^{\alpha - 1} + 1 \right] \tag{3.12}
+$$
+
+$$
+\lim_{j \to \infty} \frac{D_t}{(1 + r)^j} = 0 \tag{3.13}
+$$
+
+holding for all $t \geq 0$
+
+#### 3.
+
+Let $c_t \equiv C_t / A_t$ ; $k_t \equiv K_t / A_t$ ; $y_t \equiv Y_t / A_t$ ; $\lambda_t \equiv \Lambda_t A_t^{1/2}$ ; $d_t \equiv D_t / A_t$
+
+Now write the FOCs in terms of these variables:
+
+$$
+\frac{1}{2} c_t^{-1/2} = \lambda_t \tag{3.14}
+$$
+
+$$
+\lambda_t = \beta(1 + r)/\sqrt{\gamma} \cdot \lambda_{t+1} \tag{3.15}
+$$
+
+$$
+\lambda_t = \beta / \sqrt{\gamma} \cdot \lambda_{t+1} \left[ \alpha k_{t+1}^{\alpha - 1} + 1 \right] \tag{3.16}
+$$
+
+Use $\beta / \sqrt{\gamma} = 1 / (1 + r)$. Then we have:
+
+$$
+c_t = c_0 \tag{3.17}
+$$
+
+$$
+\lambda_t = \lambda_0 \tag{3.18}
+$$
+
+$$
+r = \alpha k_{t+1}^{\alpha - 1} \tag{3.19}
+$$
+
+Solve the last equation for $k_{t+1}$, thus we have that $k_t = k_1$ for all $t > 0$. With $k_1$ in hand, and $k_0 = K_0 / A_0$ given, we have
+
+$$
+y_t = k_t^{\alpha}
+$$
+
+for all $t$. Find $c_0$ as follows. First find the intertemporal budget constraint as
+
+$$
+\sum_{t = 0}^{\infty} \frac{A_t^{1 - \alpha} K_t^{\alpha} + K_t - K_{t + 1} - C_t}{(1 + r)^t} = (1 + r) D_{-1}
+$$
+
+Express in terms of $k_t$ and $c_t$:
+
+$$
+\sum_{t = 0}^{\infty} \frac{\gamma^t}{(1 + r)^t} \left[ k_t^{\alpha} + k_t - \gamma k_{t + 1} - c_0 \right] = (1 + r) D_{-1} / A_0
+$$
+
+We know the time path of $k_t$. Therefore the above intertemporal budget constraint represents one equation in one unknown, $c_0$. Solve for $c_0$:
+
+$$
+k_0^{\alpha} + k_0 - \gamma k_1 + \frac{\gamma}{1 + r - \gamma} \left[ k_1^{\alpha} + k_1 - \gamma k_1 \right] = (1 + r) D_{-1} / A_0 + \frac{1 + r}{1 + r - \gamma} c_0
+$$
+
+With $k_0$ and $k_1$ known, we can solve for $c_0$. We then also have found $C_t = \gamma^t A_0 c_0$ for all $t \geq 0$. $K_{t+1} = k_1 A_{t+1} = k_1 \gamma^{t+1} A_0$ ; $Y_t = k_t^{\alpha} \gamma^t A_0$. It follows that for $t > 0$ the economy follows a balanced growth path in which consumption, capital, output, and investment all grow at the same rate, $\gamma - 1 > 0$. The trade balance is:
+
+$$
+TB_t = Y_t - C_t - I_t
+$$
+
+Since every variable on the right-hand side is growing at the rate $\gamma - 1$, the trade balance is also growing at that rate. Specifically, for $t > 0$:
+
+$$
+TB_t = A_t \left[ k_1^{\alpha} - c_0 - (\gamma - 1) k_1 \right]
+$$
+
+To find the equilibrium path of $CA_t$ and of $D_t$, proceed as follows. Find $D_0 = d_0 A_0$ from the sequential budget constraint of the household evaluated at $t = 0$:
+
+$$
+k_0^{\alpha} + d_0 = c_0 + \gamma k_1 - k_0 + \frac{1 + r}{\gamma} D_{-1} / A_{-1}
+$$
+
+Notice that for any $t > 0$, by the intertemporal budget constraint:
+
+$$
+\frac{1 + r}{\gamma} d_{t - 1} = \frac{1 + r}{1 + r - \gamma} \left[ k_1^{\alpha} - c_0 - (\gamma - 1) k_1 \right]
+$$
+
+This implies that $d_t = d_0$ for all $t > 0$, or
+
+$$
+D_t = A_t d_0
+$$
+
+which says that external debt has a trend and the same one as output.  
+
+Finally, the current account is $CA_t = D_{t - 1} - D_t$. For $t = 0$:
+
+$$
+CA_0 = D_{-1} - d_0 A_0
+$$
+
+For $t > 0$:
+
+$$
+CA_t = (A_{t - 1} - A_t) d_0 = -A_t \cdot \frac{\gamma - 1}{\gamma} d_0
+$$
+
+This means that the current account also has a trend, and also the same one as output, implying that the current account to output ratio is constant over time.
+
+::: {.callout-important title="Final Answer Summary – Equilibrium Dynamics and Balanced Growth"}
+
+- Scaled variables:  
+  $c_t = C_t / A_t$, $k_t = K_t / A_t$, $d_t = D_t / A_t$, $\lambda_t = \Lambda_t A_t^{1/2}$  
+- Optimality conditions yield:  
+  $c_t = c_0$ and $k_t = k_1$ for all $t \geq 1$  
+  $r = \alpha k_{t+1}^{\alpha - 1}$  
+- Consumption path:  
+  $C_t = \gamma^t A_0 c_0$  
+- Capital path:  
+  $K_{t} = \gamma^t A_0 k_1$  
+- Output and Investment:  
+  $Y_t = \gamma^t A_0 k_1^{\alpha}$, $I_t = (\gamma - 1) K_t$  
+- Trade Balance:  
+  $TB_t = A_t (k_1^{\alpha} - c_0 - (\gamma - 1) k_1)$  
+- Debt path:  
+  $D_t = A_t d_0$ ⇒ debt has the same trend as output  
+- Current Account:  
+  $CA_t = -A_t \cdot \frac{\gamma - 1}{\gamma} d_0$ ⇒ also grows at rate $\gamma$  
+:::
+
+#### 4. 
+
+::: {.callout-note title="Growth Trend Summary"}
+
+All macro variables—$C_t$, $K_t$, $Y_t$, $I_t$, $TB_t$, $CA_t$, and $D_t$—grow at the same gross rate $\gamma$  
+⇒ This confirms the economy follows a **balanced growth path**  
+⇒ Ratios like $TB_t / Y_t$, $CA_t / Y_t$, and $D_t / Y_t$ remain constant over time  
+:::

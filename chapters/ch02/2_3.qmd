@@ -1,0 +1,111 @@
+---
+title: "Exercise 2.3"
+subtitle: "An Open Economy with Habit Formation"
+---
+<a class="return-button" href="index.qmd">⬅ Return</a>
+
+## Problem
+
+Consider a two-period small open economy populated by a large number of identical households with preferences specified by the utility function
+
+$$
+\ln c_1 + \ln(c_2 - x)
+$$
+
+where $c_1$ and $c_2$ denote, respectively, consumption in periods 1 and 2. Households are endowed with $y > 0$ units of goods each period and are born in period 1 with no assets or debts. In period 1, households can borrow or lend at a zero interest rate. Derive the equilibrium level of consumption and the trade balance under the following three formulations:
+
+1. $x = 0$ (no habits).
+
+2. $x = 0.5c_1$ (internal habit formation).
+
+3. $x = 0.5\tilde{c}_1$, where $\tilde{c}_1$ denotes the economy’s per capita level of consumption in period 1 (external habit formation).
+
+Compare economies (1) and (2) and provide intuition. Similarly, compare economies (2) and (3) and provide intuition.
+
+## Answer
+
+##### 1.
+
+The intertemporal budget constraint is
+
+$$
+c_2 = 2y - c_1.
+$$
+
+In the economy without habits, the optimality condition is
+
+$$
+\frac{1}{c_1} = \frac{1}{2y - c_1}
+$$
+
+which yields  
+
+$$
+c_1 = y
+$$
+
+::: {.callout-important title="Final Answer Summary (No Habits)"}
+$$
+c_1 = y,\quad c_2 = y
+$$
+Trade balance in period 1:
+$$
+tb_1 = y - c_1 = 0
+$$
+:::
+
+#### 2.
+
+with internal habits the household’s problem is to pick $c_1$ to maximize $\ln c_1 + \ln(2y - 1.5c_1)$. The optimality condition is
+
+$$
+\frac{1}{c_1} = \frac{1.5}{2y - 1.5c_1}
+$$
+
+which yields
+
+$$
+c_1 = \frac{2}{3}y
+$$
+
+::: {.callout-important title="Final Answer Summary (Internal Habits)"}
+$$
+c_1 = \frac{2}{3}y,\quad c_2 = \frac{4}{3}y
+$$
+Trade balance in period 1:
+$$
+tb_1 = y - c_1 = \frac{1}{3}y
+$$
+:::
+
+#### 3.
+
+with external habits the household’s problem is to pick $c_1$ to maximize $\ln c_1 + \ln(2y - c_1 - 0.5\tilde{c}_t)$. The optimality condition is
+
+$$
+\frac{1}{c_1} = \frac{1}{2y - c_1 - 0.5\tilde{c}_1}
+$$
+
+In equilibrium, $c_1 = \tilde{c}_1$. Using this expression to eliminate $\tilde{c}_1$, we obtain
+
+$$
+c_1 = \frac{4}{5}y
+$$
+
+::: {.callout-important title="Final Answer Summary (External Habits)"}
+$$
+c_1 = \frac{4}{5}y,\quad c_2 = \frac{6}{5}y
+$$
+Trade balance in period 1:
+$$
+tb_1 = y - c_1 = \frac{1}{5}y
+$$
+:::
+
+**Comparison of no habits with internal habits:**  
+Internal habits delivers less consumption in period 1, because households internalize that the more they consume in period 1, the less happy they are in period 2.
+
+**Comparison of internal and external habits:**  
+Again, with internal habits, households internalize the fact that period-1 consumption makes them unhappy in period 2. This internalization is absent under external habits, so household consume more in period 1 under the latter formulation.
+
+It is of interest to note that period-1 consumption is lower under external habits than under no habits. This is because under external habits, when $c_1 = c_2$, the marginal utility of consumption is higher in period 2 than in period 1, tilting consumption toward the future.

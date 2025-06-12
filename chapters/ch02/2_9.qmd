@@ -1,0 +1,65 @@
+---
+title: "Exercise 2.9"
+subtitle: "Expected Output Changes and Permanent Income"
+---
+<a class="return-button" href="index.qmd">⬅ Return</a>
+
+## Problem
+
+Equation (2.27) expresses the difference between current and permanent income, $y_t - y^p_t$, as the present discounted value of expected future changes in the endowment. Present a step-by-step derivation of equation (2.27) starting from definitions (2.10) and (2.25). Comment on the cyclical properties of $y_t - y^p_t$ depending on whether the level or the change of $y_t$ follows an AR(1) process.
+
+## Answer
+
+Multiply equation (2.10) by $(1 + r)/r$.
+
+$$
+\frac{1 + r}{r} y^p_t = \sum_{j=0}^{\infty} \frac{\mathbb{E}_t y_{t+j}}{(1 + r)^j}
+$$
+
+Then split the sum,
+
+$$
+\frac{1 + r}{r} y^p_t = y_t + \sum_{j=1}^{\infty} \frac{\mathbb{E}_t y_{t+j}}{(1 + r)^j}
+$$
+
+Subtract $y^p_t$ from both sides
+
+$$
+\frac{1}{r} y^p_t = y_t - y^p_t + \sum_{j=1}^{\infty} \frac{\mathbb{E}_t y_{t+j}}{(1 + r)^j}
+$$
+
+Rearrange
+
+$$
+y_t - y^p_t = - \sum_{j=1}^{\infty} \frac{\mathbb{E}_t y_{t+j}}{(1 + r)^j} + \frac{1}{r} y^p_t
+$$
+
+Divide both sides of (2.10) by $r$ and then use the resulting expression to eliminate $\frac{1}{r} y^p_t$ from the above expression. This yields
+
+$$
+y_t - y^p_t = - \sum_{j=1}^{\infty} \frac{\mathbb{E}_t y_{t+j}}{(1 + r)^j} + \sum_{j=0}^{\infty} \frac{\mathbb{E}_t y_{t+j}}{(1 + r)^{j+1}} = - \sum_{j=1}^{\infty} \frac{1}{(1 + r)^j} \left[ \mathbb{E}_t y_{t+j} - \mathbb{E}_t y_{t+j-1} \right]
+$$
+
+Finally, use (2.25) to replace $\mathbb{E}_t y_{t+j} - \mathbb{E}_t y_{t+j-1}$ with $\mathbb{E}_t \Delta y_{t+j}$ to obtain equation (2.27).
+
+If $y_t$ is AR(1), then as shown in section 2.2
+
+$$
+y^p_t = \frac{r}{1 + r - \rho} y_t
+$$
+
+so that
+
+$$
+y_t - y^p_t = \frac{1 - \rho}{1 + r - \rho} y_t
+$$
+
+Since $\rho \in (-1, 1)$, $\frac{1 - \rho}{1 + r - \rho} > 0$. It follows that $y_t - y^p_t$ is perfectly procyclical, $\text{corr}(y_t - y^p_t, y_t) = 1$. And $y_t - y^p_t$ inherits the serial correlation of $y_t$, $\text{corr}(y_t - y^p_t, y_{t-1} - y^p_{t-1}) = \text{corr}(y_t, y_{t-1}) = \rho$.
+
+If $\Delta y_t$ is AR(1), then $\mathbb{E}_t \Delta y_{t+j} = \rho^j \Delta y_t$ for $j \geq 1$. By (2.27)
+
+$$
+y_t - y^p_t = - \frac{\rho}{1 + r - \rho} \Delta y_t
+$$
+
+Assuming (as in section 2.4) $\rho \in [0, 1)$, $-\frac{\rho}{1 + r - \rho} < 0$. It follows that $y_t - y^p_t$ is perfectly countercyclical, $\text{corr}(y_t - y^p_t, \Delta y_t) = -1$. Now $y_t - y^p_t$ inherits the serial correlation of $\Delta y_t$, $\text{corr}(y_t - y^p_t, y_{t-1} - y^p_{t-1}) = \text{corr}(\Delta y_t, \Delta y_{t-1}) = \rho$.

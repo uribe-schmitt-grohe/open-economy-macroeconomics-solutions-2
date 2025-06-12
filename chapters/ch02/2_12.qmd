@@ -1,0 +1,71 @@
+---
+title: "Exercise 2.12"
+subtitle: "Global Approximation of Equilibrium Dynamics"
+---
+<a class="return-button" href="index.qmd">⬅ Return</a>
+
+## Problem
+
+1. Consider an endowment, $y_t$, following the AR(1) process
+
+$$
+y_t - 1 = \rho (y_{t-1} - 1) + \sigma_\varepsilon \varepsilon_t,
+$$
+
+where $\varepsilon_t$ is an i.i.d. innovation with mean zero and unit variance, $\rho \in [0, 1)$, and $\sigma_\varepsilon > 0$.
+
+Discretize this process by a two-state Markov process defined by the 2-by-1 state vector $Y \equiv [Y_1 \; Y_2]'$ and the 2-by-2 transition probability matrix $\Pi$ with element $(i, j)$ denoted $\pi_{ij}$ and given by
+
+$$
+\pi_{ij} \equiv \text{Prob}\{ y_{t+1} = Y_j \mid y_t = Y_i \}.
+$$
+
+To reduce the number of parameters of the Markov process to two, impose the restrictions $\pi_{11} = \pi_{22} = \pi$, $Y_1 = 1 + \gamma$, and $Y_2 = 1 - \gamma$. Pick $\pi$ and $\gamma$ to match the variance and the serial correlation of $y_t$. Express $\pi$ and $\gamma$ in terms of the parameters defining the original AR(1) process.
+
+2. Calculate the unconditional probability distribution of $Y$ (this is a 2-by-1 vector).
+
+3. Assume that $\rho = 0.4$ and $\sigma_\varepsilon = 0.05$. Evaluate the vector $Y$ and the matrix $\Pi$.
+
+4. Now consider a small open economy populated by a large number of identical households with preferences given by
+
+$$
+\mathbb{E}_0 \sum_{t=0}^{\infty} \frac{c_t^{1 - \sigma} - 1}{1 - \sigma},
+$$
+
+Suppose that households face the sequential budget constraint
+
+$$
+c_t + g + (1 + r) d_{t-1} = y_t + d_t,
+$$
+
+where $c_t$ denotes consumption in period $t$, $d_t$ denotes one-period debt assumed in period $t$ and maturing in $t + 1$, $g$ denotes a constant level of domestic absorption that yields no utility to households (possibly wasteful government spending), and $r$ denotes the world interest rate, assumed to be constant and exogenous. Households are subject to the no-Ponzi-game constraint
+
+$$
+\lim_{j \to \infty} (1 + r)^{-j} d_{t+j} \leq 0.
+$$
+
+Express the household’s problem as a Bellman equation. To this end, drop time subscripts and use instead the notation $d = d_{t-1}$, $d' = d_t$, $y = y_t$ and $y' = y_{t+1}$ for all $t$. Denote the value function in $t$ by $v(y, d)$.  
+[Here it suffices to use the notation $y$ and $y'$ because the endowment process is AR(1). Higher-order processes would require an extended notation.]
+
+5. Let $\sigma = 2$, $r = 0.04$, $\beta = 0.954$, and $g = 0.2$. And assume that the endowment process follows the two-state Markov process given in item 3. Discretize the debt state, $d$, using 200 equally spaced points ranging from 15 to 19.
+
+Calculate the value function and the debt policy function by value function iteration (these are 2 vectors, each of order 400-by-1). Calculate also the policy functions of consumption, the trade balance, and the current account (each of these policy functions is a 400-by-1 vector).
+
+Calculate the transition probability matrix of the state $(y, d)$ (this is a 400-by-400 matrix, whose rows all add up to unity; each row has only 2 nonzero entries).
+
+6. Define the impulse response of the variable $x_t$ to a one-standard-deviation increase in output as
+
+$$
+\mathbb{E}[x_t \mid y_0 = Y_1] - \mathbb{E}[x_t]
+$$
+
+for $t = 0, 1, 2, \ldots$ (note that these expectations are unconditional with respect to debt; alternatively, we could have conditioned on some value of debt, but we are not pursuing this definition here). Make a figure with 4 subplots (in a 2-by-2 arrangement) showing the impulse responses of output, consumption, the trade balance, and debt for $t = 0, 1, \ldots, 10$.
+
+7. Plot the unconditional probability distribution of debt.
+
+8. Finally, suppose that government spending, $g$, increases from 0.2 to 0.22. Plot the resulting unconditional distribution of debt. For comparison superimpose the one corresponding to the baseline case $g = 0.2$. Provide intuition for the differences you see.
+
+
+## Answer
+
+To be completed.

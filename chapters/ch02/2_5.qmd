@@ -1,0 +1,137 @@
+---
+title: " Exercise 2.5"
+subtitle: "Anticipated Endowment Shocks"
+---
+<a class="return-button" href="index.qmd">⬅ Return</a>
+
+## Problem
+
+Consider a small open endowment economy with free capital mobility. Preferences are described by the utility function
+
+$$
+- \frac{1}{2} \mathbb{E}_0 \sum_{t=0}^{\infty} \beta^t (c_t - c)^2,
+$$
+
+where $\beta \in (0, 1)$. Agents have access to a risk-free internationally traded bond paying the constant interest rate $r$, satisfying $\beta(1 + r) = 1$. The representative household starts period zero with the initial debt position $d_{-1}$. Each period $t \geq 0$, the household receives an endowment $y_t$, which obeys the law of motion:
+
+$$
+y_t - \bar{y} = \rho(y_{t-1} - \bar{y}) + \varepsilon_{t-1},
+$$
+
+where $\varepsilon_{t-1}$ is an i.i.d. shock with mean zero and standard deviation $\sigma_\varepsilon$, $\bar{y} > 0$, and $\rho \in [0, 1)$. Notice that households know already in period $t - 1$ the level of $y_t$ with certainty.
+
+1. Find the equilibrium processes of consumption and the current account.
+
+2. Compute the correlation between the current account and output, $\text{corr}(ca_t, y_t)$. Compare your result with the standard AR(1) case in which $y_t - \bar{y} = \rho(y_{t-1} - \bar{y}) + \varepsilon_t.$
+
+## Answer
+
+#### 1. Equilibrium Processes of Consumption and Current Account
+
+The representative household maximizes utility:
+
+$$
+\max_{\{c_t\}} - \frac{1}{2} \mathbb{E}_0 \sum_{t=0}^\infty \beta^t (c_t - c)^2
+$$
+
+subject to the budget constraint:
+
+$$
+d_t = (1 + r) d_{t-1} + c_t - y_t,
+$$
+
+and transversality. With $\beta(1 + r) = 1$, the optimal consumption rule becomes:
+
+$$
+c_t = y_t^p - r d_{t-1}
+$$
+
+where $y_t^p$ is the annuity value of expected future income:
+
+$$
+y_t^p = r \sum_{s=0}^\infty \frac{1}{(1 + r)^s} \mathbb{E}_t[y_{t+s}]
+$$
+
+Given anticipated shocks, we have:
+
+$$
+\mathbb{E}_t[y_{t+s}] = \bar{y} + \rho^s (y_t - \bar{y})
+$$
+
+Therefore,
+
+$$
+\begin{aligned}
+y_t^p - \bar{y}
+&= r \sum_{s=0}^\infty \frac{\rho^s}{(1 + r)^s} (y_t - \bar{y}) \\
+&= \frac{r}{1 + r - \rho}(y_t - \bar{y})
+\end{aligned}
+$$
+
+But since $y_t$ itself is known one period in advance and contains $\varepsilon_{t-1}$, an extra deterministic component arises. Thus:
+
+$$
+y_t^p - \bar{y} = \frac{r}{1 + r - \rho}(y_t - \bar{y}) + \frac{r}{1 + r} \cdot \frac{1}{1 + r - \rho} \varepsilon_t
+$$
+
+and hence:
+
+$$
+c_t = y_t^p - r d_{t-1}, \quad ca_t = y_t - y_t^p
+$$
+
+::: {.callout-important title="Final Answer Summary (Equilibrium Dynamics)"}
+$$
+y^p_t - \bar{y} = \frac{r}{1 + r - \rho}(y_t - \bar{y}) + \frac{r}{1 + r} \cdot \frac{1}{1 + r - \rho} \varepsilon_t
+$$
+
+$$
+c_t = y^p_t - r d_{t-1}
+$$
+
+$$
+ca_t = y_t - y^p_t
+$$
+:::
+
+#### 2. Correlation Between $ca_t$ and $y_t$
+
+**Standard AR(1):**
+
+With
+
+$$
+y_t - \bar{y} = \rho(y_{t-1} - \bar{y}) + \varepsilon_t,
+$$
+
+the current account is:
+
+$$
+ca_t = \frac{1 - \rho}{1 + r - \rho} (y_t - \bar{y}),
+$$
+
+so
+
+$$
+\text{corr}(ca_t, y_t) = 1
+$$
+
+**Anticipated Shocks:**
+
+Anticipation smooths the income process, reducing surprise and volatility in the current account. After applying covariance algebra, we find:
+
+$$
+\text{corr}(ca_t, y_t) = \frac{1}{\sqrt{1 + \left( \frac{r}{1 + r} \right)^2 \cdot \frac{1 - \rho^2}{(1 - \rho)^2}}} < 1
+$$
+
+::: {.callout-important title="Final Answer Summary (Correlation Result)"}
+- **Standard AR(1):**  
+  $$
+  \text{corr}(ca_t, y_t) = 1
+  $$
+
+- **Anticipated Shocks:**  
+  $$
+  \text{corr}(ca_t, y_t) = \frac{1}{\sqrt{1 + \left( \frac{r}{1 + r} \right)^2 \cdot \frac{1 - \rho^2}{(1 - \rho)^2}}} < 1
+  $$
+:::

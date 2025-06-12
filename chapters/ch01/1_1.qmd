@@ -1,13 +1,52 @@
 ---
 title: "Question 1.1"
+jupyter: python3
 ---
+<a class="return-button" href="index.qmd">⬅ Return</a>
 
 ## Problem
 
 Describe the exercise here.
 
-## Python Solution
+## Answer
 
+We can typeset mathematical expressions inline like this: $c_t = a + b y_t$,  
+or as a displayed equation:
+
+$$
+E_t c_{t+1} = c_t
+$$
+
+We can also embed images for illustration:
+
+<!-- Basic Markdown image embedding -->
+![Illustration](figures/try.png)
+
+<!-- HTML image embedding with custom styles (centered, border, responsive width) -->
+<img src="figures/try.png" alt="Illustration" style="display:block; margin:auto; max-width:90%; border:1px solid #ccc; border-radius:8px;" />
+
+
+If the code is short, we can embed it directly on the page:
+
+- code with output
 ```{python}
-import numpy as np
-print(np.mean([1,2,3,4]))
+def mean(values):
+    return sum(values) / len(values)
+
+print(mean([10, 20, 30]))
+```
+
+- code without output
+```{.matlab}
+x = [10, 20, 30];
+mean_x = mean(x);
+disp(mean_x);
+```
+
+
+If the code is longer or part of a downloadable file, we can offer a download button:
+
+<a href="code/mean.py" download style="display:inline-block;padding:8px 16px;background:#007acc;color:white;text-decoration:none;border-radius:5px;">
+📥 Download Python Code (mean.py)
+</a>
+

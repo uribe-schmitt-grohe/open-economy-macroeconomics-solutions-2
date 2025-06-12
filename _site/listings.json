@@ -4,5 +4,11 @@
     "items": [
       "/chapters/ch01/1_1.html"
     ]
+  },
+  {
+    "listing": "/chapters/ch02/index.html",
+    "items": [
+      "/chapters/ch02/2_1.html"
+    ]
   }
 ]

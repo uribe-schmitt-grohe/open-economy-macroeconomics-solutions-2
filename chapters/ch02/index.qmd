@@ -1,0 +1,21 @@
+---
+title: "Chapter 2 – An Open Endowment Economy"
+---
+
+
+- [Exercise 2.1(Consumption Innovations)](2_1.qmd)
+- [Exercise 2.2(An Economy with Endogenous Labor Supply)](2_2.qmd)
+- [Exercise 2.3(An Open Economy with Habit Formation)](2_3.qmd)
+- [Exercise 2.4(An Open Economy With Habit Formation)](2_4.qmd)
+- [Exercise 2.5(Anticipated Endowment Shocks)](2_5.qmd)
+- [Exercise 2.6(Anticipated Interest Rate Decline)](2_6.qmd)
+- [Exercise 2.7(Predicted Second Moments)](2_7.qmd)
+- [Exercise 2.8(Empirical Plausibility of an AR(2) Output Specification)](2_8.qmd)
+- [Exercise 2.9(Expected Output Changes and Permanent Income)](2_9.qmd)
+- [Exercise 2.10(Impatience and the Current Account)](2_10.qmd)
+- [Exercise 2.11(Impatience and the Current Account)](2_11.qmd)
+- [Exercise 2.12(Global Approximation of Equilibrium Dynamics)](2_12.qmd)
+- [Exercise 2.13(Determinants of the World Interest Rate)](2_13.qmd)
+- [Exercise 2.14(Leontief Preferences Over Discounted Period Utilities)](2_14.qmd)
+- [Exercise 2.15(Leontief Preferences for Consumption and Leisure)](2_15.qmd)
+- [Exercise 2.16(Permanent Income Versus Beveridge-Nelson Decomposition)](2_16.qmd)

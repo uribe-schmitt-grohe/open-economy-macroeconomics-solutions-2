@@ -10,7 +10,9 @@ This site offers solutions for **Open‑Economy Macroeconomics** exercises inclu
 
 ## 📚 Chapters
 
-- [Chapter 1 – Basics of Open Economy](chapters/ch01/index.html)
+- [Chapter 1 – Business-Cycle Facts Around the world](chapters/ch01/index.html)
+- [Chapter 2 – An Open Endowment Economy](chapters/ch02/index.html)
+- [Chapter 3 – An Open Economy with Capital](chapters/ch03/index.html)
 
 ---
 
