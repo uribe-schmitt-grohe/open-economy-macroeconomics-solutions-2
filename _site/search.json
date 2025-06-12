@@ -95,7 +95,7 @@
     "href": "chapters/ch01/1_1.html#answer",
     "title": "Question 1.1",
     "section": "Answer",
-    "text": "Answer\nWe can typeset mathematical expressions inline like this: \\(c_t = a + b y_t\\),\nor as a displayed equation:\n\\[\nE_t c_{t+1} = c_t\n\\]\nWe can also embed images for illustration:\n\n\n\n\nIllustration\n\n\n\n\nIf the code is short, we can embed it directly on the page:\n\ncode with output\n\n\n\nCode\ndef mean(values):\n    return sum(values) / len(values)\n\nprint(mean([10, 20, 30]))\n\n\n20.0\n\n\n\ncode without output\n\nx = [10, 20, 30];\nmean_x = mean(x);\ndisp(mean_x);\nIf the code is longer or part of a downloadable file, we can offer a download button:\n 📥 Download Python Code (mean.py)"
+    "text": "Answer\nWe can typeset mathematical expressions inline like this: \\(c_t = a + b y_t\\),\nor as a displayed equation:\n\\[\nE_t c_{t+1} = c_t\n\\]\nWe can also embed images for illustration:\n\n\n\n\nIllustration\n\n\n\n\nIf the code is short, we can embed it directly on the page:\nx = [10, 20, 30];\nmean_x = mean(x);\ndisp(mean_x);\nIf the code is longer or part of a downloadable file, we can offer a download button:\n 📥 Download Python Code (mean.py)"
   },
   {
     "objectID": "chapters/ch02/2_2.html",

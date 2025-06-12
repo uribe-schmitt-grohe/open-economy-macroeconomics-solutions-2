@@ -1,6 +1,5 @@
 ---
 title: "Question 1.1"
-jupyter: python3
 ---
 <a class="return-button" href="index.qmd">⬅ Return</a>
 
@@ -28,15 +27,6 @@ We can also embed images for illustration:
 
 If the code is short, we can embed it directly on the page:
 
-- code with output
-```{python}
-def mean(values):
-    return sum(values) / len(values)
-
-print(mean([10, 20, 30]))
-```
-
-- code without output
 ```{.matlab}
 x = [10, 20, 30];
 mean_x = mean(x);
