@@ -1,10 +1,11 @@
 ---
 title: "Welcome to Open‑Economy Macroeconomics Solutions"
+comments: False
 ---
 
 # Welcome!
 
-This site offers solutions for **Open‑Economy Macroeconomics** exercises including analytical derivations and code examples (Python and MATLAB).
+This site offers solutions for **Open‑Economy Macroeconomics** exercises including analytical derivations and his site offers sketches of solutions to many (but not all) of the exercises in *Open Economy Macroeconomics* by Martín Uribe and Stephanie Schmitt-Grohé ([Princeton University Press](https://press.princeton.edu/books/hardcover/9780691158778/open-economy-macroeconomics)).
 
 ---
 
@@ -18,10 +19,4 @@ This site offers solutions for **Open‑Economy Macroeconomics** exercises inclu
 
 ## 💬 Discussions
 
-Each page features an independent comment section. Feel free to share questions or feedback below each exercise, or browse [Discussions] for full threads.
-
----
-
-## 🤝 Contribute
-
-Contributions welcome! Please open a pull request on GitHub.
+Each solution page features an independent comment section. Feel free to share questions or feedback below each exercise, or browse [Discussions] for full threads.

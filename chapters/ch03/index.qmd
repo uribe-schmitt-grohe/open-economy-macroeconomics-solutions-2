@@ -1,5 +1,6 @@
 ---
 title: "Chapter 3 – An Open Economy with Capital"
+comments: False
 ---
 
 
