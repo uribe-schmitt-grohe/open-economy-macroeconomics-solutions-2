@@ -18,5 +18,4 @@ comments: False
 - [Exercise 2.12(Global Approximation of Equilibrium Dynamics)](2_12.qmd)
 - [Exercise 2.13(Determinants of the World Interest Rate)](2_13.qmd)
 - [Exercise 2.14(Leontief Preferences Over Discounted Period Utilities)](2_14.qmd)
-- [Exercise 2.15(Leontief Preferences for Consumption and Leisure)](2_15.qmd)
-- [Exercise 2.16(Permanent Income Versus Beveridge-Nelson Decomposition)](2_16.qmd)
+- [Exercise 2.17(Leontief Preferences for Consumption and Leisure)](2_17.qmd)

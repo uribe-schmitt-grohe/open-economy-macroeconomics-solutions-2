@@ -1,5 +1,5 @@
 ---
-title: "Exercise 2.15"
+title: "Exercise 2.17"
 subtitle: "Leontief Preferences for Consumption and Leisure"
 ---
 <a class="return-button" href="index.qmd">⬅ Return</a>

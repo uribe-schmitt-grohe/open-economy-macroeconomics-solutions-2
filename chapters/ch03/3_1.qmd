@@ -1,6 +1,6 @@
 ---
 title: "Exercise 3.1"
-subtitle: "Euler Equation for Capital"
+subtitle: "Full Depreciation"
 ---
 <a class="return-button" href="index.qmd">⬅ Return</a>
 

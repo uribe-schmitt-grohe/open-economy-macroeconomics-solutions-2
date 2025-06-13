@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Open‑Economy Macroeconomics Solutions"
+  title: "Open Economy Macroeconomics"
   navbar:
     right:
       - text: "Home"
