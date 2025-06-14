@@ -15,3 +15,23 @@
   .return-button:hover {
     background-color: #dbe9ff;
   }
+
+/* Navbar background color */
+.navbar {
+  background-color: #e1542c !important;
+}
+
+/* Navbar text color */
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .dropdown-toggle,
+.navbar .dropdown-item {
+  color: black !important;
+}
+
+/* When hovering, keep text black */
+.navbar .nav-link:hover,
+.navbar .dropdown-item:hover {
+  color: black !important;
+  background-color: #d34728 !important; /* optional: darker hover */
+}

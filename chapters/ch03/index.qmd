@@ -4,8 +4,8 @@ comments: False
 ---
 
 
-- [Exercise 3.1(Full Depreciation)](3_1.qmd)
-- [Exercise 3.2(Anticipated Productivity Shocks)](3_2.qmd)
-- [Exercise 3.3(Adjustment Costs and Temporary Technology Shocks)](3_3.qmd)
-- [Exercise 3.4(Balanced Growth)](3_4.qmd)
-- [Exercise 3.5(Unbalanced Growth)](3_5.qmd)
+- [Exercise 3.1 (Full Depreciation)](3_1.qmd)
+- [Exercise 3.2 (Anticipated Productivity Shocks)](3_2.qmd)
+- [Exercise 3.3 (Adjustment Costs and Temporary Technology Shocks)](3_3.qmd)
+- [Exercise 3.4 (Balanced Growth)](3_4.qmd)
+- [Exercise 3.5 (Unbalanced Growth)](3_5.qmd)

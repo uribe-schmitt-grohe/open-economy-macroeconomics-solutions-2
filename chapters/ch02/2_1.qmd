@@ -13,17 +13,17 @@ In the economy with AR(1) endowment shocks studied in section 2.2, we found that
 Using equation (2.18), we have:
 
 $$
-c_{t+1} = \frac{r}{1 + r - \rho} y_{t+1} - r d_t \quad \text{(1)}
+c_{t+1} = \frac{r}{1 + r - \rho} y_{t+1} - r d_t \tag{1}
 $$
 
 $$
-c_t = \frac{r}{1 + r - \rho} y_t - r d_{t-1} \quad \text{(2)}
+c_t = \frac{r}{1 + r - \rho} y_t - r d_{t-1} \tag{2}
 $$
 
 Subtracting (2) from (1):
 
 $$
-c_{t+1} - c_t = \frac{r}{1 + r - \rho} (y_{t+1} - y_t) - r (d_t - d_{t-1}) \quad \text{(3)}
+c_{t+1} - c_t = \frac{r}{1 + r - \rho} (y_{t+1} - y_t) - r (d_t - d_{t-1}) \tag{3}
 $$
 
 Now plug in the AR(1) process for $y_t$:
@@ -41,7 +41,7 @@ $$
 Then:
 
 $$
-c_{t+1} - c_t = \frac{r}{1 + r - \rho} ((\rho - 1) y_t + \epsilon_{t+1}) - r(d_t - d_{t-1}) \quad \text{(4)}
+c_{t+1} - c_t = \frac{r}{1 + r - \rho} ((\rho - 1) y_t + \epsilon_{t+1}) - r(d_t - d_{t-1}) \tag{4}
 $$
 
 Now use the law of motion for external debt (equation 2.21):
@@ -53,13 +53,13 @@ $$
 Substitute into the equation:
 
 $$
-c_{t+1} - c_t = \frac{r}{1 + r - \rho} ((\rho - 1) y_t + \epsilon_{t+1}) - r \cdot \frac{1 - \rho}{1 + r - \rho} y_t \quad \text{(5)}
+c_{t+1} - c_t = \frac{r}{1 + r - \rho} ((\rho - 1) y_t + \epsilon_{t+1}) - r \cdot \frac{1 - \rho}{1 + r - \rho} y_t \tag{5}
 $$
 
 The terms involving \( y_t \) cancel:
 
 $$
-c_{t+1} - c_t = \frac{r}{1 + r - \rho} \epsilon_{t+1} \quad \text{(6)}
+c_{t+1} - c_t = \frac{r}{1 + r - \rho} \epsilon_{t+1} \tag{6}
 $$
 
 ::: {.callout-important title="Final Answer Summary"}
@@ -69,4 +69,3 @@ $$
 \mu_{t+1} = c_{t+1} - c_t = \frac{r}{1 + r - \rho} \epsilon_{t+1}
 $$
 :::
-

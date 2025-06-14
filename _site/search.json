@@ -2,21 +2,21 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Welcome to Open‑Economy Macroeconomics Solutions",
+    "title": "Open Economy Macroeconomics Solutions",
     "section": "",
-    "text": "This site offers solutions for Open‑Economy Macroeconomics exercises including analytical derivations and his site offers sketches of solutions to many (but not all) of the exercises in Open Economy Macroeconomics by Martín Uribe and Stephanie Schmitt-Grohé (Princeton University Press).\n\n\n\n\nChapter 1 – Business-Cycle Facts Around the world\nChapter 2 – An Open Endowment Economy\nChapter 3 – An Open Economy with Capital\n\n\n\n\n\nEach solution page features an independent comment section. Feel free to share questions or feedback below each exercise, or browse [Discussions] for full threads."
+    "text": "This repository contains sketches of solutions to many (but not all) of the exercises in Open Economy Macroeconomics by Martín Uribe and Stephanie Schmitt-Grohé (Princeton University Press link). Please help us to improve the repository. If you have solutions or corrections or alternative approaches to solutions, please post them in the corresponding discussion thread in the Discussions tab.\n\n\n\nOpen Economy Macroeconomics cover\n\n\n\n\n\n\nChapter 2 – An Open Endowment Economy\nChapter 3 – An Open Economy with Capital\n\n\n\n\n\nEach solution page features an independent comment section. Feel free to share questions or feedback below each exercise, or browse [Discussions] for full threads."
   },
   {
     "objectID": "index.html#chapters",
     "href": "index.html#chapters",
-    "title": "Welcome to Open‑Economy Macroeconomics Solutions",
+    "title": "Open Economy Macroeconomics Solutions",
     "section": "",
-    "text": "Chapter 1 – Business-Cycle Facts Around the world\nChapter 2 – An Open Endowment Economy\nChapter 3 – An Open Economy with Capital"
+    "text": "Chapter 2 – An Open Endowment Economy\nChapter 3 – An Open Economy with Capital"
   },
   {
     "objectID": "index.html#discussions",
     "href": "index.html#discussions",
-    "title": "Welcome to Open‑Economy Macroeconomics Solutions",
+    "title": "Open Economy Macroeconomics Solutions",
     "section": "",
     "text": "Each solution page features an independent comment section. Feel free to share questions or feedback below each exercise, or browse [Discussions] for full threads."
   },
@@ -60,7 +60,7 @@
     "href": "chapters/ch02/index.html",
     "title": "Chapter 2 – An Open Endowment Economy",
     "section": "",
-    "text": "Exercise 2.1(Consumption Innovations)\nExercise 2.2(An Economy with Endogenous Labor Supply)\nExercise 2.3(An Open Economy with Habit Formation)\nExercise 2.4(An Open Economy With Habit Formation)\nExercise 2.5(Anticipated Endowment Shocks)\nExercise 2.6(Anticipated Interest Rate Decline)\nExercise 2.7(Predicted Second Moments)\nExercise 2.8(Empirical Plausibility of an AR(2) Output Specification)\nExercise 2.9(Expected Output Changes and Permanent Income)\nExercise 2.10(Impatience and the Current Account)\nExercise 2.11(Impatience and the Current Account)\nExercise 2.12(Global Approximation of Equilibrium Dynamics)\nExercise 2.13(Determinants of the World Interest Rate)\nExercise 2.14(Leontief Preferences Over Discounted Period Utilities)\nExercise 2.17(Leontief Preferences for Consumption and Leisure)"
+    "text": "Exercise 2.1 (Consumption Innovations)\nExercise 2.2 (An Economy with Endogenous Labor Supply)\nExercise 2.3 (An Open Economy with Habit Formation)\nExercise 2.4 (An Open Economy With Habit Formation)\nExercise 2.5 (Anticipated Endowment Shocks)\nExercise 2.6 (Anticipated Interest Rate Decline)\nExercise 2.7 (Predicted Second Moments)\nExercise 2.8 (Empirical Plausibility of an AR(2) Output Specification)\nExercise 2.9 (Expected Output Changes and Permanent Income)\nExercise 2.10 (Impatience and the Current Account)\nExercise 2.11 (Impatience and the Current Account)\nExercise 2.12 (Global Approximation of Equilibrium Dynamics)\nExercise 2.13 (Determinants of the World Interest Rate)\nExercise 2.14 (Leontief Preferences Over Discounted Period Utilities)\nExercise 2.17 (Leontief Preferences for Consumption and Leisure)"
   },
   {
     "objectID": "chapters/ch02/2_1.html",
@@ -81,7 +81,7 @@
     "href": "chapters/ch02/2_1.html#answer",
     "title": "Exercise 2.1",
     "section": "Answer",
-    "text": "Answer\nUsing equation (2.18), we have:\n\\[\nc_{t+1} = \\frac{r}{1 + r - \\rho} y_{t+1} - r d_t \\quad \\text{(1)}\n\\]\n\\[\nc_t = \\frac{r}{1 + r - \\rho} y_t - r d_{t-1} \\quad \\text{(2)}\n\\]\nSubtracting (2) from (1):\n\\[\nc_{t+1} - c_t = \\frac{r}{1 + r - \\rho} (y_{t+1} - y_t) - r (d_t - d_{t-1}) \\quad \\text{(3)}\n\\]\nNow plug in the AR(1) process for \\(y_t\\):\n\\[\ny_{t+1} = \\rho y_t + \\epsilon_{t+1}\n\\]\nSo:\n\\[\ny_{t+1} - y_t = (\\rho - 1) y_t + \\epsilon_{t+1}\n\\]\nThen:\n\\[\nc_{t+1} - c_t = \\frac{r}{1 + r - \\rho} ((\\rho - 1) y_t + \\epsilon_{t+1}) - r(d_t - d_{t-1}) \\quad \\text{(4)}\n\\]\nNow use the law of motion for external debt (equation 2.21):\n\\[\nd_t - d_{t-1} = \\frac{1 - \\rho}{1 + r - \\rho} y_t\n\\]\nSubstitute into the equation:\n\\[\nc_{t+1} - c_t = \\frac{r}{1 + r - \\rho} ((\\rho - 1) y_t + \\epsilon_{t+1}) - r \\cdot \\frac{1 - \\rho}{1 + r - \\rho} y_t \\quad \\text{(5)}\n\\]\nThe terms involving ( y_t ) cancel:\n\\[\nc_{t+1} - c_t = \\frac{r}{1 + r - \\rho} \\epsilon_{t+1} \\quad \\text{(6)}\n\\]\n\n\n\n\n\n\nFinal Answer Summary\n\n\n\nThe innovation term is:\n\\[\n\\mu_{t+1} = c_{t+1} - c_t = \\frac{r}{1 + r - \\rho} \\epsilon_{t+1}\n\\]"
+    "text": "Answer\nUsing equation (2.18), we have:\n\\[\nc_{t+1} = \\frac{r}{1 + r - \\rho} y_{t+1} - r d_t \\tag{1}\n\\]\n\\[\nc_t = \\frac{r}{1 + r - \\rho} y_t - r d_{t-1} \\quad \\text{(2)}\n\\]\nSubtracting (2) from (1):\n\\[\nc_{t+1} - c_t = \\frac{r}{1 + r - \\rho} (y_{t+1} - y_t) - r (d_t - d_{t-1}) \\quad \\text{(3)}\n\\]\nNow plug in the AR(1) process for \\(y_t\\):\n\\[\ny_{t+1} = \\rho y_t + \\epsilon_{t+1}\n\\]\nSo:\n\\[\ny_{t+1} - y_t = (\\rho - 1) y_t + \\epsilon_{t+1}\n\\]\nThen:\n\\[\nc_{t+1} - c_t = \\frac{r}{1 + r - \\rho} ((\\rho - 1) y_t + \\epsilon_{t+1}) - r(d_t - d_{t-1}) \\quad \\text{(4)}\n\\]\nNow use the law of motion for external debt (equation 2.21):\n\\[\nd_t - d_{t-1} = \\frac{1 - \\rho}{1 + r - \\rho} y_t\n\\]\nSubstitute into the equation:\n\\[\nc_{t+1} - c_t = \\frac{r}{1 + r - \\rho} ((\\rho - 1) y_t + \\epsilon_{t+1}) - r \\cdot \\frac{1 - \\rho}{1 + r - \\rho} y_t \\quad \\text{(5)}\n\\]\nThe terms involving ( y_t ) cancel:\n\\[\nc_{t+1} - c_t = \\frac{r}{1 + r - \\rho} \\epsilon_{t+1} \\quad \\text{(6)}\n\\]\n\n\n\n\n\n\nFinal Answer Summary\n\n\n\nThe innovation term is:\n\\[\n\\mu_{t+1} = c_{t+1} - c_t = \\frac{r}{1 + r - \\rho} \\epsilon_{t+1}\n\\]"
   },
   {
     "objectID": "chapters/ch02/index.html#exercises",
@@ -291,7 +291,7 @@
     "href": "chapters/ch03/index.html",
     "title": "Chapter 3 – An Open Economy with Capital",
     "section": "",
-    "text": "Exercise 3.1(Full Depreciation)\nExercise 3.2(Anticipated Productivity Shocks)\nExercise 3.3(Adjustment Costs and Temporary Technology Shocks)\nExercise 3.4(Balanced Growth)\nExercise 3.5(Unbalanced Growth)"
+    "text": "Exercise 3.1 (Full Depreciation)\nExercise 3.2 (Anticipated Productivity Shocks)\nExercise 3.3 (Adjustment Costs and Temporary Technology Shocks)\nExercise 3.4 (Balanced Growth)\nExercise 3.5 (Unbalanced Growth)"
   },
   {
     "objectID": "chapters/ch03/2_1.html",

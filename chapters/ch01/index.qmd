@@ -1,6 +1,0 @@
----
-title: "Chapter 1 – Business-Cycle Facts Around the world"
-comments: False
----
-
-- [Exercise 1.1(Business-Sysle Regularities in South Korea and the United States)](1_1.qmd)
