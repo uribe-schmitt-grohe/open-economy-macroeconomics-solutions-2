@@ -90,8 +90,6 @@ k' > \bar{k} & t > 0
 \end{cases}
 $$
 
-Investment:
-
 $$
 i_t =
 \begin{cases}
@@ -100,8 +98,6 @@ k' - \bar{k} > 0 & t = 0 \\
 0 & t > 0
 \end{cases}
 $$
-
-Output:
 
 $$
 y_t =
@@ -112,76 +108,103 @@ A'F(k') > \bar{A}F(\bar{k}) & t > 0
 \end{cases}
 $$
 
-Consumption:
-
-Given that $\beta(1 + r) = 1$, we know that $c_t = c_0$ for all $t \geq 0$. We solve for $c_0$ from the intertemporal budget constraint:
+From the intertemporal resource constraint and the fact that $c_t = c_0$ for all $t$ we have that
 
 $$
-c_0 + rd_{-1} = \frac{r}{1 + r} \sum_{t=0}^{\infty} \frac{A_t F(k_t) - i_t}{(1 + r)^t}
+\begin{aligned}
+rd_{-1} + c_0 &= \frac{r}{1 + r} \sum_{t=0}^{\infty} \left( \frac{1}{1 + r} \right)^t \left[ A_t F(k_t) - (k_{t+1} - k_t) \right] \\
+&= \frac{r}{1 + r} \left[ \bar{A} F(\bar{k}) - (k' - \bar{k}) + r^{-1} A' F'(k') \right] \\
+&= \bar{A} F(\bar{k}) + \frac{r}{1 + r} \left[ -r^{-1} \bar{A} F(\bar{k}) + r^{-1} A' F'(k') - (k' - \bar{k}) \right] \\
+&= rd_{-1} + c_{-1} + \frac{1}{1 + r} \left[ A' F(\bar{k}) - \bar{A} F(\bar{k}) + A' F(k') - A' F(\bar{k}) - r(k' - \bar{k}) \right] \\
+&= rd_{-1} + c_{-1} + \frac{1}{1 + r} \left[ A' F(k') - \bar{A} F(\bar{k}) + A' F'(k') - A' F(\bar{k}) - A' F'(k') (k' - \bar{k}) \right] \\
+&\geq rd_{-1} + c_{-1},
+\end{aligned}
 $$
 
-Plug in the expressions for $A_t F(k_t)$ and $i_t$:
+where the last equality uses the fact that $r = A' F'(k')$, and the inequality uses the fact that by the mean value theorem $A' F(k') - A' F(\bar{k}) - A' F'(k')(k' - \bar{k}) > 0$. We then have that
 
 $$
-= \frac{1}{1 + r} \left[ r(\bar{A}F(\bar{k}) - i_0) + A'F(k') \right]
+c_0 > c_{-1},
 $$
 
-$$
-= \bar{A}F(\bar{k}) + \frac{1}{1 + r} \left[ A'F(k') - \bar{A}F(\bar{k}) - r(k' - \bar{k}) \right]
-$$
+that is, consumption jumps up in period 0 and stays at that higher level thereafter.
 
-So:
+The trade balance deteriorates in period 0. To see this, write
 
 $$
-tb_0 - tb_{-1} = y_0 - c_0 - i_0 - rd_{-1}
-= - (k' - \bar{k}) - \frac{1}{1 + r} \left[ A'F(k') - \bar{A}F(\bar{k}) - r(k' - \bar{k}) \right] < 0
+tb_0 - tb_{-1} = (y_0 - y_{-1}) - (c_0 - c_{-1}) - (i_0 - i_{-1})
 $$
 
-Debt:
+and note that $y_0 - y_{-1} = 0$, $c_0 - c_{-1} > 0$, and $i_0 - i_{-1} = i_0 > 0$. Let $tb_0 = tb'$. In period 1, the trade balance improves, because output increases, consumption doesn’t change, and investment drops to zero. We have already shown that output, consumption, and investment are all constant from period 1 on. This implies that the trade balance is also constant from period 1 on. Let $tb_t = tb''$ for $t \geq 1$. We have established that $tb'' > tb' > tb_{-1} = rd_{-1}$. Summarizing,
 
 $$
-d_0 = (1 + r)d_{-1} - tb_0
+tb_t =
+\begin{cases}
+rd_{-1} & t < 0 \\
+tb' < rd_{-1} & t = 0 \\
+tb'' = rd_0 > rd_{-1} & t > 0
+\end{cases}
+\quad \tag{*}
 $$
 
-and
+
+The last line will become clear shortly, when we characterize the equilibrium path of debt. It says that after deteriorating in period 0, the trade balance improves to a level higher than in the original steady state.
+
+
+The stock of debt increases in period 0. To see this, write
 
 $$
-d_t = \frac{A'F(k') - c_0}{r}, \quad \text{for all } t \geq 1
+\begin{aligned}
+d_0 &= (1 + r) d_{-1} - tb_0 \\
+&= (1 + r) d_{-1} - tb_{-1} - (tb_0 - tb_{-1}) \\
+&= d_{-1} - (tb_0 - tb_{-1}) \\
+&> d_{-1}
+\end{aligned}
 $$
 
-Current account:
+since $tb_0 - tb_{-1} < 0$. Because the trade balance is constant (and equal to $tb''$) from period 1 on, we have that the evolution of debt satisfies
 
 $$
-ca_0 = d_{-1} - d_0 = - (d_0 - d_{-1}) < 0
+d_t = (1 + r) d_{t-1} - tb''; \quad t \geq 1
 $$
 
-$$
-ca_1 = d_0 - d_1 > 0
-$$
+The only nonexplosive solution to this expression is
 
 $$
-ca_t = 0, \quad \text{for } t > 1
+d_t = d_0; \quad t \geq 1
 $$
 
-::: {.callout-important title="Final Answer Summary – Anticipated Permanent Productivity Shock"}
-- Capital: jumps at $t = 0$ from $\bar{k}$ to $k'$ where $k' = \kappa(A'/r)$
-- Investment: $i_0 = k' - \bar{k} > 0$, $i_t = 0$ for $t \neq 0$
-- Output: rises at $t = 1$ from $\bar{A}F(\bar{k})$ to $A'F(k')$
-- Consumption: constant at $c_t = c_0$
-- Trade Balance: sharp deterioration at $t = 0$
-- Debt: jumps up at $t = 0$, stabilizes after
-- Current Account: $ca_0 < 0$, $ca_1 > 0$, $ca_t = 0$ for $t > 1$
-:::
+which means that
+
+$$
+tb'' = r d_0 > r \bar{d}
+$$
+
+This explains the last line of (*). Summarizing,
+
+$$
+d_t =
+\begin{cases}
+\bar{d} & t < 0 \\
+d' > \bar{d} & t = 0 \\
+d'' > \bar{d} & t > 0
+\end{cases}
+$$
+
+The current account, being the change in the stock of debt, is negative in period 0 and 0 thereafter,
+
+$$
+ca_t =
+\begin{cases}
+0 & t < 0 \\
+-(d' - \bar{d}) < 0 & t = 0 \\
+0 & t > 0
+\end{cases}
+$$
 
 #### 2.
 
-The key difference is in the trade balance and the current account. Both deteriorate when the temporary shock is **anticipated** but **improve** when it is **unanticipated**. This is primarily because in the former case (anticipated), in period 0 **investment increases and output is unchanged**, whereas in the latter case (unanticipated), **investment is unchanged and output increases**.
-
-::: {.callout-important title="Final Answer Summary – Anticipated vs. Unanticipated Permanent Shock"}
-- Anticipated: investment rises at $t = 0$ before productivity gains
-- Unanticipated: output jumps immediately, no change in $i_0$
-- Result: TB and CA **deteriorate** in anticipated case, **improve** in unanticipated
-:::
+The key difference is that under a permanent but anticipated increase in productivity, output does not increase in period 0. This is because at $t = 0$ $A_t$ and $k_t$ are still at their old values $\bar{A}$ and $\bar{k}$. In the unanticipated case, by contrast, $A_0 = A' > \bar{A}$ and $k_0 = \bar{k}$, so output increases in period 0. Besides this, the two cases are similar in the sense that in period 0 consumption and investment increase, and the trade balance deteriorates.
 
 #### 3.
 
@@ -247,16 +270,24 @@ $$
 and note that $y_0 - y_{-1} = 0$, $c_0 - c_{-1} > 0$, and $i_0 > 0$. The deterioration in the trade balance is smaller than in the case in which the anticipated productivity shock is permanent, because now the increase in consumption is smaller. In period 1 the trade balance improves:
 
 $$
-tb_1 - tb_0 = (y_1 - y_0) - (c_1 - c_0) - (i_1 - i_0) = A'F(k') - \bar{A}F(\bar{k}) + 2(k' - \bar{k}) > 0
+\begin{aligned}
+tb_1 - tb_0 &= (y_1 - y_0) - (c_1 - c_0) - (i_1 - i_0) \\
+&= A'F(k') - \bar{A}F(\bar{k}) + 2(k' - \bar{k}) \\
+&> 0
+\end{aligned}
 $$
 
 In period 2 the trade balance deteriorates because output falls from $A'F(k')$ to $\bar{A}F(\bar{k})$, and investment goes from negative to zero:
 
 $$
-tb_2 - tb_1 = (y_2 - y_1) - (c_2 - c_1) - (i_2 - i_1) = \bar{A}F(\bar{k}) - A'F(k') - (k' - \bar{k}) < 0
+\begin{aligned}
+tb_2 - tb_1 &= (y_2 - y_1) - (c_2 - c_1) - (i_2 - i_1) \\
+&= \bar{A}F(\bar{k}) - A'F(k') - (k' - \bar{k}) \\
+&< 0
+\end{aligned}
 $$
 
-As we will see shortly, the trade balance in period 2 is lower than in the original steady state. From period 2 on, output is constant and equal to* $\bar{A}F(\bar{k})$, *consumption is constant and equal to* $c_0$, *and investment is zero, so the trade balance is constant and equal to* $\bar{A}F(\bar{k}) - c_0 < \bar{A}F(\bar{k}) - c_{-1} = tb_{-1} = r\bar{d}$. *Summarizing,*
+As we will see shortly, the trade balance in period 2 is lower than in the original steady state. From period 2 on, output is constant and equal to $\bar{A}F(\bar{k})$, consumption is constant and equal to $c_0$, and investment is zero, so the trade balance is constant and equal to $\bar{A}F(\bar{k}) - c_0 < \bar{A}F(\bar{k}) - c_{-1} = tb_{-1} = r\bar{d}$. Summarizing,
 
 $$
 tb_t =
@@ -268,7 +299,7 @@ rd_{-1} < tb'' & t > 1
 \end{cases}
 $$
 
-The stock of debt increases in period 0. To see this, write*
+The stock of debt increases in period 0. To see this, write
 
 $$
 \begin{aligned}
@@ -288,10 +319,10 @@ $$
 which means that the only nonexplosive solution is
 
 $$
-d_t = d_1 = tb_2 / r = (\bar{A}F(\bar{k}) - c_0)/r < (\bar{A}F(\bar{k}) - c_{-1})/r = tb_{-1}/r = d_{-1} = \bar{d}, \quad \text{for } t \geq 1.
+d_t = d_1 = tb_2 / r = (\bar{A}F(\bar{k}) - c_0)/r < (\bar{A}F(\bar{k}) - c_{-1})/r = tb_{-1}/r = d_{-1} = \bar{d},
 $$
 
-So we can write
+for $t \geq 1$. So we can write
 
 $$
 d_t =
@@ -314,33 +345,12 @@ ca_t =
 \end{cases}
 $$
 
-::: {.callout-important title="Final Answer Summary – Anticipated Transitory Shock"}
-- $k_t$ rises at $t=1$ then falls back at $t=2$
-- Investment: $i_0 > 0$, $i_1 < 0$, $i_t = 0$ otherwise
-- Consumption: rises at $t = 0$, constant thereafter
-- TB: worsens at $t=0$, improves at $t=1$, worsens again at $t=2$, then stabilizes
-- Debt: $d_0 > \bar{d}$, $d_1 < \bar{d}$, $d_t = d_1$ for $t \geq 2$
-- CA: $ca_0 < 0$, $ca_1 > 0$, $ca_t = 0$ for $t \ne 0, 1$
-:::
-
 ##### (b)
 
 The key diﬀerence is in the trade balance and the current account. Both deteriorate when the temporary shock is anticipated but improve when it is unanticipated. This is primarily because in the former case in period 0 investment increases and output is unchanged, whereas in the latter case investment is unchanged and output increases.
 
-::: {.callout-important title="Final Answer Summary – Anticipated vs. Unanticipated Temporary Shock"}
-- Anticipated: $i_0 > 0$, $y_0$ unchanged → TB/CA worsen
-- Unanticipated: $y_0$ rises, $i_0$ unchanged → TB/CA improve
-:::
 
 ##### (c)
 
 An anticipated endowment shock would also cause a deterioration in the trade balance and the current account in period 0, because output is unchanged but consumption increases (as households feel richer). However, the deterioration in the external accounts is smaller, because in the economy with capital investment is a second source of increase in domestic absorption.
 
-
-
-
-::: {.callout-important title="Final Answer Summary – Comparison to Endowment Economy (Exercise 2.5)"}
-- Both: anticipation leads to higher $c_0$, TB/CA deterioration
-- Capital economy: absorption includes both $c$ and $i$
-- Result: TB/CA deteriorate **more** than in endowment economy
-:::

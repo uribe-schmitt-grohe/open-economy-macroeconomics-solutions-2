@@ -208,11 +208,11 @@ window.Quarto = {
 c_{t+1} = \frac{r}{1 + r - \rho} y_{t+1} - r d_t \tag{1}
 \]</span></p>
 <p><span class="math display">\[
-c_t = \frac{r}{1 + r - \rho} y_t - r d_{t-1} \quad \text{(2)}
+c_t = \frac{r}{1 + r - \rho} y_t - r d_{t-1} \tag{2}
 \]</span></p>
 <p>Subtracting (2) from (1):</p>
 <p><span class="math display">\[
-c_{t+1} - c_t = \frac{r}{1 + r - \rho} (y_{t+1} - y_t) - r (d_t - d_{t-1}) \quad \text{(3)}
+c_{t+1} - c_t = \frac{r}{1 + r - \rho} (y_{t+1} - y_t) - r (d_t - d_{t-1}) \tag{3}
 \]</span></p>
 <p>Now plug in the AR(1) process for <span class="math inline">\(y_t\)</span>:</p>
 <p><span class="math display">\[
@@ -224,7 +224,7 @@ y_{t+1} - y_t = (\rho - 1) y_t + \epsilon_{t+1}
 \]</span></p>
 <p>Then:</p>
 <p><span class="math display">\[
-c_{t+1} - c_t = \frac{r}{1 + r - \rho} ((\rho - 1) y_t + \epsilon_{t+1}) - r(d_t - d_{t-1}) \quad \text{(4)}
+c_{t+1} - c_t = \frac{r}{1 + r - \rho} ((\rho - 1) y_t + \epsilon_{t+1}) - r(d_t - d_{t-1}) \tag{4}
 \]</span></p>
 <p>Now use the law of motion for external debt (equation 2.21):</p>
 <p><span class="math display">\[
@@ -232,28 +232,16 @@ d_t - d_{t-1} = \frac{1 - \rho}{1 + r - \rho} y_t
 \]</span></p>
 <p>Substitute into the equation:</p>
 <p><span class="math display">\[
-c_{t+1} - c_t = \frac{r}{1 + r - \rho} ((\rho - 1) y_t + \epsilon_{t+1}) - r \cdot \frac{1 - \rho}{1 + r - \rho} y_t \quad \text{(5)}
+c_{t+1} - c_t = \frac{r}{1 + r - \rho} ((\rho - 1) y_t + \epsilon_{t+1}) - r \cdot \frac{1 - \rho}{1 + r - \rho} y_t \tag{5}
 \]</span></p>
-<p>The terms involving ( y_t ) cancel:</p>
+<p>The terms involving $ y_t $ cancel:</p>
 <p><span class="math display">\[
-c_{t+1} - c_t = \frac{r}{1 + r - \rho} \epsilon_{t+1} \quad \text{(6)}
+c_{t+1} - c_t = \frac{r}{1 + r - \rho} \epsilon_{t+1} \tag{6}
 \]</span></p>
-<div class="callout callout-style-default callout-important callout-titled" title="Final Answer Summary">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Final Answer Summary
-</div>
-</div>
-<div class="callout-body-container callout-body">
 <p>The innovation term is:</p>
 <p><span class="math display">\[
 \mu_{t+1} = c_{t+1} - c_t = \frac{r}{1 + r - \rho} \epsilon_{t+1}
 \]</span></p>
-</div>
-</div>
 
 
 <!-- -->
@@ -759,13 +747,13 @@ Final Answer Summary
 <span id="cb1-17"><a href="#cb1-17"></a>$$</span>
 <span id="cb1-18"><a href="#cb1-18"></a></span>
 <span id="cb1-19"><a href="#cb1-19"></a>$$</span>
-<span id="cb1-20"><a href="#cb1-20"></a>c_t = \frac{r}{1 + r - \rho} y_t - r d_{t-1} \quad \text{(2)}</span>
+<span id="cb1-20"><a href="#cb1-20"></a>c_t = \frac{r}{1 + r - \rho} y_t - r d_{t-1} \tag{2}</span>
 <span id="cb1-21"><a href="#cb1-21"></a>$$</span>
 <span id="cb1-22"><a href="#cb1-22"></a></span>
 <span id="cb1-23"><a href="#cb1-23"></a>Subtracting (2) from (1):</span>
 <span id="cb1-24"><a href="#cb1-24"></a></span>
 <span id="cb1-25"><a href="#cb1-25"></a>$$</span>
-<span id="cb1-26"><a href="#cb1-26"></a>c_{t+1} - c_t = \frac{r}{1 + r - \rho} (y_{t+1} - y_t) - r (d_t - d_{t-1}) \quad \text{(3)}</span>
+<span id="cb1-26"><a href="#cb1-26"></a>c_{t+1} - c_t = \frac{r}{1 + r - \rho} (y_{t+1} - y_t) - r (d_t - d_{t-1}) \tag{3}</span>
 <span id="cb1-27"><a href="#cb1-27"></a>$$</span>
 <span id="cb1-28"><a href="#cb1-28"></a></span>
 <span id="cb1-29"><a href="#cb1-29"></a>Now plug in the AR(1) process for $y_t$:</span>
@@ -783,7 +771,7 @@ Final Answer Summary
 <span id="cb1-41"><a href="#cb1-41"></a>Then:</span>
 <span id="cb1-42"><a href="#cb1-42"></a></span>
 <span id="cb1-43"><a href="#cb1-43"></a>$$</span>
-<span id="cb1-44"><a href="#cb1-44"></a>c_{t+1} - c_t = \frac{r}{1 + r - \rho} ((\rho - 1) y_t + \epsilon_{t+1}) - r(d_t - d_{t-1}) \quad \text{(4)}</span>
+<span id="cb1-44"><a href="#cb1-44"></a>c_{t+1} - c_t = \frac{r}{1 + r - \rho} ((\rho - 1) y_t + \epsilon_{t+1}) - r(d_t - d_{t-1}) \tag{4}</span>
 <span id="cb1-45"><a href="#cb1-45"></a>$$</span>
 <span id="cb1-46"><a href="#cb1-46"></a></span>
 <span id="cb1-47"><a href="#cb1-47"></a>Now use the law of motion for external debt (equation 2.21):</span>
@@ -795,22 +783,20 @@ Final Answer Summary
 <span id="cb1-53"><a href="#cb1-53"></a>Substitute into the equation:</span>
 <span id="cb1-54"><a href="#cb1-54"></a></span>
 <span id="cb1-55"><a href="#cb1-55"></a>$$</span>
-<span id="cb1-56"><a href="#cb1-56"></a>c_{t+1} - c_t = \frac{r}{1 + r - \rho} ((\rho - 1) y_t + \epsilon_{t+1}) - r \cdot \frac{1 - \rho}{1 + r - \rho} y_t \quad \text{(5)}</span>
+<span id="cb1-56"><a href="#cb1-56"></a>c_{t+1} - c_t = \frac{r}{1 + r - \rho} ((\rho - 1) y_t + \epsilon_{t+1}) - r \cdot \frac{1 - \rho}{1 + r - \rho} y_t \tag{5}</span>
 <span id="cb1-57"><a href="#cb1-57"></a>$$</span>
 <span id="cb1-58"><a href="#cb1-58"></a></span>
-<span id="cb1-59"><a href="#cb1-59"></a>The terms involving <span class="sc">\(</span> y_t <span class="sc">\)</span> cancel:</span>
+<span id="cb1-59"><a href="#cb1-59"></a>The terms involving $ y_t $ cancel:</span>
 <span id="cb1-60"><a href="#cb1-60"></a></span>
 <span id="cb1-61"><a href="#cb1-61"></a>$$</span>
-<span id="cb1-62"><a href="#cb1-62"></a>c_{t+1} - c_t = \frac{r}{1 + r - \rho} \epsilon_{t+1} \quad \text{(6)}</span>
+<span id="cb1-62"><a href="#cb1-62"></a>c_{t+1} - c_t = \frac{r}{1 + r - \rho} \epsilon_{t+1} \tag{6}</span>
 <span id="cb1-63"><a href="#cb1-63"></a>$$</span>
 <span id="cb1-64"><a href="#cb1-64"></a></span>
-<span id="cb1-65"><a href="#cb1-65"></a>::: {.callout-important title="Final Answer Summary"}</span>
-<span id="cb1-66"><a href="#cb1-66"></a>The innovation term is:</span>
-<span id="cb1-67"><a href="#cb1-67"></a></span>
-<span id="cb1-68"><a href="#cb1-68"></a>$$</span>
-<span id="cb1-69"><a href="#cb1-69"></a>\mu_{t+1} = c_{t+1} - c_t = \frac{r}{1 + r - \rho} \epsilon_{t+1}</span>
-<span id="cb1-70"><a href="#cb1-70"></a>$$</span>
-<span id="cb1-71"><a href="#cb1-71"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-65"><a href="#cb1-65"></a>The innovation term is:</span>
+<span id="cb1-66"><a href="#cb1-66"></a></span>
+<span id="cb1-67"><a href="#cb1-67"></a>$$</span>
+<span id="cb1-68"><a href="#cb1-68"></a>\mu_{t+1} = c_{t+1} - c_t = \frac{r}{1 + r - \rho} \epsilon_{t+1}</span>
+<span id="cb1-69"><a href="#cb1-69"></a>$$</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

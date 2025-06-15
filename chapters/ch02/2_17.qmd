@@ -57,8 +57,6 @@ $$
 
 subject to
 
-::: {.callout-important title="Final Answer Summary – Household Optimization Problem"}
-
 $$
 x_t = \min\{c_t, 1 - h_t\},
 $$
@@ -73,7 +71,6 @@ $$
 
 and the no-Ponzi-game constraint.
 
-:::
 
 #### 2.
 
@@ -93,12 +90,6 @@ $$
 c_{t+1} = c_t \quad \text{for all } t \geq 0.
 $$
 
-::: {.callout-important title="Final Answer Summary – Optimality Conditions"}
-- Optimal to set: $c_t = 1 - h_t$
-- Reduced budget constraint: $d_t = (1 + r) d_{t-1} + 2c_t - 1$
-- Euler condition: $c_{t+1} = c_t$ (when $\beta(1 + r) = 1$)
-:::
-
 #### 3.
 
 Because consumption is constant over time, so is debt ($d_t = d_{-1} = 0$ for $t \geq 0$). Then, the sequential budget constraint implies that
@@ -112,12 +103,6 @@ And the trade balance is
 $$
 tb_t = y - c = h_t - c_t = 0.
 $$
-
-::: {.callout-important title="Final Answer Summary – Equilibrium with $\beta(1 + r) = 1$"}
-- $c_t = h_t = \frac{1}{2}$ for all $t$
-- Trade balance: $tb_t = h_t - c_t = 0$
-- Debt: $d_t = 0$
-:::
 
 #### 4.
 
@@ -159,12 +144,3 @@ $$
 
 From period 0 onward, consumption falls monotonically at the constant gross rate $\beta(1 + r)$, which happens to be 0.917. Consumption converges monotonically to zero. Since the trade balance is given by $1 - 2c_t$, we have that the trade balance improves monotonically and converges to 1. 
 
-::: {.callout-important title="Final Answer Summary – Equilibrium with $\beta(1 + r) < 1$"}
-- Initial consumption:
-  $$
-  c_0 = \frac{1}{2} \cdot \frac{1 + r}{r}(1 - \beta) = 0.917
-  $$
-- Initial trade balance: $tb_0 = 1 - 2c_0 = -0.833$
-- Consumption path: $c_{t+1} = \beta(1 + r) c_t$ (falls monotonically)
-- Trade balance: $tb_t = 1 - 2c_t$ (rises monotonically, converges to 1)
-:::

@@ -42,7 +42,6 @@ where $d_t$ denotes one-period debt acquired in period $t$ and maturing in $t+1$
 
 #### 1.
 
-::: {.callout-important title="Final Answer Summary – Household Problem"}
 
 $$
 \max \left\{ \min_{t \geq 0} \left\{ \beta^t c_t \right\} \right\}
@@ -51,26 +50,18 @@ $$
 subject to
 
 $$
-c_t + (1 + r) d_{t-1} = y + d_t \quad \text{(Budget constraint)}
+c_t + (1 + r) d_{t-1} = y + d_t
 $$
 
-$$
-\lim_{t \to \infty}(1 + r)^{-t} d_t \leq 0 \quad \text{(No-Ponzi-game condition)}
-$$
-
-$$
-d_{-1} > 0 \quad \text{(Initial debt)}
-$$
-
-:::
+and no Ponzi.
 
 #### 2.
 
-::: {.callout-important title="Final Answer Summary – Optimality Conditions"}
+$$
+\beta^t c_t = \beta^{t'} c_{t'}
+$$
 
-$$
-\beta^t c_t = \beta^{t'} c_{t'} \quad \text{for all } t, t' \geq 0.
-$$
+for all $t, t' \geq 0$.
 
 Intertemporal budget constraint:
 
@@ -78,7 +69,6 @@ $$
 (1 + r) d_{-1} = \sum_{t=0}^{\infty} \frac{y - c_t}{(1 + r)^t}
 $$
 
-:::
 
 #### 3.
 
@@ -104,127 +94,89 @@ $$
 \sum_{t=0}^{\infty} \frac{c_t}{(1 + r)^t} = \sum_{t=0}^{\infty} \frac{c_0}{[\beta(1 + r)]^t} = \sum_{t=0}^{\infty} \frac{c_0}{(1 + \gamma)^t} = \frac{1 + \gamma}{\gamma} c_0
 $$
 
-So the budget constraint becomes:
+With those intermediate results in hand we can write the eqm intertemporal budget constraint as
 
 $$
 (1 + r) d_{-1} = \frac{1 + r}{r} y - \frac{1 + \gamma}{\gamma} c_0
 $$
 
-Solve for $c_0$:
+Solve for $c_0$ to obtain:
 
 $$
 c_0 = \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right)(y - r d_{-1})
 $$
 
-Then for $t \geq 0$:
+This is the equilibrium value of $c_0$ in terms of $\beta$, $r$, $\gamma$, $y$ and the initial condition $d_{-1}$. And for $t \geq 0$
 
 $$
 c_t = \beta^{-t} c_0
 $$
 
-To find the path of $d_t$, use:
-
-- At $t = 0$, solve for $d_0$ from the budget constraint using known $c_0$, $y$, and $d_{-1}$;
-- At $t = 1$, use $d_0$ and $c_1$ to solve for $d_1$;
-- Continue recursively for full $\{d_t\}$ sequence.
-
-::: {.callout-important title="Final Answer Summary – Equilibrium Paths"}
-- Consumption: $c_t = \beta^{-t} c_0$
-- Budget constraint implies:
-  $$
-  c_0 = \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right)(y - r d_{-1})
-  $$
-- Debt path: compute recursively from $c_t$ and budget constraint
-:::
+With $c_t$ in hand we can find the path of $d_t$. Proceed as follows. For $t = 0$, use the sequential budget constraint and solve for $d_0$, which only requires knowledge of $c_0$, $y$, and $d_{-1}$. Once you know $d_0$, use the sequential budget constraint in $t = 1$ to find $d_1$. Proceed in this way to find the entire sequence of $d_t$. 
 
 #### 4.
 
-The equilibrium intertemporal budget constraint must hold at any $t \geq 0$, so:
+The equilibrium intertemporal budget constraint must hold, not just in $t = 0$ but for any period $t \geq 0$. So we have
 
 $$
-c_t = \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right)(y - r d_{t-1})
+c_t = \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) (y - r d_{t-1})
 $$
 
-From the budget constraint:
+Get the change in assets (or minus debt) from sequential budget constraint
 
 $$
 c_t + (1 + r) d_{t-1} = y + d_t
 $$
 
-Rewriting and plugging in $c_t$:
+Rearrange and then plug the solution for $c_t$ from above
 
 $$
--d_t + d_{t-1} = y - r d_{t-1} - c_t = y - r d_{t-1} - \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right)(y - r d_{t-1})
+\begin{aligned}
+-d_t + d_{t-1} &= y - r d_{t-1} - c_t \\
+&= y - r d_{t-1} - \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) (y - r d_{t-1}) \\
+&= y - r d_{t-1} - \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) (y - r d_{t-1}) \\
+&= \left[ 1 - \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) \right] (y - r d_{t-1}) > 0
+\end{aligned}
 $$
 
-$$
-= \left[ 1 - \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) \right](y - r d_{t-1}) > 0
-$$
+The term in square parenthesis is positive because $0 < \gamma < r$. For $t = 0$, $y - r d_{-1} > 0$ by assumption. So the current account in period 0 is positive which means that debt declines or equivalently assets go up. Therefore $y - r d_{-1} > 0$ for $t = 1$. But then by induction it is positive for all $t$.
 
-The bracketed term is positive because $0 < \gamma < r$. Since $y - r d_{-1} > 0$, the current account is initially positive, and debt declines over time.
+To finance a growing stream of consumption with a fixed endowment income, it must be that debt falls over time. In fact debt turns into assets and then grows without bounds but at a rate less that $r$.
 
-As $d_t$ falls and turns into assets, asymptotically the growth rate of $-d_t$ is:
+Asymptotically the growth rate of assets ($-d_t$) is
 
 $$
-\lim_{t \to \infty} \frac{(-d_t) - (-d_{t-1})}{-d_{t-1}} = r \left[ 1 - \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) \right]
+\lim_{t \to \infty} \frac{(-d_t) - (-d_{t-1})}{-d_{t-1}} = \lim_{t \to \infty} \left[ 1 - \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) \right] \left( \frac{y - r d_{t-1}}{-d_{t-1}} \right)
+= r \left[ 1 - \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) \right]
 $$
 
-Thus gross growth rate of $-d_t$:
+which uses $\lim_{t \to \infty} y / d_{t-1} = 0$ because $-d_{t-1}$ increases without bound.  
+The gross growth rate of $-d_t$ is equal to $1 + r \left[ 1 - \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) \right] = (1 + r) / (1 + \gamma) < 1 + r$.
 
-$$
-1 + r \left[ 1 - \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) \right] = \frac{1 + r}{1 + \gamma} < 1 + r
-$$
-
-Growth rate of consumption is:
-
-$$
-\beta^{-1} = \frac{1 + r}{1 + \gamma}
-$$
-
-which matches the growth rate of net assets $-d_t$.
-
-::: {.callout-important title="Final Answer Summary – Growth Rates"}
-- Consumption growth: $\frac{c_{t+1}}{c_t} = \beta^{-1} = \frac{1 + r}{1 + \gamma}$
-- Net asset growth: identical to consumption growth
-- Both grow at rate $< 1 + r$
-:::
+The growth rate of consumption is $\beta^{-1} = (1 + r)/(1 + \gamma)$, which is the same as the asymptotic growth rate of assets.
 
 #### 5.
 
-Step 1: Impact on consumption:
+Step 1: Change in consumption in period 0
 
 $$
 \Delta c_0 = \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) \Delta y < \Delta y
 $$
 
-because:
+because $\left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) < 1$.  
+This follows from $\beta = (1 + \gamma)/(1 + r) < 1$.  
+In words $c_0$ increases but by less than $y$.
 
-$$
-\left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) < 1
-$$
-
-(Since $\beta = \frac{1 + \gamma}{1 + r} < 1$)
-
-Step 2: Impact on trade balance:
+Step 2:
 
 $$
 \Delta tb_0 = \Delta y - \Delta c_0 = \left[ 1 - \left( \frac{\gamma}{1 + \gamma} \right) \left( \frac{1 + r}{r} \right) \right] \Delta y > 0
 $$
 
-Conclusion: a permanent increase in income leads to an increase in the trade balance.
-
-This contrasts with standard time-separable models where trade balance is unchanged. With Leontief preferences and relatively patient agents ($\beta > 1/(1 + r)$), consumption is increasing over time, so to fund this, households save more in $t = 0$.
-
-::: {.callout-important title="Final Answer Summary – Impact of Endowment Shock"}
-- $\Delta c_0 < \Delta y$
-- $\Delta tb_0 = \left[1 - \left( \frac{\gamma}{1 + \gamma} \right)\left( \frac{1 + r}{r} \right)\right] \Delta y > 0$
-- Households save more at $t = 0$ to support growing future $c_t$
-:::
+This means that a permanent increase in the level of income leads to an increase in the trade balance.  
+Under the preferences used in class, namely, time separable and no impatience, we obtained the result that the trade balance was unchanged.  
+What is the intuition? With Leontief preferences and agents more patient than the market ($\beta > 1/(1 + \gamma)$) households have an increasing path of consumption over time and to achieve this given that the increase in income is flat (or non-increasing over time), the only way to fund an increasing consumption path is to save more in period 0 and then to use only part of the additional interest income for additional consumption and using the remainder to save.
 
 #### 6.
 
-::: {.callout-important title="Final Answer Summary – No Equilibrium When $\gamma = 0$"}
-- If $\gamma = 0$, then $\beta(1 + r) = 1$
-- Utility becomes flat in all $t$, Leontief preferences fail to determine a unique consumption plan
-- No well-defined maximum ⇒ no equilibrium
-:::
+When $\gamma = 0$, no equilibrium with positive lifetime utility exists.

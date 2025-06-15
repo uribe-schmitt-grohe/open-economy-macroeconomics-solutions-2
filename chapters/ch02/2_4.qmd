@@ -62,26 +62,21 @@ $$
 It follows that
 
 $$
-\mathbb{E}_t \sum_{j=0}^{\infty} \beta^j c_{t+j} =
-\frac{\alpha}{1 - \alpha \beta} c_{t-1} + \left[ \frac{1}{1 - \beta} - \frac{\alpha}{1 - \alpha \beta} \right] x_t
-$$
-
-$$
-= \frac{\alpha}{1 - \alpha \beta} c_{t-1} + \frac{1}{(1 - \beta)(1 - \alpha \beta)} x_t
+\begin{aligned}
+\mathbb{E}_t \sum_{j=0}^{\infty} \beta^j c_{t+j} &=
+\frac{\alpha}{1 - \alpha \beta} c_{t-1} + \left[ \frac{1}{1 - \beta} - \frac{\alpha}{1 - \alpha \beta} \right] x_t \\
+&= \frac{\alpha}{1 - \alpha \beta} c_{t-1} + \frac{1}{(1 - \beta)(1 - \alpha \beta)} x_t
+\end{aligned}
 $$
 
 From (3) and (4) we get
 
 $$
-(1 + r) d_{t-1} = \sum_{j=0}^{\infty} \beta^j y_{t+j} - \sum_{j=0}^{\infty} \beta^j c_{t+j}
-$$
-
-$$
-= \frac{1}{1 - \rho \beta} y_t - \frac{\alpha}{1 - \alpha \beta} c_{t-1} - \frac{1}{(1 - \beta)(1 - \alpha \beta)} (c_t - \alpha c_{t-1})
-$$
-
-$$
-= \frac{1}{1 - \rho \beta} y_t + \frac{\alpha \beta}{(1 - \alpha \beta)(1 - \beta)} c_{t-1} - \frac{1}{(1 - \beta)(1 - \alpha \beta)} c_t
+\begin{aligned}
+(1 + r) d_{t-1} &= \sum_{j=0}^{\infty} \beta^j y_{t+j} - \sum_{j=0}^{\infty} \beta^j c_{t+j} \\
+&= \frac{1}{1 - \rho \beta} y_t - \frac{\alpha}{1 - \alpha \beta} c_{t-1} - \frac{1}{(1 - \beta)(1 - \alpha \beta)} (c_t - \alpha c_{t-1}) \\
+&= \frac{1}{1 - \rho \beta} y_t + \frac{\alpha \beta}{(1 - \alpha \beta)(1 - \beta)} c_{t-1} - \frac{1}{(1 - \beta)(1 - \alpha \beta)} c_t
+\end{aligned}
 $$
 
 So we have
@@ -89,16 +84,6 @@ So we have
 $$
 \frac{d c_t}{d y_t} = \frac{(1 - \beta)(1 - \alpha \beta)}{1 - \rho \beta}
 $$
-
-::: {.callout-important title="Final Answer Summary (Impact Consumption Response)"}
-A unit endowment shock in period 0 raises consumption by:
-
-$$
-\frac{d c_t}{d y_t} = \frac{(1 - \beta)(1 - \alpha \beta)}{1 - \rho \beta}
-$$
-
-:::
-
 
 #### 2.
 
@@ -110,14 +95,3 @@ $$
 $$
 
 So $\alpha$ must be negative. As $\rho \to 1$, $\alpha < 0$ is enough.
-
-
-::: {.callout-important title="Final Answer Summary (Trade Balance Response)"}
-A positive endowment shock worsens the trade balance if:
-
-$$
-\alpha < \frac{\rho - 1}{1 - \beta}
-$$
-
-That is, habit formation must be sufficiently negative (external habits).
-:::

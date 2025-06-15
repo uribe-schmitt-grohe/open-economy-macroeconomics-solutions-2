@@ -26,7 +26,7 @@ where $\varepsilon_{t-1}$ is an i.i.d. shock with mean zero and standard deviati
 
 ## Answer
 
-#### 1. Equilibrium Processes of Consumption and Current Account
+#### 1.
 
 The representative household maximizes utility:
 
@@ -77,24 +77,14 @@ $$
 and hence:
 
 $$
-c_t = y_t^p - r d_{t-1}, \quad ca_t = y_t - y_t^p
-$$
-
-::: {.callout-important title="Final Answer Summary (Equilibrium Dynamics)"}
-$$
-y^p_t - \bar{y} = \frac{r}{1 + r - \rho}(y_t - \bar{y}) + \frac{r}{1 + r} \cdot \frac{1}{1 + r - \rho} \varepsilon_t
+c_t = y_t^p - r d_{t-1},
 $$
 
 $$
-c_t = y^p_t - r d_{t-1}
+ca_t = y_t - y_t^p
 $$
 
-$$
-ca_t = y_t - y^p_t
-$$
-:::
-
-#### 2. Correlation Between $ca_t$ and $y_t$
+#### 2.
 
 **Standard AR(1):**
 
@@ -123,15 +113,3 @@ Anticipation smooths the income process, reducing surprise and volatility in the
 $$
 \text{corr}(ca_t, y_t) = \frac{1}{\sqrt{1 + \left( \frac{r}{1 + r} \right)^2 \cdot \frac{1 - \rho^2}{(1 - \rho)^2}}} < 1
 $$
-
-::: {.callout-important title="Final Answer Summary (Correlation Result)"}
-- **Standard AR(1):**  
-  $$
-  \text{corr}(ca_t, y_t) = 1
-  $$
-
-- **Anticipated Shocks:**  
-  $$
-  \text{corr}(ca_t, y_t) = \frac{1}{\sqrt{1 + \left( \frac{r}{1 + r} \right)^2 \cdot \frac{1 - \rho^2}{(1 - \rho)^2}}} < 1
-  $$
-:::

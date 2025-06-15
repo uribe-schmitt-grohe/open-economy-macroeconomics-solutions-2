@@ -1,0 +1,13 @@
+---
+title: "Exercise 2.16"
+subtitle: "Testing the Intertemporal Approach on Emerging Market Data"
+---
+<a class="return-button" href="index.qmd">⬅ Return</a>
+
+## Problem
+
+Use the data posted online with the materials for chapter 1 to test the empirical validity of the intertemporal approach to the current account in emerging countries. Specifically, extract quarterly data on output and the current account from an emerging country of your choice and apply the econometric tests studied in section 2.5. Discuss your findings. Make sure to include a comparison with the results for Canada reported in the aforementioned section.
+
+## Answer
+
+To be added.

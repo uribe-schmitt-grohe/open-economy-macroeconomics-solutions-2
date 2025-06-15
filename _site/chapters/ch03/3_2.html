@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Exercise 3.2 – Open‑Economy Macroeconomics Solutions</title>
+<title>Exercise 3.2 – Open Economy Macroeconomics - Solutions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -144,7 +144,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Open‑Economy Macroeconomics Solutions</span>
+    <span class="navbar-title">Open Economy Macroeconomics - Solutions</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -265,7 +265,6 @@ k_t =
 k' &gt; \bar{k} &amp; t &gt; 0
 \end{cases}
 \]</span></p>
-<p>Investment:</p>
 <p><span class="math display">\[
 i_t =
 \begin{cases}
@@ -274,7 +273,6 @@ k' - \bar{k} &gt; 0 &amp; t = 0 \\
 0 &amp; t &gt; 0
 \end{cases}
 \]</span></p>
-<p>Output:</p>
 <p><span class="math display">\[
 y_t =
 \begin{cases}
@@ -283,83 +281,80 @@ y_t =
 A'F(k') &gt; \bar{A}F(\bar{k}) &amp; t &gt; 0
 \end{cases}
 \]</span></p>
-<p>Consumption:</p>
-<p>Given that <span class="math inline">\(\beta(1 + r) = 1\)</span>, we know that <span class="math inline">\(c_t = c_0\)</span> for all <span class="math inline">\(t \geq 0\)</span>. We solve for <span class="math inline">\(c_0\)</span> from the intertemporal budget constraint:</p>
+<p>From the intertemporal resource constraint and the fact that <span class="math inline">\(c_t = c_0\)</span> for all <span class="math inline">\(t\)</span> we have that</p>
 <p><span class="math display">\[
-c_0 + rd_{-1} = \frac{r}{1 + r} \sum_{t=0}^{\infty} \frac{A_t F(k_t) - i_t}{(1 + r)^t}
+\begin{aligned}
+rd_{-1} + c_0 &amp;= \frac{r}{1 + r} \sum_{t=0}^{\infty} \left( \frac{1}{1 + r} \right)^t \left[ A_t F(k_t) - (k_{t+1} - k_t) \right] \\
+&amp;= \frac{r}{1 + r} \left[ \bar{A} F(\bar{k}) - (k' - \bar{k}) + r^{-1} A' F'(k') \right] \\
+&amp;= \bar{A} F(\bar{k}) + \frac{r}{1 + r} \left[ -r^{-1} \bar{A} F(\bar{k}) + r^{-1} A' F'(k') - (k' - \bar{k}) \right] \\
+&amp;= rd_{-1} + c_{-1} + \frac{1}{1 + r} \left[ A' F(\bar{k}) - \bar{A} F(\bar{k}) + A' F(k') - A' F(\bar{k}) - r(k' - \bar{k}) \right] \\
+&amp;= rd_{-1} + c_{-1} + \frac{1}{1 + r} \left[ A' F(k') - \bar{A} F(\bar{k}) + A' F'(k') - A' F(\bar{k}) - A' F'(k') (k' - \bar{k}) \right] \\
+&amp;\geq rd_{-1} + c_{-1},
+\end{aligned}
 \]</span></p>
-<p>Plug in the expressions for <span class="math inline">\(A_t F(k_t)\)</span> and <span class="math inline">\(i_t\)</span>:</p>
+<p>where the last equality uses the fact that <span class="math inline">\(r = A' F'(k')\)</span>, and the inequality uses the fact that by the mean value theorem <span class="math inline">\(A' F(k') - A' F(\bar{k}) - A' F'(k')(k' - \bar{k}) &gt; 0\)</span>. We then have that</p>
 <p><span class="math display">\[
-= \frac{1}{1 + r} \left[ r(\bar{A}F(\bar{k}) - i_0) + A'F(k') \right]
+c_0 &gt; c_{-1},
 \]</span></p>
+<p>that is, consumption jumps up in period 0 and stays at that higher level thereafter.</p>
+<p>The trade balance deteriorates in period 0. To see this, write</p>
 <p><span class="math display">\[
-= \bar{A}F(\bar{k}) + \frac{1}{1 + r} \left[ A'F(k') - \bar{A}F(\bar{k}) - r(k' - \bar{k}) \right]
+tb_0 - tb_{-1} = (y_0 - y_{-1}) - (c_0 - c_{-1}) - (i_0 - i_{-1})
 \]</span></p>
-<p>So:</p>
+<p>and note that <span class="math inline">\(y_0 - y_{-1} = 0\)</span>, <span class="math inline">\(c_0 - c_{-1} &gt; 0\)</span>, and <span class="math inline">\(i_0 - i_{-1} = i_0 &gt; 0\)</span>. Let <span class="math inline">\(tb_0 = tb'\)</span>. In period 1, the trade balance improves, because output increases, consumption doesn’t change, and investment drops to zero. We have already shown that output, consumption, and investment are all constant from period 1 on. This implies that the trade balance is also constant from period 1 on. Let <span class="math inline">\(tb_t = tb''\)</span> for <span class="math inline">\(t \geq 1\)</span>. We have established that <span class="math inline">\(tb'' &gt; tb' &gt; tb_{-1} = rd_{-1}\)</span>. Summarizing,</p>
 <p><span class="math display">\[
-tb_0 - tb_{-1} = y_0 - c_0 - i_0 - rd_{-1}
-= - (k' - \bar{k}) - \frac{1}{1 + r} \left[ A'F(k') - \bar{A}F(\bar{k}) - r(k' - \bar{k}) \right] &lt; 0
+tb_t =
+\begin{cases}
+rd_{-1} &amp; t &lt; 0 \\
+tb' &lt; rd_{-1} &amp; t = 0 \\
+tb'' = rd_0 &gt; rd_{-1} &amp; t &gt; 0
+\end{cases}
+\quad \tag{*}
 \]</span></p>
-<p>Debt:</p>
+<p>The last line will become clear shortly, when we characterize the equilibrium path of debt. It says that after deteriorating in period 0, the trade balance improves to a level higher than in the original steady state.</p>
+<p>The stock of debt increases in period 0. To see this, write</p>
 <p><span class="math display">\[
-d_0 = (1 + r)d_{-1} - tb_0
+\begin{aligned}
+d_0 &amp;= (1 + r) d_{-1} - tb_0 \\
+&amp;= (1 + r) d_{-1} - tb_{-1} - (tb_0 - tb_{-1}) \\
+&amp;= d_{-1} - (tb_0 - tb_{-1}) \\
+&amp;&gt; d_{-1}
+\end{aligned}
 \]</span></p>
-<p>and</p>
+<p>since <span class="math inline">\(tb_0 - tb_{-1} &lt; 0\)</span>. Because the trade balance is constant (and equal to <span class="math inline">\(tb''\)</span>) from period 1 on, we have that the evolution of debt satisfies</p>
 <p><span class="math display">\[
-d_t = \frac{A'F(k') - c_0}{r}, \quad \text{for all } t \geq 1
+d_t = (1 + r) d_{t-1} - tb''; \quad t \geq 1
 \]</span></p>
-<p>Current account:</p>
+<p>The only nonexplosive solution to this expression is</p>
 <p><span class="math display">\[
-ca_0 = d_{-1} - d_0 = - (d_0 - d_{-1}) &lt; 0
+d_t = d_0; \quad t \geq 1
 \]</span></p>
+<p>which means that</p>
 <p><span class="math display">\[
-ca_1 = d_0 - d_1 &gt; 0
+tb'' = r d_0 &gt; r \bar{d}
 \]</span></p>
+<p>This explains the last line of (*). Summarizing,</p>
 <p><span class="math display">\[
-ca_t = 0, \quad \text{for } t &gt; 1
+d_t =
+\begin{cases}
+\bar{d} &amp; t &lt; 0 \\
+d' &gt; \bar{d} &amp; t = 0 \\
+d'' &gt; \bar{d} &amp; t &gt; 0
+\end{cases}
 \]</span></p>
-<div class="callout callout-style-default callout-important callout-titled" title="Final Answer Summary – Anticipated Permanent Productivity Shock">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Final Answer Summary – Anticipated Permanent Productivity Shock
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Capital: jumps at <span class="math inline">\(t = 0\)</span> from <span class="math inline">\(\bar{k}\)</span> to <span class="math inline">\(k'\)</span> where <span class="math inline">\(k' = \kappa(A'/r)\)</span></li>
-<li>Investment: <span class="math inline">\(i_0 = k' - \bar{k} &gt; 0\)</span>, <span class="math inline">\(i_t = 0\)</span> for <span class="math inline">\(t \neq 0\)</span></li>
-<li>Output: rises at <span class="math inline">\(t = 1\)</span> from <span class="math inline">\(\bar{A}F(\bar{k})\)</span> to <span class="math inline">\(A'F(k')\)</span></li>
-<li>Consumption: constant at <span class="math inline">\(c_t = c_0\)</span></li>
-<li>Trade Balance: sharp deterioration at <span class="math inline">\(t = 0\)</span></li>
-<li>Debt: jumps up at <span class="math inline">\(t = 0\)</span>, stabilizes after</li>
-<li>Current Account: <span class="math inline">\(ca_0 &lt; 0\)</span>, <span class="math inline">\(ca_1 &gt; 0\)</span>, <span class="math inline">\(ca_t = 0\)</span> for <span class="math inline">\(t &gt; 1\)</span></li>
-</ul>
-</div>
-</div>
+<p>The current account, being the change in the stock of debt, is negative in period 0 and 0 thereafter,</p>
+<p><span class="math display">\[
+ca_t =
+\begin{cases}
+0 &amp; t &lt; 0 \\
+-(d' - \bar{d}) &lt; 0 &amp; t = 0 \\
+0 &amp; t &gt; 0
+\end{cases}
+\]</span></p>
 </section>
 <section id="section-1" class="level4">
 <h4 class="anchored" data-anchor-id="section-1">2.</h4>
-<p>The key difference is in the trade balance and the current account. Both deteriorate when the temporary shock is <strong>anticipated</strong> but <strong>improve</strong> when it is <strong>unanticipated</strong>. This is primarily because in the former case (anticipated), in period 0 <strong>investment increases and output is unchanged</strong>, whereas in the latter case (unanticipated), <strong>investment is unchanged and output increases</strong>.</p>
-<div class="callout callout-style-default callout-important callout-titled" title="Final Answer Summary – Anticipated vs. Unanticipated Permanent Shock">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Final Answer Summary – Anticipated vs.&nbsp;Unanticipated Permanent Shock
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Anticipated: investment rises at <span class="math inline">\(t = 0\)</span> before productivity gains</li>
-<li>Unanticipated: output jumps immediately, no change in <span class="math inline">\(i_0\)</span></li>
-<li>Result: TB and CA <strong>deteriorate</strong> in anticipated case, <strong>improve</strong> in unanticipated</li>
-</ul>
-</div>
-</div>
+<p>The key difference is that under a permanent but anticipated increase in productivity, output does not increase in period 0. This is because at <span class="math inline">\(t = 0\)</span> <span class="math inline">\(A_t\)</span> and <span class="math inline">\(k_t\)</span> are still at their old values <span class="math inline">\(\bar{A}\)</span> and <span class="math inline">\(\bar{k}\)</span>. In the unanticipated case, by contrast, <span class="math inline">\(A_0 = A' &gt; \bar{A}\)</span> and <span class="math inline">\(k_0 = \bar{k}\)</span>, so output increases in period 0. Besides this, the two cases are similar in the sense that in period 0 consumption and investment increase, and the trade balance deteriorates.</p>
 </section>
 <section id="section-2" class="level4">
 <h4 class="anchored" data-anchor-id="section-2">3.</h4>
@@ -414,13 +409,21 @@ tb_0 - tb_{-1} = (y_0 - y_{-1}) - (c_0 - c_{-1}) - (i_0 - i_{-1})
 \]</span></p>
 <p>and note that <span class="math inline">\(y_0 - y_{-1} = 0\)</span>, <span class="math inline">\(c_0 - c_{-1} &gt; 0\)</span>, and <span class="math inline">\(i_0 &gt; 0\)</span>. The deterioration in the trade balance is smaller than in the case in which the anticipated productivity shock is permanent, because now the increase in consumption is smaller. In period 1 the trade balance improves:</p>
 <p><span class="math display">\[
-tb_1 - tb_0 = (y_1 - y_0) - (c_1 - c_0) - (i_1 - i_0) = A'F(k') - \bar{A}F(\bar{k}) + 2(k' - \bar{k}) &gt; 0
+\begin{aligned}
+tb_1 - tb_0 &amp;= (y_1 - y_0) - (c_1 - c_0) - (i_1 - i_0) \\
+&amp;= A'F(k') - \bar{A}F(\bar{k}) + 2(k' - \bar{k}) \\
+&amp;&gt; 0
+\end{aligned}
 \]</span></p>
 <p>In period 2 the trade balance deteriorates because output falls from <span class="math inline">\(A'F(k')\)</span> to <span class="math inline">\(\bar{A}F(\bar{k})\)</span>, and investment goes from negative to zero:</p>
 <p><span class="math display">\[
-tb_2 - tb_1 = (y_2 - y_1) - (c_2 - c_1) - (i_2 - i_1) = \bar{A}F(\bar{k}) - A'F(k') - (k' - \bar{k}) &lt; 0
+\begin{aligned}
+tb_2 - tb_1 &amp;= (y_2 - y_1) - (c_2 - c_1) - (i_2 - i_1) \\
+&amp;= \bar{A}F(\bar{k}) - A'F(k') - (k' - \bar{k}) \\
+&amp;&lt; 0
+\end{aligned}
 \]</span></p>
-<p>As we will see shortly, the trade balance in period 2 is lower than in the original steady state. From period 2 on, output is constant and equal to* <span class="math inline">\(\bar{A}F(\bar{k})\)</span>, <em>consumption is constant and equal to</em> <span class="math inline">\(c_0\)</span>, <em>and investment is zero, so the trade balance is constant and equal to</em> <span class="math inline">\(\bar{A}F(\bar{k}) - c_0 &lt; \bar{A}F(\bar{k}) - c_{-1} = tb_{-1} = r\bar{d}\)</span>. <em>Summarizing,</em></p>
+<p>As we will see shortly, the trade balance in period 2 is lower than in the original steady state. From period 2 on, output is constant and equal to <span class="math inline">\(\bar{A}F(\bar{k})\)</span>, consumption is constant and equal to <span class="math inline">\(c_0\)</span>, and investment is zero, so the trade balance is constant and equal to <span class="math inline">\(\bar{A}F(\bar{k}) - c_0 &lt; \bar{A}F(\bar{k}) - c_{-1} = tb_{-1} = r\bar{d}\)</span>. Summarizing,</p>
 <p><span class="math display">\[
 tb_t =
 \begin{cases}
@@ -430,7 +433,7 @@ tb'' &gt; tb' &amp; t = 1 \\
 rd_{-1} &lt; tb'' &amp; t &gt; 1
 \end{cases}
 \]</span></p>
-<p>The stock of debt increases in period 0. To see this, write*</p>
+<p>The stock of debt increases in period 0. To see this, write</p>
 <p><span class="math display">\[
 \begin{aligned}
 d_0 &amp;= (1 + r)d_{-1} - tb_0 \\
@@ -445,9 +448,9 @@ d_t = (1 + r)d_{t-1} - tb_2, \quad t \geq 2
 \]</span></p>
 <p>which means that the only nonexplosive solution is</p>
 <p><span class="math display">\[
-d_t = d_1 = tb_2 / r = (\bar{A}F(\bar{k}) - c_0)/r &lt; (\bar{A}F(\bar{k}) - c_{-1})/r = tb_{-1}/r = d_{-1} = \bar{d}, \quad \text{for } t \geq 1.
+d_t = d_1 = tb_2 / r = (\bar{A}F(\bar{k}) - c_0)/r &lt; (\bar{A}F(\bar{k}) - c_{-1})/r = tb_{-1}/r = d_{-1} = \bar{d},
 \]</span></p>
-<p>So we can write</p>
+<p>for <span class="math inline">\(t \geq 1\)</span>. So we can write</p>
 <p><span class="math display">\[
 d_t =
 \begin{cases}
@@ -466,67 +469,14 @@ ca_t =
 0 &amp; t &gt; 1
 \end{cases}
 \]</span></p>
-<div class="callout callout-style-default callout-important callout-titled" title="Final Answer Summary – Anticipated Transitory Shock">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Final Answer Summary – Anticipated Transitory Shock
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><span class="math inline">\(k_t\)</span> rises at <span class="math inline">\(t=1\)</span> then falls back at <span class="math inline">\(t=2\)</span></li>
-<li>Investment: <span class="math inline">\(i_0 &gt; 0\)</span>, <span class="math inline">\(i_1 &lt; 0\)</span>, <span class="math inline">\(i_t = 0\)</span> otherwise</li>
-<li>Consumption: rises at <span class="math inline">\(t = 0\)</span>, constant thereafter</li>
-<li>TB: worsens at <span class="math inline">\(t=0\)</span>, improves at <span class="math inline">\(t=1\)</span>, worsens again at <span class="math inline">\(t=2\)</span>, then stabilizes</li>
-<li>Debt: <span class="math inline">\(d_0 &gt; \bar{d}\)</span>, <span class="math inline">\(d_1 &lt; \bar{d}\)</span>, <span class="math inline">\(d_t = d_1\)</span> for <span class="math inline">\(t \geq 2\)</span></li>
-<li>CA: <span class="math inline">\(ca_0 &lt; 0\)</span>, <span class="math inline">\(ca_1 &gt; 0\)</span>, <span class="math inline">\(ca_t = 0\)</span> for <span class="math inline">\(t \ne 0, 1\)</span></li>
-</ul>
-</div>
-</div>
 </section>
 <section id="b" class="level5">
 <h5 class="anchored" data-anchor-id="b">(b)</h5>
 <p>The key diﬀerence is in the trade balance and the current account. Both deteriorate when the temporary shock is anticipated but improve when it is unanticipated. This is primarily because in the former case in period 0 investment increases and output is unchanged, whereas in the latter case investment is unchanged and output increases.</p>
-<div class="callout callout-style-default callout-important callout-titled" title="Final Answer Summary – Anticipated vs. Unanticipated Temporary Shock">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Final Answer Summary – Anticipated vs.&nbsp;Unanticipated Temporary Shock
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Anticipated: <span class="math inline">\(i_0 &gt; 0\)</span>, <span class="math inline">\(y_0\)</span> unchanged → TB/CA worsen</li>
-<li>Unanticipated: <span class="math inline">\(y_0\)</span> rises, <span class="math inline">\(i_0\)</span> unchanged → TB/CA improve</li>
-</ul>
-</div>
-</div>
 </section>
 <section id="c" class="level5">
 <h5 class="anchored" data-anchor-id="c">(c)</h5>
 <p>An anticipated endowment shock would also cause a deterioration in the trade balance and the current account in period 0, because output is unchanged but consumption increases (as households feel richer). However, the deterioration in the external accounts is smaller, because in the economy with capital investment is a second source of increase in domestic absorption.</p>
-<div class="callout callout-style-default callout-important callout-titled" title="Final Answer Summary – Comparison to Endowment Economy (Exercise 2.5)">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Final Answer Summary – Comparison to Endowment Economy (Exercise 2.5)
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Both: anticipation leads to higher <span class="math inline">\(c_0\)</span>, TB/CA deterioration</li>
-<li>Capital economy: absorption includes both <span class="math inline">\(c\)</span> and <span class="math inline">\(i\)</span></li>
-<li>Result: TB/CA deteriorate <strong>more</strong> than in endowment economy</li>
-</ul>
-</div>
-</div>
 
 
 <!-- -->
@@ -1107,260 +1057,269 @@ Final Answer Summary – Comparison to Endowment Economy (Exercise 2.5)
 <span id="cb1-90"><a href="#cb1-90"></a>\end{cases}</span>
 <span id="cb1-91"><a href="#cb1-91"></a>$$</span>
 <span id="cb1-92"><a href="#cb1-92"></a></span>
-<span id="cb1-93"><a href="#cb1-93"></a>Investment:</span>
-<span id="cb1-94"><a href="#cb1-94"></a></span>
-<span id="cb1-95"><a href="#cb1-95"></a>$$</span>
-<span id="cb1-96"><a href="#cb1-96"></a>i_t =</span>
-<span id="cb1-97"><a href="#cb1-97"></a>\begin{cases}</span>
-<span id="cb1-98"><a href="#cb1-98"></a>0 &amp; t &lt; 0 <span class="sc">\\</span></span>
-<span id="cb1-99"><a href="#cb1-99"></a>k' - \bar{k} &gt; 0 &amp; t = 0 <span class="sc">\\</span></span>
-<span id="cb1-100"><a href="#cb1-100"></a>0 &amp; t &gt; 0</span>
-<span id="cb1-101"><a href="#cb1-101"></a>\end{cases}</span>
+<span id="cb1-93"><a href="#cb1-93"></a>$$</span>
+<span id="cb1-94"><a href="#cb1-94"></a>i_t =</span>
+<span id="cb1-95"><a href="#cb1-95"></a>\begin{cases}</span>
+<span id="cb1-96"><a href="#cb1-96"></a>0 &amp; t &lt; 0 <span class="sc">\\</span></span>
+<span id="cb1-97"><a href="#cb1-97"></a>k' - \bar{k} &gt; 0 &amp; t = 0 <span class="sc">\\</span></span>
+<span id="cb1-98"><a href="#cb1-98"></a>0 &amp; t &gt; 0</span>
+<span id="cb1-99"><a href="#cb1-99"></a>\end{cases}</span>
+<span id="cb1-100"><a href="#cb1-100"></a>$$</span>
+<span id="cb1-101"><a href="#cb1-101"></a></span>
 <span id="cb1-102"><a href="#cb1-102"></a>$$</span>
-<span id="cb1-103"><a href="#cb1-103"></a></span>
-<span id="cb1-104"><a href="#cb1-104"></a>Output:</span>
-<span id="cb1-105"><a href="#cb1-105"></a></span>
-<span id="cb1-106"><a href="#cb1-106"></a>$$</span>
-<span id="cb1-107"><a href="#cb1-107"></a>y_t =</span>
-<span id="cb1-108"><a href="#cb1-108"></a>\begin{cases}</span>
-<span id="cb1-109"><a href="#cb1-109"></a>\bar{A}F(\bar{k}) &amp; t &lt; 0 <span class="sc">\\</span></span>
-<span id="cb1-110"><a href="#cb1-110"></a>\bar{A}F(\bar{k}) &amp; t = 0 <span class="sc">\\</span></span>
-<span id="cb1-111"><a href="#cb1-111"></a>A'F(k') &gt; \bar{A}F(\bar{k}) &amp; t &gt; 0</span>
-<span id="cb1-112"><a href="#cb1-112"></a>\end{cases}</span>
+<span id="cb1-103"><a href="#cb1-103"></a>y_t =</span>
+<span id="cb1-104"><a href="#cb1-104"></a>\begin{cases}</span>
+<span id="cb1-105"><a href="#cb1-105"></a>\bar{A}F(\bar{k}) &amp; t &lt; 0 <span class="sc">\\</span></span>
+<span id="cb1-106"><a href="#cb1-106"></a>\bar{A}F(\bar{k}) &amp; t = 0 <span class="sc">\\</span></span>
+<span id="cb1-107"><a href="#cb1-107"></a>A'F(k') &gt; \bar{A}F(\bar{k}) &amp; t &gt; 0</span>
+<span id="cb1-108"><a href="#cb1-108"></a>\end{cases}</span>
+<span id="cb1-109"><a href="#cb1-109"></a>$$</span>
+<span id="cb1-110"><a href="#cb1-110"></a></span>
+<span id="cb1-111"><a href="#cb1-111"></a>From the intertemporal resource constraint and the fact that $c_t = c_0$ for all $t$ we have that</span>
+<span id="cb1-112"><a href="#cb1-112"></a></span>
 <span id="cb1-113"><a href="#cb1-113"></a>$$</span>
-<span id="cb1-114"><a href="#cb1-114"></a></span>
-<span id="cb1-115"><a href="#cb1-115"></a>Consumption:</span>
-<span id="cb1-116"><a href="#cb1-116"></a></span>
-<span id="cb1-117"><a href="#cb1-117"></a>Given that $\beta(1 + r) = 1$, we know that $c_t = c_0$ for all $t \geq 0$. We solve for $c_0$ from the intertemporal budget constraint:</span>
-<span id="cb1-118"><a href="#cb1-118"></a></span>
-<span id="cb1-119"><a href="#cb1-119"></a>$$</span>
-<span id="cb1-120"><a href="#cb1-120"></a>c_0 + rd_{-1} = \frac{r}{1 + r} \sum_{t=0}^{\infty} \frac{A_t F(k_t) - i_t}{(1 + r)^t}</span>
-<span id="cb1-121"><a href="#cb1-121"></a>$$</span>
-<span id="cb1-122"><a href="#cb1-122"></a></span>
-<span id="cb1-123"><a href="#cb1-123"></a>Plug in the expressions for $A_t F(k_t)$ and $i_t$:</span>
-<span id="cb1-124"><a href="#cb1-124"></a></span>
-<span id="cb1-125"><a href="#cb1-125"></a>$$</span>
-<span id="cb1-126"><a href="#cb1-126"></a>= \frac{1}{1 + r} \left<span class="co">[</span><span class="ot"> r(\bar{A}F(\bar{k}) - i_0) + A'F(k') \right</span><span class="co">]</span></span>
-<span id="cb1-127"><a href="#cb1-127"></a>$$</span>
-<span id="cb1-128"><a href="#cb1-128"></a></span>
-<span id="cb1-129"><a href="#cb1-129"></a>$$</span>
-<span id="cb1-130"><a href="#cb1-130"></a>= \bar{A}F(\bar{k}) + \frac{1}{1 + r} \left<span class="co">[</span><span class="ot"> A'F(k') - \bar{A}F(\bar{k}) - r(k' - \bar{k}) \right</span><span class="co">]</span></span>
-<span id="cb1-131"><a href="#cb1-131"></a>$$</span>
-<span id="cb1-132"><a href="#cb1-132"></a></span>
-<span id="cb1-133"><a href="#cb1-133"></a>So:</span>
-<span id="cb1-134"><a href="#cb1-134"></a></span>
-<span id="cb1-135"><a href="#cb1-135"></a>$$</span>
-<span id="cb1-136"><a href="#cb1-136"></a>tb_0 - tb_{-1} = y_0 - c_0 - i_0 - rd_{-1}</span>
-<span id="cb1-137"><a href="#cb1-137"></a>= - (k' - \bar{k}) - \frac{1}{1 + r} \left<span class="co">[</span><span class="ot"> A'F(k') - \bar{A}F(\bar{k}) - r(k' - \bar{k}) \right</span><span class="co">]</span> &lt; 0</span>
-<span id="cb1-138"><a href="#cb1-138"></a>$$</span>
+<span id="cb1-114"><a href="#cb1-114"></a>\begin{aligned}</span>
+<span id="cb1-115"><a href="#cb1-115"></a>rd_{-1} + c_0 &amp;= \frac{r}{1 + r} \sum_{t=0}^{\infty} \left( \frac{1}{1 + r} \right)^t \left<span class="co">[</span><span class="ot"> A_t F(k_t) - (k_{t+1} - k_t) \right</span><span class="co">]</span> <span class="sc">\\</span></span>
+<span id="cb1-116"><a href="#cb1-116"></a>&amp;= \frac{r}{1 + r} \left<span class="co">[</span><span class="ot"> \bar{A} F(\bar{k}) - (k' - \bar{k}) + r^{-1} A' F'(k') \right</span><span class="co">]</span> <span class="sc">\\</span></span>
+<span id="cb1-117"><a href="#cb1-117"></a>&amp;= \bar{A} F(\bar{k}) + \frac{r}{1 + r} \left<span class="co">[</span><span class="ot"> -r^{-1} \bar{A} F(\bar{k}) + r^{-1} A' F'(k') - (k' - \bar{k}) \right</span><span class="co">]</span> <span class="sc">\\</span></span>
+<span id="cb1-118"><a href="#cb1-118"></a>&amp;= rd_{-1} + c_{-1} + \frac{1}{1 + r} \left<span class="co">[</span><span class="ot"> A' F(\bar{k}) - \bar{A} F(\bar{k}) + A' F(k') - A' F(\bar{k}) - r(k' - \bar{k}) \right</span><span class="co">]</span> <span class="sc">\\</span></span>
+<span id="cb1-119"><a href="#cb1-119"></a>&amp;= rd_{-1} + c_{-1} + \frac{1}{1 + r} \left<span class="co">[</span><span class="ot"> A' F(k') - \bar{A} F(\bar{k}) + A' F'(k') - A' F(\bar{k}) - A' F'(k') (k' - \bar{k}) \right</span><span class="co">]</span> <span class="sc">\\</span></span>
+<span id="cb1-120"><a href="#cb1-120"></a>&amp;\geq rd_{-1} + c_{-1},</span>
+<span id="cb1-121"><a href="#cb1-121"></a>\end{aligned}</span>
+<span id="cb1-122"><a href="#cb1-122"></a>$$</span>
+<span id="cb1-123"><a href="#cb1-123"></a></span>
+<span id="cb1-124"><a href="#cb1-124"></a>where the last equality uses the fact that $r = A' F'(k')$, and the inequality uses the fact that by the mean value theorem $A' F(k') - A' F(\bar{k}) - A' F'(k')(k' - \bar{k}) &gt; 0$. We then have that</span>
+<span id="cb1-125"><a href="#cb1-125"></a></span>
+<span id="cb1-126"><a href="#cb1-126"></a>$$</span>
+<span id="cb1-127"><a href="#cb1-127"></a>c_0 &gt; c_{-1},</span>
+<span id="cb1-128"><a href="#cb1-128"></a>$$</span>
+<span id="cb1-129"><a href="#cb1-129"></a></span>
+<span id="cb1-130"><a href="#cb1-130"></a>that is, consumption jumps up in period 0 and stays at that higher level thereafter.</span>
+<span id="cb1-131"><a href="#cb1-131"></a></span>
+<span id="cb1-132"><a href="#cb1-132"></a>The trade balance deteriorates in period 0. To see this, write</span>
+<span id="cb1-133"><a href="#cb1-133"></a></span>
+<span id="cb1-134"><a href="#cb1-134"></a>$$</span>
+<span id="cb1-135"><a href="#cb1-135"></a>tb_0 - tb_{-1} = (y_0 - y_{-1}) - (c_0 - c_{-1}) - (i_0 - i_{-1})</span>
+<span id="cb1-136"><a href="#cb1-136"></a>$$</span>
+<span id="cb1-137"><a href="#cb1-137"></a></span>
+<span id="cb1-138"><a href="#cb1-138"></a>and note that $y_0 - y_{-1} = 0$, $c_0 - c_{-1} &gt; 0$, and $i_0 - i_{-1} = i_0 &gt; 0$. Let $tb_0 = tb'$. In period 1, the trade balance improves, because output increases, consumption doesn’t change, and investment drops to zero. We have already shown that output, consumption, and investment are all constant from period 1 on. This implies that the trade balance is also constant from period 1 on. Let $tb_t = tb''$ for $t \geq 1$. We have established that $tb'' &gt; tb' &gt; tb_{-1} = rd_{-1}$. Summarizing,</span>
 <span id="cb1-139"><a href="#cb1-139"></a></span>
-<span id="cb1-140"><a href="#cb1-140"></a>Debt:</span>
-<span id="cb1-141"><a href="#cb1-141"></a></span>
-<span id="cb1-142"><a href="#cb1-142"></a>$$</span>
-<span id="cb1-143"><a href="#cb1-143"></a>d_0 = (1 + r)d_{-1} - tb_0</span>
-<span id="cb1-144"><a href="#cb1-144"></a>$$</span>
-<span id="cb1-145"><a href="#cb1-145"></a></span>
-<span id="cb1-146"><a href="#cb1-146"></a>and</span>
-<span id="cb1-147"><a href="#cb1-147"></a></span>
+<span id="cb1-140"><a href="#cb1-140"></a>$$</span>
+<span id="cb1-141"><a href="#cb1-141"></a>tb_t =</span>
+<span id="cb1-142"><a href="#cb1-142"></a>\begin{cases}</span>
+<span id="cb1-143"><a href="#cb1-143"></a>rd_{-1} &amp; t &lt; 0 <span class="sc">\\</span></span>
+<span id="cb1-144"><a href="#cb1-144"></a>tb' &lt; rd_{-1} &amp; t = 0 <span class="sc">\\</span></span>
+<span id="cb1-145"><a href="#cb1-145"></a>tb'' = rd_0 &gt; rd_{-1} &amp; t &gt; 0</span>
+<span id="cb1-146"><a href="#cb1-146"></a>\end{cases}</span>
+<span id="cb1-147"><a href="#cb1-147"></a>\quad \tag{*}</span>
 <span id="cb1-148"><a href="#cb1-148"></a>$$</span>
-<span id="cb1-149"><a href="#cb1-149"></a>d_t = \frac{A'F(k') - c_0}{r}, \quad \text{for all } t \geq 1</span>
-<span id="cb1-150"><a href="#cb1-150"></a>$$</span>
-<span id="cb1-151"><a href="#cb1-151"></a></span>
-<span id="cb1-152"><a href="#cb1-152"></a>Current account:</span>
+<span id="cb1-149"><a href="#cb1-149"></a></span>
+<span id="cb1-150"><a href="#cb1-150"></a></span>
+<span id="cb1-151"><a href="#cb1-151"></a>The last line will become clear shortly, when we characterize the equilibrium path of debt. It says that after deteriorating in period 0, the trade balance improves to a level higher than in the original steady state.</span>
+<span id="cb1-152"><a href="#cb1-152"></a></span>
 <span id="cb1-153"><a href="#cb1-153"></a></span>
-<span id="cb1-154"><a href="#cb1-154"></a>$$</span>
-<span id="cb1-155"><a href="#cb1-155"></a>ca_0 = d_{-1} - d_0 = - (d_0 - d_{-1}) &lt; 0</span>
+<span id="cb1-154"><a href="#cb1-154"></a>The stock of debt increases in period 0. To see this, write</span>
+<span id="cb1-155"><a href="#cb1-155"></a></span>
 <span id="cb1-156"><a href="#cb1-156"></a>$$</span>
-<span id="cb1-157"><a href="#cb1-157"></a></span>
-<span id="cb1-158"><a href="#cb1-158"></a>$$</span>
-<span id="cb1-159"><a href="#cb1-159"></a>ca_1 = d_0 - d_1 &gt; 0</span>
-<span id="cb1-160"><a href="#cb1-160"></a>$$</span>
-<span id="cb1-161"><a href="#cb1-161"></a></span>
-<span id="cb1-162"><a href="#cb1-162"></a>$$</span>
-<span id="cb1-163"><a href="#cb1-163"></a>ca_t = 0, \quad \text{for } t &gt; 1</span>
-<span id="cb1-164"><a href="#cb1-164"></a>$$</span>
-<span id="cb1-165"><a href="#cb1-165"></a></span>
-<span id="cb1-166"><a href="#cb1-166"></a>::: {.callout-important title="Final Answer Summary – Anticipated Permanent Productivity Shock"}</span>
-<span id="cb1-167"><a href="#cb1-167"></a><span class="ss">- </span>Capital: jumps at $t = 0$ from $\bar{k}$ to $k'$ where $k' = \kappa(A'/r)$</span>
-<span id="cb1-168"><a href="#cb1-168"></a><span class="ss">- </span>Investment: $i_0 = k' - \bar{k} &gt; 0$, $i_t = 0$ for $t \neq 0$</span>
-<span id="cb1-169"><a href="#cb1-169"></a><span class="ss">- </span>Output: rises at $t = 1$ from $\bar{A}F(\bar{k})$ to $A'F(k')$</span>
-<span id="cb1-170"><a href="#cb1-170"></a><span class="ss">- </span>Consumption: constant at $c_t = c_0$</span>
-<span id="cb1-171"><a href="#cb1-171"></a><span class="ss">- </span>Trade Balance: sharp deterioration at $t = 0$</span>
-<span id="cb1-172"><a href="#cb1-172"></a><span class="ss">- </span>Debt: jumps up at $t = 0$, stabilizes after</span>
-<span id="cb1-173"><a href="#cb1-173"></a><span class="ss">- </span>Current Account: $ca_0 &lt; 0$, $ca_1 &gt; 0$, $ca_t = 0$ for $t &gt; 1$</span>
-<span id="cb1-174"><a href="#cb1-174"></a>:::</span>
-<span id="cb1-175"><a href="#cb1-175"></a></span>
-<span id="cb1-176"><a href="#cb1-176"></a><span class="fu">#### 2.</span></span>
-<span id="cb1-177"><a href="#cb1-177"></a></span>
-<span id="cb1-178"><a href="#cb1-178"></a>The key difference is in the trade balance and the current account. Both deteriorate when the temporary shock is **anticipated** but **improve** when it is **unanticipated**. This is primarily because in the former case (anticipated), in period 0 **investment increases and output is unchanged**, whereas in the latter case (unanticipated), **investment is unchanged and output increases**.</span>
-<span id="cb1-179"><a href="#cb1-179"></a></span>
-<span id="cb1-180"><a href="#cb1-180"></a>::: {.callout-important title="Final Answer Summary – Anticipated vs. Unanticipated Permanent Shock"}</span>
-<span id="cb1-181"><a href="#cb1-181"></a><span class="ss">- </span>Anticipated: investment rises at $t = 0$ before productivity gains</span>
-<span id="cb1-182"><a href="#cb1-182"></a><span class="ss">- </span>Unanticipated: output jumps immediately, no change in $i_0$</span>
-<span id="cb1-183"><a href="#cb1-183"></a><span class="ss">- </span>Result: TB and CA **deteriorate** in anticipated case, **improve** in unanticipated</span>
-<span id="cb1-184"><a href="#cb1-184"></a>:::</span>
-<span id="cb1-185"><a href="#cb1-185"></a></span>
-<span id="cb1-186"><a href="#cb1-186"></a><span class="fu">#### 3.</span></span>
-<span id="cb1-187"><a href="#cb1-187"></a></span>
-<span id="cb1-188"><a href="#cb1-188"></a><span class="fu">##### (a)</span></span>
-<span id="cb1-189"><a href="#cb1-189"></a></span>
-<span id="cb1-190"><a href="#cb1-190"></a>From the equilibrium condition $k_{t+1} = \kappa(A_{t+1}/r)$, we have that $k_t = \bar{k} \equiv \kappa(\bar{A}/r)$ for $t \leq 0$, $k_1 = k' \equiv \kappa(A'/r)$, and $k_t = \bar{k}$ for $t &gt; 1$. So we have that</span>
-<span id="cb1-191"><a href="#cb1-191"></a></span>
+<span id="cb1-157"><a href="#cb1-157"></a>\begin{aligned}</span>
+<span id="cb1-158"><a href="#cb1-158"></a>d_0 &amp;= (1 + r) d_{-1} - tb_0 <span class="sc">\\</span></span>
+<span id="cb1-159"><a href="#cb1-159"></a>&amp;= (1 + r) d_{-1} - tb_{-1} - (tb_0 - tb_{-1}) <span class="sc">\\</span></span>
+<span id="cb1-160"><a href="#cb1-160"></a>&amp;= d_{-1} - (tb_0 - tb_{-1}) <span class="sc">\\</span></span>
+<span id="cb1-161"><a href="#cb1-161"></a>&amp;&gt; d_{-1}</span>
+<span id="cb1-162"><a href="#cb1-162"></a>\end{aligned}</span>
+<span id="cb1-163"><a href="#cb1-163"></a>$$</span>
+<span id="cb1-164"><a href="#cb1-164"></a></span>
+<span id="cb1-165"><a href="#cb1-165"></a>since $tb_0 - tb_{-1} &lt; 0$. Because the trade balance is constant (and equal to $tb''$) from period 1 on, we have that the evolution of debt satisfies</span>
+<span id="cb1-166"><a href="#cb1-166"></a></span>
+<span id="cb1-167"><a href="#cb1-167"></a>$$</span>
+<span id="cb1-168"><a href="#cb1-168"></a>d_t = (1 + r) d_{t-1} - tb''; \quad t \geq 1</span>
+<span id="cb1-169"><a href="#cb1-169"></a>$$</span>
+<span id="cb1-170"><a href="#cb1-170"></a></span>
+<span id="cb1-171"><a href="#cb1-171"></a>The only nonexplosive solution to this expression is</span>
+<span id="cb1-172"><a href="#cb1-172"></a></span>
+<span id="cb1-173"><a href="#cb1-173"></a>$$</span>
+<span id="cb1-174"><a href="#cb1-174"></a>d_t = d_0; \quad t \geq 1</span>
+<span id="cb1-175"><a href="#cb1-175"></a>$$</span>
+<span id="cb1-176"><a href="#cb1-176"></a></span>
+<span id="cb1-177"><a href="#cb1-177"></a>which means that</span>
+<span id="cb1-178"><a href="#cb1-178"></a></span>
+<span id="cb1-179"><a href="#cb1-179"></a>$$</span>
+<span id="cb1-180"><a href="#cb1-180"></a>tb'' = r d_0 &gt; r \bar{d}</span>
+<span id="cb1-181"><a href="#cb1-181"></a>$$</span>
+<span id="cb1-182"><a href="#cb1-182"></a></span>
+<span id="cb1-183"><a href="#cb1-183"></a>This explains the last line of (*). Summarizing,</span>
+<span id="cb1-184"><a href="#cb1-184"></a></span>
+<span id="cb1-185"><a href="#cb1-185"></a>$$</span>
+<span id="cb1-186"><a href="#cb1-186"></a>d_t =</span>
+<span id="cb1-187"><a href="#cb1-187"></a>\begin{cases}</span>
+<span id="cb1-188"><a href="#cb1-188"></a>\bar{d} &amp; t &lt; 0 <span class="sc">\\</span></span>
+<span id="cb1-189"><a href="#cb1-189"></a>d' &gt; \bar{d} &amp; t = 0 <span class="sc">\\</span></span>
+<span id="cb1-190"><a href="#cb1-190"></a>d'' &gt; \bar{d} &amp; t &gt; 0</span>
+<span id="cb1-191"><a href="#cb1-191"></a>\end{cases}</span>
 <span id="cb1-192"><a href="#cb1-192"></a>$$</span>
-<span id="cb1-193"><a href="#cb1-193"></a>k_t =</span>
-<span id="cb1-194"><a href="#cb1-194"></a>\begin{cases}</span>
-<span id="cb1-195"><a href="#cb1-195"></a>\bar{k} &amp; t &lt; 0 <span class="sc">\\</span></span>
-<span id="cb1-196"><a href="#cb1-196"></a>\bar{k} &amp; t = 0 <span class="sc">\\</span></span>
-<span id="cb1-197"><a href="#cb1-197"></a>k' &gt; \bar{k} &amp; t = 1 <span class="sc">\\</span></span>
-<span id="cb1-198"><a href="#cb1-198"></a>\bar{k} &amp; t &gt; 1</span>
-<span id="cb1-199"><a href="#cb1-199"></a>\end{cases}</span>
-<span id="cb1-200"><a href="#cb1-200"></a>$$</span>
-<span id="cb1-201"><a href="#cb1-201"></a></span>
-<span id="cb1-202"><a href="#cb1-202"></a>$$</span>
-<span id="cb1-203"><a href="#cb1-203"></a>i_t =</span>
-<span id="cb1-204"><a href="#cb1-204"></a>\begin{cases}</span>
-<span id="cb1-205"><a href="#cb1-205"></a>0 &amp; t &lt; 0 <span class="sc">\\</span></span>
-<span id="cb1-206"><a href="#cb1-206"></a>k' - \bar{k} &gt; 0 &amp; t = 0 <span class="sc">\\</span></span>
-<span id="cb1-207"><a href="#cb1-207"></a>\bar{k} - k' &lt; 0 &amp; t = 1 <span class="sc">\\</span></span>
-<span id="cb1-208"><a href="#cb1-208"></a>0 &amp; t &gt; 1</span>
-<span id="cb1-209"><a href="#cb1-209"></a>\end{cases}</span>
-<span id="cb1-210"><a href="#cb1-210"></a>$$</span>
-<span id="cb1-211"><a href="#cb1-211"></a></span>
-<span id="cb1-212"><a href="#cb1-212"></a>$$</span>
-<span id="cb1-213"><a href="#cb1-213"></a>y_t =</span>
-<span id="cb1-214"><a href="#cb1-214"></a>\begin{cases}</span>
-<span id="cb1-215"><a href="#cb1-215"></a>\bar{A}F(\bar{k}) &amp; t &lt; 0 <span class="sc">\\</span></span>
-<span id="cb1-216"><a href="#cb1-216"></a>\bar{A}F(\bar{k}) &amp; t = 0 <span class="sc">\\</span></span>
-<span id="cb1-217"><a href="#cb1-217"></a>A'F(k') &gt; y_0 &amp; t = 1 <span class="sc">\\</span></span>
-<span id="cb1-218"><a href="#cb1-218"></a>\bar{A}F(\bar{k}) &amp; t &gt; 1</span>
-<span id="cb1-219"><a href="#cb1-219"></a>\end{cases}</span>
-<span id="cb1-220"><a href="#cb1-220"></a>$$</span>
-<span id="cb1-221"><a href="#cb1-221"></a></span>
-<span id="cb1-222"><a href="#cb1-222"></a>From the intertemporal resource constraint and the fact that $c_t = c_0$ for all $t$ we have:</span>
-<span id="cb1-223"><a href="#cb1-223"></a></span>
-<span id="cb1-224"><a href="#cb1-224"></a>$$</span>
-<span id="cb1-225"><a href="#cb1-225"></a>\begin{aligned}</span>
-<span id="cb1-226"><a href="#cb1-226"></a>rd_{-1} + c_0 &amp;= \frac{r}{1 + r} \sum_{t=0}^{\infty} \frac{A_t F(k_t) - (k_{t+1} - k_t)}{(1 + r)^t}<span class="sc">\\</span></span>
-<span id="cb1-227"><a href="#cb1-227"></a>&amp;= \frac{r}{1 + r} \left<span class="co">[</span><span class="ot"> \left( \frac{1 + r}{r} \right) \bar{A}F(\bar{k}) + \frac{1}{1 + r}(A'F(k') - \bar{A}F(\bar{k})) - (k' - \bar{k}) + \frac{1}{1 + r}(k' - \bar{k}) \right</span><span class="co">]</span><span class="sc">\\</span></span>
-<span id="cb1-228"><a href="#cb1-228"></a>&amp;= \bar{A}F(\bar{k}) + \frac{r}{(1 + r)^2} \left<span class="co">[</span><span class="ot"> A'F(k') - \bar{A}F(\bar{k}) - r(k' - \bar{k}) \right</span><span class="co">]</span><span class="sc">\\</span></span>
-<span id="cb1-229"><a href="#cb1-229"></a>&amp;= \bar{A}F(\bar{k}) + \frac{r}{(1 + r)^2} \left<span class="co">[</span><span class="ot"> A'F(k') - \bar{A}F(\bar{k}) - A'F'(k')(k' - \bar{k}) \right</span><span class="co">]</span><span class="sc">\\</span></span>
-<span id="cb1-230"><a href="#cb1-230"></a>&amp;= rd_{-1} + c_{-1} + \frac{r}{(1 + r)^2} \left<span class="co">[</span><span class="ot"> A'F(\bar{k}) - \bar{A}F(\bar{k}) + A'F(k') - A'F(\bar{k})- A'F'(k')(k' - \bar{k}) \right</span><span class="co">]</span><span class="sc">\\</span></span>
-<span id="cb1-231"><a href="#cb1-231"></a>&amp;&gt; rd_{-1} + c_{-1}</span>
-<span id="cb1-232"><a href="#cb1-232"></a>\end{aligned}</span>
+<span id="cb1-193"><a href="#cb1-193"></a></span>
+<span id="cb1-194"><a href="#cb1-194"></a>The current account, being the change in the stock of debt, is negative in period 0 and 0 thereafter,</span>
+<span id="cb1-195"><a href="#cb1-195"></a></span>
+<span id="cb1-196"><a href="#cb1-196"></a>$$</span>
+<span id="cb1-197"><a href="#cb1-197"></a>ca_t =</span>
+<span id="cb1-198"><a href="#cb1-198"></a>\begin{cases}</span>
+<span id="cb1-199"><a href="#cb1-199"></a>0 &amp; t &lt; 0 <span class="sc">\\</span></span>
+<span id="cb1-200"><a href="#cb1-200"></a>-(d' - \bar{d}) &lt; 0 &amp; t = 0 <span class="sc">\\</span></span>
+<span id="cb1-201"><a href="#cb1-201"></a>0 &amp; t &gt; 0</span>
+<span id="cb1-202"><a href="#cb1-202"></a>\end{cases}</span>
+<span id="cb1-203"><a href="#cb1-203"></a>$$</span>
+<span id="cb1-204"><a href="#cb1-204"></a></span>
+<span id="cb1-205"><a href="#cb1-205"></a><span class="fu">#### 2.</span></span>
+<span id="cb1-206"><a href="#cb1-206"></a></span>
+<span id="cb1-207"><a href="#cb1-207"></a>The key difference is that under a permanent but anticipated increase in productivity, output does not increase in period 0. This is because at $t = 0$ $A_t$ and $k_t$ are still at their old values $\bar{A}$ and $\bar{k}$. In the unanticipated case, by contrast, $A_0 = A' &gt; \bar{A}$ and $k_0 = \bar{k}$, so output increases in period 0. Besides this, the two cases are similar in the sense that in period 0 consumption and investment increase, and the trade balance deteriorates.</span>
+<span id="cb1-208"><a href="#cb1-208"></a></span>
+<span id="cb1-209"><a href="#cb1-209"></a><span class="fu">#### 3.</span></span>
+<span id="cb1-210"><a href="#cb1-210"></a></span>
+<span id="cb1-211"><a href="#cb1-211"></a><span class="fu">##### (a)</span></span>
+<span id="cb1-212"><a href="#cb1-212"></a></span>
+<span id="cb1-213"><a href="#cb1-213"></a>From the equilibrium condition $k_{t+1} = \kappa(A_{t+1}/r)$, we have that $k_t = \bar{k} \equiv \kappa(\bar{A}/r)$ for $t \leq 0$, $k_1 = k' \equiv \kappa(A'/r)$, and $k_t = \bar{k}$ for $t &gt; 1$. So we have that</span>
+<span id="cb1-214"><a href="#cb1-214"></a></span>
+<span id="cb1-215"><a href="#cb1-215"></a>$$</span>
+<span id="cb1-216"><a href="#cb1-216"></a>k_t =</span>
+<span id="cb1-217"><a href="#cb1-217"></a>\begin{cases}</span>
+<span id="cb1-218"><a href="#cb1-218"></a>\bar{k} &amp; t &lt; 0 <span class="sc">\\</span></span>
+<span id="cb1-219"><a href="#cb1-219"></a>\bar{k} &amp; t = 0 <span class="sc">\\</span></span>
+<span id="cb1-220"><a href="#cb1-220"></a>k' &gt; \bar{k} &amp; t = 1 <span class="sc">\\</span></span>
+<span id="cb1-221"><a href="#cb1-221"></a>\bar{k} &amp; t &gt; 1</span>
+<span id="cb1-222"><a href="#cb1-222"></a>\end{cases}</span>
+<span id="cb1-223"><a href="#cb1-223"></a>$$</span>
+<span id="cb1-224"><a href="#cb1-224"></a></span>
+<span id="cb1-225"><a href="#cb1-225"></a>$$</span>
+<span id="cb1-226"><a href="#cb1-226"></a>i_t =</span>
+<span id="cb1-227"><a href="#cb1-227"></a>\begin{cases}</span>
+<span id="cb1-228"><a href="#cb1-228"></a>0 &amp; t &lt; 0 <span class="sc">\\</span></span>
+<span id="cb1-229"><a href="#cb1-229"></a>k' - \bar{k} &gt; 0 &amp; t = 0 <span class="sc">\\</span></span>
+<span id="cb1-230"><a href="#cb1-230"></a>\bar{k} - k' &lt; 0 &amp; t = 1 <span class="sc">\\</span></span>
+<span id="cb1-231"><a href="#cb1-231"></a>0 &amp; t &gt; 1</span>
+<span id="cb1-232"><a href="#cb1-232"></a>\end{cases}</span>
 <span id="cb1-233"><a href="#cb1-233"></a>$$</span>
 <span id="cb1-234"><a href="#cb1-234"></a></span>
-<span id="cb1-235"><a href="#cb1-235"></a>which implies that</span>
-<span id="cb1-236"><a href="#cb1-236"></a></span>
-<span id="cb1-237"><a href="#cb1-237"></a>$$</span>
-<span id="cb1-238"><a href="#cb1-238"></a>c_0 &gt; c_{-1}</span>
-<span id="cb1-239"><a href="#cb1-239"></a>$$</span>
-<span id="cb1-240"><a href="#cb1-240"></a></span>
-<span id="cb1-241"><a href="#cb1-241"></a>that is, consumption jumps up in period 0 and stays at that higher level thereafter. Comparing this derivation with the one for an anticipated permanent productivity shock, it is clear that the increase in consumption is now smaller. The trade balance deteriorates in period 0. To see this, write</span>
-<span id="cb1-242"><a href="#cb1-242"></a></span>
+<span id="cb1-235"><a href="#cb1-235"></a>$$</span>
+<span id="cb1-236"><a href="#cb1-236"></a>y_t =</span>
+<span id="cb1-237"><a href="#cb1-237"></a>\begin{cases}</span>
+<span id="cb1-238"><a href="#cb1-238"></a>\bar{A}F(\bar{k}) &amp; t &lt; 0 <span class="sc">\\</span></span>
+<span id="cb1-239"><a href="#cb1-239"></a>\bar{A}F(\bar{k}) &amp; t = 0 <span class="sc">\\</span></span>
+<span id="cb1-240"><a href="#cb1-240"></a>A'F(k') &gt; y_0 &amp; t = 1 <span class="sc">\\</span></span>
+<span id="cb1-241"><a href="#cb1-241"></a>\bar{A}F(\bar{k}) &amp; t &gt; 1</span>
+<span id="cb1-242"><a href="#cb1-242"></a>\end{cases}</span>
 <span id="cb1-243"><a href="#cb1-243"></a>$$</span>
-<span id="cb1-244"><a href="#cb1-244"></a>tb_0 - tb_{-1} = (y_0 - y_{-1}) - (c_0 - c_{-1}) - (i_0 - i_{-1})</span>
-<span id="cb1-245"><a href="#cb1-245"></a>$$</span>
+<span id="cb1-244"><a href="#cb1-244"></a></span>
+<span id="cb1-245"><a href="#cb1-245"></a>From the intertemporal resource constraint and the fact that $c_t = c_0$ for all $t$ we have:</span>
 <span id="cb1-246"><a href="#cb1-246"></a></span>
-<span id="cb1-247"><a href="#cb1-247"></a>and note that $y_0 - y_{-1} = 0$, $c_0 - c_{-1} &gt; 0$, and $i_0 &gt; 0$. The deterioration in the trade balance is smaller than in the case in which the anticipated productivity shock is permanent, because now the increase in consumption is smaller. In period 1 the trade balance improves:</span>
-<span id="cb1-248"><a href="#cb1-248"></a></span>
-<span id="cb1-249"><a href="#cb1-249"></a>$$</span>
-<span id="cb1-250"><a href="#cb1-250"></a>tb_1 - tb_0 = (y_1 - y_0) - (c_1 - c_0) - (i_1 - i_0) = A'F(k') - \bar{A}F(\bar{k}) + 2(k' - \bar{k}) &gt; 0</span>
-<span id="cb1-251"><a href="#cb1-251"></a>$$</span>
-<span id="cb1-252"><a href="#cb1-252"></a></span>
-<span id="cb1-253"><a href="#cb1-253"></a>In period 2 the trade balance deteriorates because output falls from $A'F(k')$ to $\bar{A}F(\bar{k})$, and investment goes from negative to zero:</span>
-<span id="cb1-254"><a href="#cb1-254"></a></span>
-<span id="cb1-255"><a href="#cb1-255"></a>$$</span>
-<span id="cb1-256"><a href="#cb1-256"></a>tb_2 - tb_1 = (y_2 - y_1) - (c_2 - c_1) - (i_2 - i_1) = \bar{A}F(\bar{k}) - A'F(k') - (k' - \bar{k}) &lt; 0</span>
-<span id="cb1-257"><a href="#cb1-257"></a>$$</span>
-<span id="cb1-258"><a href="#cb1-258"></a></span>
-<span id="cb1-259"><a href="#cb1-259"></a>As we will see shortly, the trade balance in period 2 is lower than in the original steady state. From period 2 on, output is constant and equal to* $\bar{A}F(\bar{k})$, *consumption is constant and equal to* $c_0$, *and investment is zero, so the trade balance is constant and equal to* $\bar{A}F(\bar{k}) - c_0 &lt; \bar{A}F(\bar{k}) - c_{-1} = tb_{-1} = r\bar{d}$. *Summarizing,*</span>
-<span id="cb1-260"><a href="#cb1-260"></a></span>
-<span id="cb1-261"><a href="#cb1-261"></a>$$</span>
-<span id="cb1-262"><a href="#cb1-262"></a>tb_t =</span>
-<span id="cb1-263"><a href="#cb1-263"></a>\begin{cases}</span>
-<span id="cb1-264"><a href="#cb1-264"></a>rd_{-1} &amp; t &lt; 0 <span class="sc">\\</span></span>
-<span id="cb1-265"><a href="#cb1-265"></a>tb' &lt; rd_{-1} &amp; t = 0 <span class="sc">\\</span></span>
-<span id="cb1-266"><a href="#cb1-266"></a>tb'' &gt; tb' &amp; t = 1 <span class="sc">\\</span></span>
-<span id="cb1-267"><a href="#cb1-267"></a>rd_{-1} &lt; tb'' &amp; t &gt; 1</span>
-<span id="cb1-268"><a href="#cb1-268"></a>\end{cases}</span>
-<span id="cb1-269"><a href="#cb1-269"></a>$$</span>
-<span id="cb1-270"><a href="#cb1-270"></a></span>
-<span id="cb1-271"><a href="#cb1-271"></a>The stock of debt increases in period 0. To see this, write*</span>
-<span id="cb1-272"><a href="#cb1-272"></a></span>
-<span id="cb1-273"><a href="#cb1-273"></a>$$</span>
-<span id="cb1-274"><a href="#cb1-274"></a>\begin{aligned}</span>
-<span id="cb1-275"><a href="#cb1-275"></a>d_0 &amp;= (1 + r)d_{-1} - tb_0 <span class="sc">\\</span></span>
-<span id="cb1-276"><a href="#cb1-276"></a>&amp;= (1 + r)d_{-1} - tb_{-1} - (tb_0 - tb_{-1}) <span class="sc">\\</span></span>
-<span id="cb1-277"><a href="#cb1-277"></a>&amp;= d_{-1} - (tb_0 - tb_{-1}) <span class="sc">\\</span></span>
-<span id="cb1-278"><a href="#cb1-278"></a>&amp;&gt; d_{-1}</span>
-<span id="cb1-279"><a href="#cb1-279"></a>\end{aligned}</span>
-<span id="cb1-280"><a href="#cb1-280"></a>$$</span>
+<span id="cb1-247"><a href="#cb1-247"></a>$$</span>
+<span id="cb1-248"><a href="#cb1-248"></a>\begin{aligned}</span>
+<span id="cb1-249"><a href="#cb1-249"></a>rd_{-1} + c_0 &amp;= \frac{r}{1 + r} \sum_{t=0}^{\infty} \frac{A_t F(k_t) - (k_{t+1} - k_t)}{(1 + r)^t}<span class="sc">\\</span></span>
+<span id="cb1-250"><a href="#cb1-250"></a>&amp;= \frac{r}{1 + r} \left<span class="co">[</span><span class="ot"> \left( \frac{1 + r}{r} \right) \bar{A}F(\bar{k}) + \frac{1}{1 + r}(A'F(k') - \bar{A}F(\bar{k})) - (k' - \bar{k}) + \frac{1}{1 + r}(k' - \bar{k}) \right</span><span class="co">]</span><span class="sc">\\</span></span>
+<span id="cb1-251"><a href="#cb1-251"></a>&amp;= \bar{A}F(\bar{k}) + \frac{r}{(1 + r)^2} \left<span class="co">[</span><span class="ot"> A'F(k') - \bar{A}F(\bar{k}) - r(k' - \bar{k}) \right</span><span class="co">]</span><span class="sc">\\</span></span>
+<span id="cb1-252"><a href="#cb1-252"></a>&amp;= \bar{A}F(\bar{k}) + \frac{r}{(1 + r)^2} \left<span class="co">[</span><span class="ot"> A'F(k') - \bar{A}F(\bar{k}) - A'F'(k')(k' - \bar{k}) \right</span><span class="co">]</span><span class="sc">\\</span></span>
+<span id="cb1-253"><a href="#cb1-253"></a>&amp;= rd_{-1} + c_{-1} + \frac{r}{(1 + r)^2} \left<span class="co">[</span><span class="ot"> A'F(\bar{k}) - \bar{A}F(\bar{k}) + A'F(k') - A'F(\bar{k})- A'F'(k')(k' - \bar{k}) \right</span><span class="co">]</span><span class="sc">\\</span></span>
+<span id="cb1-254"><a href="#cb1-254"></a>&amp;&gt; rd_{-1} + c_{-1}</span>
+<span id="cb1-255"><a href="#cb1-255"></a>\end{aligned}</span>
+<span id="cb1-256"><a href="#cb1-256"></a>$$</span>
+<span id="cb1-257"><a href="#cb1-257"></a></span>
+<span id="cb1-258"><a href="#cb1-258"></a>which implies that</span>
+<span id="cb1-259"><a href="#cb1-259"></a></span>
+<span id="cb1-260"><a href="#cb1-260"></a>$$</span>
+<span id="cb1-261"><a href="#cb1-261"></a>c_0 &gt; c_{-1}</span>
+<span id="cb1-262"><a href="#cb1-262"></a>$$</span>
+<span id="cb1-263"><a href="#cb1-263"></a></span>
+<span id="cb1-264"><a href="#cb1-264"></a>that is, consumption jumps up in period 0 and stays at that higher level thereafter. Comparing this derivation with the one for an anticipated permanent productivity shock, it is clear that the increase in consumption is now smaller. The trade balance deteriorates in period 0. To see this, write</span>
+<span id="cb1-265"><a href="#cb1-265"></a></span>
+<span id="cb1-266"><a href="#cb1-266"></a>$$</span>
+<span id="cb1-267"><a href="#cb1-267"></a>tb_0 - tb_{-1} = (y_0 - y_{-1}) - (c_0 - c_{-1}) - (i_0 - i_{-1})</span>
+<span id="cb1-268"><a href="#cb1-268"></a>$$</span>
+<span id="cb1-269"><a href="#cb1-269"></a></span>
+<span id="cb1-270"><a href="#cb1-270"></a>and note that $y_0 - y_{-1} = 0$, $c_0 - c_{-1} &gt; 0$, and $i_0 &gt; 0$. The deterioration in the trade balance is smaller than in the case in which the anticipated productivity shock is permanent, because now the increase in consumption is smaller. In period 1 the trade balance improves:</span>
+<span id="cb1-271"><a href="#cb1-271"></a></span>
+<span id="cb1-272"><a href="#cb1-272"></a>$$</span>
+<span id="cb1-273"><a href="#cb1-273"></a>\begin{aligned}</span>
+<span id="cb1-274"><a href="#cb1-274"></a>tb_1 - tb_0 &amp;= (y_1 - y_0) - (c_1 - c_0) - (i_1 - i_0) <span class="sc">\\</span></span>
+<span id="cb1-275"><a href="#cb1-275"></a>&amp;= A'F(k') - \bar{A}F(\bar{k}) + 2(k' - \bar{k}) <span class="sc">\\</span></span>
+<span id="cb1-276"><a href="#cb1-276"></a>&amp;&gt; 0</span>
+<span id="cb1-277"><a href="#cb1-277"></a>\end{aligned}</span>
+<span id="cb1-278"><a href="#cb1-278"></a>$$</span>
+<span id="cb1-279"><a href="#cb1-279"></a></span>
+<span id="cb1-280"><a href="#cb1-280"></a>In period 2 the trade balance deteriorates because output falls from $A'F(k')$ to $\bar{A}F(\bar{k})$, and investment goes from negative to zero:</span>
 <span id="cb1-281"><a href="#cb1-281"></a></span>
-<span id="cb1-282"><a href="#cb1-282"></a>since $tb_0 &lt; tb_{-1}$. In period 1, debt falls to a level lower than in the original steady state. To see this, recall that the trade balance is constant from period 2 on, so the evolution of debt satisfies</span>
-<span id="cb1-283"><a href="#cb1-283"></a></span>
-<span id="cb1-284"><a href="#cb1-284"></a>$$</span>
-<span id="cb1-285"><a href="#cb1-285"></a>d_t = (1 + r)d_{t-1} - tb_2, \quad t \geq 2</span>
-<span id="cb1-286"><a href="#cb1-286"></a>$$</span>
-<span id="cb1-287"><a href="#cb1-287"></a></span>
-<span id="cb1-288"><a href="#cb1-288"></a>which means that the only nonexplosive solution is</span>
+<span id="cb1-282"><a href="#cb1-282"></a>$$</span>
+<span id="cb1-283"><a href="#cb1-283"></a>\begin{aligned}</span>
+<span id="cb1-284"><a href="#cb1-284"></a>tb_2 - tb_1 &amp;= (y_2 - y_1) - (c_2 - c_1) - (i_2 - i_1) <span class="sc">\\</span></span>
+<span id="cb1-285"><a href="#cb1-285"></a>&amp;= \bar{A}F(\bar{k}) - A'F(k') - (k' - \bar{k}) <span class="sc">\\</span></span>
+<span id="cb1-286"><a href="#cb1-286"></a>&amp;&lt; 0</span>
+<span id="cb1-287"><a href="#cb1-287"></a>\end{aligned}</span>
+<span id="cb1-288"><a href="#cb1-288"></a>$$</span>
 <span id="cb1-289"><a href="#cb1-289"></a></span>
-<span id="cb1-290"><a href="#cb1-290"></a>$$</span>
-<span id="cb1-291"><a href="#cb1-291"></a>d_t = d_1 = tb_2 / r = (\bar{A}F(\bar{k}) - c_0)/r &lt; (\bar{A}F(\bar{k}) - c_{-1})/r = tb_{-1}/r = d_{-1} = \bar{d}, \quad \text{for } t \geq 1.</span>
+<span id="cb1-290"><a href="#cb1-290"></a>As we will see shortly, the trade balance in period 2 is lower than in the original steady state. From period 2 on, output is constant and equal to $\bar{A}F(\bar{k})$, consumption is constant and equal to $c_0$, and investment is zero, so the trade balance is constant and equal to $\bar{A}F(\bar{k}) - c_0 &lt; \bar{A}F(\bar{k}) - c_{-1} = tb_{-1} = r\bar{d}$. Summarizing,</span>
+<span id="cb1-291"><a href="#cb1-291"></a></span>
 <span id="cb1-292"><a href="#cb1-292"></a>$$</span>
-<span id="cb1-293"><a href="#cb1-293"></a></span>
-<span id="cb1-294"><a href="#cb1-294"></a>So we can write</span>
-<span id="cb1-295"><a href="#cb1-295"></a></span>
-<span id="cb1-296"><a href="#cb1-296"></a>$$</span>
-<span id="cb1-297"><a href="#cb1-297"></a>d_t =</span>
-<span id="cb1-298"><a href="#cb1-298"></a>\begin{cases}</span>
-<span id="cb1-299"><a href="#cb1-299"></a>\bar{d} &amp; t &lt; 0 <span class="sc">\\</span></span>
-<span id="cb1-300"><a href="#cb1-300"></a>d' &gt; \bar{d} &amp; t = 0 <span class="sc">\\</span></span>
-<span id="cb1-301"><a href="#cb1-301"></a>d'' &lt; \bar{d} &amp; t &gt; 0</span>
-<span id="cb1-302"><a href="#cb1-302"></a>\end{cases}</span>
-<span id="cb1-303"><a href="#cb1-303"></a>$$</span>
-<span id="cb1-304"><a href="#cb1-304"></a></span>
-<span id="cb1-305"><a href="#cb1-305"></a>The current account, being the change in the stock of debt, is negative in period 0, positive in period 1, and 0 thereafter,</span>
-<span id="cb1-306"><a href="#cb1-306"></a></span>
-<span id="cb1-307"><a href="#cb1-307"></a>$$</span>
-<span id="cb1-308"><a href="#cb1-308"></a>ca_t =</span>
-<span id="cb1-309"><a href="#cb1-309"></a>\begin{cases}</span>
-<span id="cb1-310"><a href="#cb1-310"></a>0 &amp; t &lt; 0 <span class="sc">\\</span></span>
-<span id="cb1-311"><a href="#cb1-311"></a>-(d' - \bar{d}) &lt; 0 &amp; t = 0 <span class="sc">\\</span></span>
-<span id="cb1-312"><a href="#cb1-312"></a>-(d'' - d') &gt; 0 &amp; t = 1 <span class="sc">\\</span></span>
-<span id="cb1-313"><a href="#cb1-313"></a>0 &amp; t &gt; 1</span>
-<span id="cb1-314"><a href="#cb1-314"></a>\end{cases}</span>
+<span id="cb1-293"><a href="#cb1-293"></a>tb_t =</span>
+<span id="cb1-294"><a href="#cb1-294"></a>\begin{cases}</span>
+<span id="cb1-295"><a href="#cb1-295"></a>rd_{-1} &amp; t &lt; 0 <span class="sc">\\</span></span>
+<span id="cb1-296"><a href="#cb1-296"></a>tb' &lt; rd_{-1} &amp; t = 0 <span class="sc">\\</span></span>
+<span id="cb1-297"><a href="#cb1-297"></a>tb'' &gt; tb' &amp; t = 1 <span class="sc">\\</span></span>
+<span id="cb1-298"><a href="#cb1-298"></a>rd_{-1} &lt; tb'' &amp; t &gt; 1</span>
+<span id="cb1-299"><a href="#cb1-299"></a>\end{cases}</span>
+<span id="cb1-300"><a href="#cb1-300"></a>$$</span>
+<span id="cb1-301"><a href="#cb1-301"></a></span>
+<span id="cb1-302"><a href="#cb1-302"></a>The stock of debt increases in period 0. To see this, write</span>
+<span id="cb1-303"><a href="#cb1-303"></a></span>
+<span id="cb1-304"><a href="#cb1-304"></a>$$</span>
+<span id="cb1-305"><a href="#cb1-305"></a>\begin{aligned}</span>
+<span id="cb1-306"><a href="#cb1-306"></a>d_0 &amp;= (1 + r)d_{-1} - tb_0 <span class="sc">\\</span></span>
+<span id="cb1-307"><a href="#cb1-307"></a>&amp;= (1 + r)d_{-1} - tb_{-1} - (tb_0 - tb_{-1}) <span class="sc">\\</span></span>
+<span id="cb1-308"><a href="#cb1-308"></a>&amp;= d_{-1} - (tb_0 - tb_{-1}) <span class="sc">\\</span></span>
+<span id="cb1-309"><a href="#cb1-309"></a>&amp;&gt; d_{-1}</span>
+<span id="cb1-310"><a href="#cb1-310"></a>\end{aligned}</span>
+<span id="cb1-311"><a href="#cb1-311"></a>$$</span>
+<span id="cb1-312"><a href="#cb1-312"></a></span>
+<span id="cb1-313"><a href="#cb1-313"></a>since $tb_0 &lt; tb_{-1}$. In period 1, debt falls to a level lower than in the original steady state. To see this, recall that the trade balance is constant from period 2 on, so the evolution of debt satisfies</span>
+<span id="cb1-314"><a href="#cb1-314"></a></span>
 <span id="cb1-315"><a href="#cb1-315"></a>$$</span>
-<span id="cb1-316"><a href="#cb1-316"></a></span>
-<span id="cb1-317"><a href="#cb1-317"></a>::: {.callout-important title="Final Answer Summary – Anticipated Transitory Shock"}</span>
-<span id="cb1-318"><a href="#cb1-318"></a><span class="ss">- </span>$k_t$ rises at $t=1$ then falls back at $t=2$</span>
-<span id="cb1-319"><a href="#cb1-319"></a><span class="ss">- </span>Investment: $i_0 &gt; 0$, $i_1 &lt; 0$, $i_t = 0$ otherwise</span>
-<span id="cb1-320"><a href="#cb1-320"></a><span class="ss">- </span>Consumption: rises at $t = 0$, constant thereafter</span>
-<span id="cb1-321"><a href="#cb1-321"></a><span class="ss">- </span>TB: worsens at $t=0$, improves at $t=1$, worsens again at $t=2$, then stabilizes</span>
-<span id="cb1-322"><a href="#cb1-322"></a><span class="ss">- </span>Debt: $d_0 &gt; \bar{d}$, $d_1 &lt; \bar{d}$, $d_t = d_1$ for $t \geq 2$</span>
-<span id="cb1-323"><a href="#cb1-323"></a><span class="ss">- </span>CA: $ca_0 &lt; 0$, $ca_1 &gt; 0$, $ca_t = 0$ for $t \ne 0, 1$</span>
-<span id="cb1-324"><a href="#cb1-324"></a>:::</span>
-<span id="cb1-325"><a href="#cb1-325"></a></span>
-<span id="cb1-326"><a href="#cb1-326"></a><span class="fu">##### (b)</span></span>
-<span id="cb1-327"><a href="#cb1-327"></a></span>
-<span id="cb1-328"><a href="#cb1-328"></a>The key diﬀerence is in the trade balance and the current account. Both deteriorate when the temporary shock is anticipated but improve when it is unanticipated. This is primarily because in the former case in period 0 investment increases and output is unchanged, whereas in the latter case investment is unchanged and output increases.</span>
-<span id="cb1-329"><a href="#cb1-329"></a></span>
-<span id="cb1-330"><a href="#cb1-330"></a>::: {.callout-important title="Final Answer Summary – Anticipated vs. Unanticipated Temporary Shock"}</span>
-<span id="cb1-331"><a href="#cb1-331"></a><span class="ss">- </span>Anticipated: $i_0 &gt; 0$, $y_0$ unchanged → TB/CA worsen</span>
-<span id="cb1-332"><a href="#cb1-332"></a><span class="ss">- </span>Unanticipated: $y_0$ rises, $i_0$ unchanged → TB/CA improve</span>
-<span id="cb1-333"><a href="#cb1-333"></a>:::</span>
-<span id="cb1-334"><a href="#cb1-334"></a></span>
-<span id="cb1-335"><a href="#cb1-335"></a><span class="fu">##### (c)</span></span>
-<span id="cb1-336"><a href="#cb1-336"></a></span>
-<span id="cb1-337"><a href="#cb1-337"></a>An anticipated endowment shock would also cause a deterioration in the trade balance and the current account in period 0, because output is unchanged but consumption increases (as households feel richer). However, the deterioration in the external accounts is smaller, because in the economy with capital investment is a second source of increase in domestic absorption.</span>
-<span id="cb1-338"><a href="#cb1-338"></a></span>
-<span id="cb1-339"><a href="#cb1-339"></a></span>
-<span id="cb1-340"><a href="#cb1-340"></a></span>
-<span id="cb1-341"><a href="#cb1-341"></a></span>
-<span id="cb1-342"><a href="#cb1-342"></a>::: {.callout-important title="Final Answer Summary – Comparison to Endowment Economy (Exercise 2.5)"}</span>
-<span id="cb1-343"><a href="#cb1-343"></a><span class="ss">- </span>Both: anticipation leads to higher $c_0$, TB/CA deterioration</span>
-<span id="cb1-344"><a href="#cb1-344"></a><span class="ss">- </span>Capital economy: absorption includes both $c$ and $i$</span>
-<span id="cb1-345"><a href="#cb1-345"></a><span class="ss">- </span>Result: TB/CA deteriorate **more** than in endowment economy</span>
-<span id="cb1-346"><a href="#cb1-346"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-316"><a href="#cb1-316"></a>d_t = (1 + r)d_{t-1} - tb_2, \quad t \geq 2</span>
+<span id="cb1-317"><a href="#cb1-317"></a>$$</span>
+<span id="cb1-318"><a href="#cb1-318"></a></span>
+<span id="cb1-319"><a href="#cb1-319"></a>which means that the only nonexplosive solution is</span>
+<span id="cb1-320"><a href="#cb1-320"></a></span>
+<span id="cb1-321"><a href="#cb1-321"></a>$$</span>
+<span id="cb1-322"><a href="#cb1-322"></a>d_t = d_1 = tb_2 / r = (\bar{A}F(\bar{k}) - c_0)/r &lt; (\bar{A}F(\bar{k}) - c_{-1})/r = tb_{-1}/r = d_{-1} = \bar{d},</span>
+<span id="cb1-323"><a href="#cb1-323"></a>$$</span>
+<span id="cb1-324"><a href="#cb1-324"></a></span>
+<span id="cb1-325"><a href="#cb1-325"></a>for $t \geq 1$. So we can write</span>
+<span id="cb1-326"><a href="#cb1-326"></a></span>
+<span id="cb1-327"><a href="#cb1-327"></a>$$</span>
+<span id="cb1-328"><a href="#cb1-328"></a>d_t =</span>
+<span id="cb1-329"><a href="#cb1-329"></a>\begin{cases}</span>
+<span id="cb1-330"><a href="#cb1-330"></a>\bar{d} &amp; t &lt; 0 <span class="sc">\\</span></span>
+<span id="cb1-331"><a href="#cb1-331"></a>d' &gt; \bar{d} &amp; t = 0 <span class="sc">\\</span></span>
+<span id="cb1-332"><a href="#cb1-332"></a>d'' &lt; \bar{d} &amp; t &gt; 0</span>
+<span id="cb1-333"><a href="#cb1-333"></a>\end{cases}</span>
+<span id="cb1-334"><a href="#cb1-334"></a>$$</span>
+<span id="cb1-335"><a href="#cb1-335"></a></span>
+<span id="cb1-336"><a href="#cb1-336"></a>The current account, being the change in the stock of debt, is negative in period 0, positive in period 1, and 0 thereafter,</span>
+<span id="cb1-337"><a href="#cb1-337"></a></span>
+<span id="cb1-338"><a href="#cb1-338"></a>$$</span>
+<span id="cb1-339"><a href="#cb1-339"></a>ca_t =</span>
+<span id="cb1-340"><a href="#cb1-340"></a>\begin{cases}</span>
+<span id="cb1-341"><a href="#cb1-341"></a>0 &amp; t &lt; 0 <span class="sc">\\</span></span>
+<span id="cb1-342"><a href="#cb1-342"></a>-(d' - \bar{d}) &lt; 0 &amp; t = 0 <span class="sc">\\</span></span>
+<span id="cb1-343"><a href="#cb1-343"></a>-(d'' - d') &gt; 0 &amp; t = 1 <span class="sc">\\</span></span>
+<span id="cb1-344"><a href="#cb1-344"></a>0 &amp; t &gt; 1</span>
+<span id="cb1-345"><a href="#cb1-345"></a>\end{cases}</span>
+<span id="cb1-346"><a href="#cb1-346"></a>$$</span>
+<span id="cb1-347"><a href="#cb1-347"></a></span>
+<span id="cb1-348"><a href="#cb1-348"></a><span class="fu">##### (b)</span></span>
+<span id="cb1-349"><a href="#cb1-349"></a></span>
+<span id="cb1-350"><a href="#cb1-350"></a>The key diﬀerence is in the trade balance and the current account. Both deteriorate when the temporary shock is anticipated but improve when it is unanticipated. This is primarily because in the former case in period 0 investment increases and output is unchanged, whereas in the latter case investment is unchanged and output increases.</span>
+<span id="cb1-351"><a href="#cb1-351"></a></span>
+<span id="cb1-352"><a href="#cb1-352"></a></span>
+<span id="cb1-353"><a href="#cb1-353"></a><span class="fu">##### (c)</span></span>
+<span id="cb1-354"><a href="#cb1-354"></a></span>
+<span id="cb1-355"><a href="#cb1-355"></a>An anticipated endowment shock would also cause a deterioration in the trade balance and the current account in period 0, because output is unchanged but consumption increases (as households feel richer). However, the deterioration in the external accounts is smaller, because in the economy with capital investment is a second source of increase in domestic absorption.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Exercise 2.4 – Open‑Economy Macroeconomics Solutions</title>
+<title>Exercise 2.4 – Open Economy Macroeconomics - Solutions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -144,7 +144,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Open‑Economy Macroeconomics Solutions</span>
+    <span class="navbar-title">Open Economy Macroeconomics - Solutions</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -240,42 +240,24 @@ d_t = (1 + r) d_{t-1} + c_t - y_t \tag{3}
 \]</span></p>
 <p>It follows that</p>
 <p><span class="math display">\[
-\mathbb{E}_t \sum_{j=0}^{\infty} \beta^j c_{t+j} =
-\frac{\alpha}{1 - \alpha \beta} c_{t-1} + \left[ \frac{1}{1 - \beta} - \frac{\alpha}{1 - \alpha \beta} \right] x_t
-\]</span></p>
-<p><span class="math display">\[
-= \frac{\alpha}{1 - \alpha \beta} c_{t-1} + \frac{1}{(1 - \beta)(1 - \alpha \beta)} x_t
+\begin{aligned}
+\mathbb{E}_t \sum_{j=0}^{\infty} \beta^j c_{t+j} &amp;=
+\frac{\alpha}{1 - \alpha \beta} c_{t-1} + \left[ \frac{1}{1 - \beta} - \frac{\alpha}{1 - \alpha \beta} \right] x_t \\
+&amp;= \frac{\alpha}{1 - \alpha \beta} c_{t-1} + \frac{1}{(1 - \beta)(1 - \alpha \beta)} x_t
+\end{aligned}
 \]</span></p>
 <p>From (3) and (4) we get</p>
 <p><span class="math display">\[
-(1 + r) d_{t-1} = \sum_{j=0}^{\infty} \beta^j y_{t+j} - \sum_{j=0}^{\infty} \beta^j c_{t+j}
-\]</span></p>
-<p><span class="math display">\[
-= \frac{1}{1 - \rho \beta} y_t - \frac{\alpha}{1 - \alpha \beta} c_{t-1} - \frac{1}{(1 - \beta)(1 - \alpha \beta)} (c_t - \alpha c_{t-1})
-\]</span></p>
-<p><span class="math display">\[
-= \frac{1}{1 - \rho \beta} y_t + \frac{\alpha \beta}{(1 - \alpha \beta)(1 - \beta)} c_{t-1} - \frac{1}{(1 - \beta)(1 - \alpha \beta)} c_t
+\begin{aligned}
+(1 + r) d_{t-1} &amp;= \sum_{j=0}^{\infty} \beta^j y_{t+j} - \sum_{j=0}^{\infty} \beta^j c_{t+j} \\
+&amp;= \frac{1}{1 - \rho \beta} y_t - \frac{\alpha}{1 - \alpha \beta} c_{t-1} - \frac{1}{(1 - \beta)(1 - \alpha \beta)} (c_t - \alpha c_{t-1}) \\
+&amp;= \frac{1}{1 - \rho \beta} y_t + \frac{\alpha \beta}{(1 - \alpha \beta)(1 - \beta)} c_{t-1} - \frac{1}{(1 - \beta)(1 - \alpha \beta)} c_t
+\end{aligned}
 \]</span></p>
 <p>So we have</p>
 <p><span class="math display">\[
 \frac{d c_t}{d y_t} = \frac{(1 - \beta)(1 - \alpha \beta)}{1 - \rho \beta}
 \]</span></p>
-<div class="callout callout-style-default callout-important callout-titled" title="Final Answer Summary (Impact Consumption Response)">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Final Answer Summary (Impact Consumption Response)
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>A unit endowment shock in period 0 raises consumption by:</p>
-<p><span class="math display">\[
-\frac{d c_t}{d y_t} = \frac{(1 - \beta)(1 - \alpha \beta)}{1 - \rho \beta}
-\]</span></p>
-</div>
-</div>
 </section>
 <section id="section-1" class="level4">
 <h4 class="anchored" data-anchor-id="section-1">2.</h4>
@@ -285,23 +267,6 @@ This requires</p>
 \alpha &lt; \frac{\rho - 1}{1 - \beta}
 \]</span></p>
 <p>So <span class="math inline">\(\alpha\)</span> must be negative. As <span class="math inline">\(\rho \to 1\)</span>, <span class="math inline">\(\alpha &lt; 0\)</span> is enough.</p>
-<div class="callout callout-style-default callout-important callout-titled" title="Final Answer Summary (Trade Balance Response)">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Final Answer Summary (Trade Balance Response)
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>A positive endowment shock worsens the trade balance if:</p>
-<p><span class="math display">\[
-\alpha &lt; \frac{\rho - 1}{1 - \beta}
-\]</span></p>
-<p>That is, habit formation must be sufficiently negative (external habits).</p>
-</div>
-</div>
 
 
 <!-- -->
@@ -853,65 +818,39 @@ Final Answer Summary (Trade Balance Response)
 <span id="cb1-62"><a href="#cb1-62"></a>It follows that</span>
 <span id="cb1-63"><a href="#cb1-63"></a></span>
 <span id="cb1-64"><a href="#cb1-64"></a>$$</span>
-<span id="cb1-65"><a href="#cb1-65"></a>\mathbb{E}_t \sum_{j=0}^{\infty} \beta^j c_{t+j} =</span>
-<span id="cb1-66"><a href="#cb1-66"></a>\frac{\alpha}{1 - \alpha \beta} c_{t-1} + \left<span class="co">[</span><span class="ot"> \frac{1}{1 - \beta} - \frac{\alpha}{1 - \alpha \beta} \right</span><span class="co">]</span> x_t</span>
-<span id="cb1-67"><a href="#cb1-67"></a>$$</span>
-<span id="cb1-68"><a href="#cb1-68"></a></span>
-<span id="cb1-69"><a href="#cb1-69"></a>$$</span>
-<span id="cb1-70"><a href="#cb1-70"></a>= \frac{\alpha}{1 - \alpha \beta} c_{t-1} + \frac{1}{(1 - \beta)(1 - \alpha \beta)} x_t</span>
-<span id="cb1-71"><a href="#cb1-71"></a>$$</span>
-<span id="cb1-72"><a href="#cb1-72"></a></span>
-<span id="cb1-73"><a href="#cb1-73"></a>From (3) and (4) we get</span>
-<span id="cb1-74"><a href="#cb1-74"></a></span>
-<span id="cb1-75"><a href="#cb1-75"></a>$$</span>
-<span id="cb1-76"><a href="#cb1-76"></a>(1 + r) d_{t-1} = \sum_{j=0}^{\infty} \beta^j y_{t+j} - \sum_{j=0}^{\infty} \beta^j c_{t+j}</span>
-<span id="cb1-77"><a href="#cb1-77"></a>$$</span>
-<span id="cb1-78"><a href="#cb1-78"></a></span>
-<span id="cb1-79"><a href="#cb1-79"></a>$$</span>
-<span id="cb1-80"><a href="#cb1-80"></a>= \frac{1}{1 - \rho \beta} y_t - \frac{\alpha}{1 - \alpha \beta} c_{t-1} - \frac{1}{(1 - \beta)(1 - \alpha \beta)} (c_t - \alpha c_{t-1})</span>
-<span id="cb1-81"><a href="#cb1-81"></a>$$</span>
-<span id="cb1-82"><a href="#cb1-82"></a></span>
-<span id="cb1-83"><a href="#cb1-83"></a>$$</span>
-<span id="cb1-84"><a href="#cb1-84"></a>= \frac{1}{1 - \rho \beta} y_t + \frac{\alpha \beta}{(1 - \alpha \beta)(1 - \beta)} c_{t-1} - \frac{1}{(1 - \beta)(1 - \alpha \beta)} c_t</span>
-<span id="cb1-85"><a href="#cb1-85"></a>$$</span>
-<span id="cb1-86"><a href="#cb1-86"></a></span>
-<span id="cb1-87"><a href="#cb1-87"></a>So we have</span>
-<span id="cb1-88"><a href="#cb1-88"></a></span>
-<span id="cb1-89"><a href="#cb1-89"></a>$$</span>
-<span id="cb1-90"><a href="#cb1-90"></a>\frac{d c_t}{d y_t} = \frac{(1 - \beta)(1 - \alpha \beta)}{1 - \rho \beta}</span>
-<span id="cb1-91"><a href="#cb1-91"></a>$$</span>
+<span id="cb1-65"><a href="#cb1-65"></a>\begin{aligned}</span>
+<span id="cb1-66"><a href="#cb1-66"></a>\mathbb{E}_t \sum_{j=0}^{\infty} \beta^j c_{t+j} &amp;=</span>
+<span id="cb1-67"><a href="#cb1-67"></a>\frac{\alpha}{1 - \alpha \beta} c_{t-1} + \left<span class="co">[</span><span class="ot"> \frac{1}{1 - \beta} - \frac{\alpha}{1 - \alpha \beta} \right</span><span class="co">]</span> x_t <span class="sc">\\</span></span>
+<span id="cb1-68"><a href="#cb1-68"></a>&amp;= \frac{\alpha}{1 - \alpha \beta} c_{t-1} + \frac{1}{(1 - \beta)(1 - \alpha \beta)} x_t</span>
+<span id="cb1-69"><a href="#cb1-69"></a>\end{aligned}</span>
+<span id="cb1-70"><a href="#cb1-70"></a>$$</span>
+<span id="cb1-71"><a href="#cb1-71"></a></span>
+<span id="cb1-72"><a href="#cb1-72"></a>From (3) and (4) we get</span>
+<span id="cb1-73"><a href="#cb1-73"></a></span>
+<span id="cb1-74"><a href="#cb1-74"></a>$$</span>
+<span id="cb1-75"><a href="#cb1-75"></a>\begin{aligned}</span>
+<span id="cb1-76"><a href="#cb1-76"></a>(1 + r) d_{t-1} &amp;= \sum_{j=0}^{\infty} \beta^j y_{t+j} - \sum_{j=0}^{\infty} \beta^j c_{t+j} <span class="sc">\\</span></span>
+<span id="cb1-77"><a href="#cb1-77"></a>&amp;= \frac{1}{1 - \rho \beta} y_t - \frac{\alpha}{1 - \alpha \beta} c_{t-1} - \frac{1}{(1 - \beta)(1 - \alpha \beta)} (c_t - \alpha c_{t-1}) <span class="sc">\\</span></span>
+<span id="cb1-78"><a href="#cb1-78"></a>&amp;= \frac{1}{1 - \rho \beta} y_t + \frac{\alpha \beta}{(1 - \alpha \beta)(1 - \beta)} c_{t-1} - \frac{1}{(1 - \beta)(1 - \alpha \beta)} c_t</span>
+<span id="cb1-79"><a href="#cb1-79"></a>\end{aligned}</span>
+<span id="cb1-80"><a href="#cb1-80"></a>$$</span>
+<span id="cb1-81"><a href="#cb1-81"></a></span>
+<span id="cb1-82"><a href="#cb1-82"></a>So we have</span>
+<span id="cb1-83"><a href="#cb1-83"></a></span>
+<span id="cb1-84"><a href="#cb1-84"></a>$$</span>
+<span id="cb1-85"><a href="#cb1-85"></a>\frac{d c_t}{d y_t} = \frac{(1 - \beta)(1 - \alpha \beta)}{1 - \rho \beta}</span>
+<span id="cb1-86"><a href="#cb1-86"></a>$$</span>
+<span id="cb1-87"><a href="#cb1-87"></a></span>
+<span id="cb1-88"><a href="#cb1-88"></a><span class="fu">#### 2.</span></span>
+<span id="cb1-89"><a href="#cb1-89"></a></span>
+<span id="cb1-90"><a href="#cb1-90"></a>For $dtb_t/dy_t$ to be negative, we need the above expression to be larger than unity.  </span>
+<span id="cb1-91"><a href="#cb1-91"></a>This requires</span>
 <span id="cb1-92"><a href="#cb1-92"></a></span>
-<span id="cb1-93"><a href="#cb1-93"></a>::: {.callout-important title="Final Answer Summary (Impact Consumption Response)"}</span>
-<span id="cb1-94"><a href="#cb1-94"></a>A unit endowment shock in period 0 raises consumption by:</span>
-<span id="cb1-95"><a href="#cb1-95"></a></span>
-<span id="cb1-96"><a href="#cb1-96"></a>$$</span>
-<span id="cb1-97"><a href="#cb1-97"></a>\frac{d c_t}{d y_t} = \frac{(1 - \beta)(1 - \alpha \beta)}{1 - \rho \beta}</span>
-<span id="cb1-98"><a href="#cb1-98"></a>$$</span>
-<span id="cb1-99"><a href="#cb1-99"></a></span>
-<span id="cb1-100"><a href="#cb1-100"></a>:::</span>
-<span id="cb1-101"><a href="#cb1-101"></a></span>
-<span id="cb1-102"><a href="#cb1-102"></a></span>
-<span id="cb1-103"><a href="#cb1-103"></a><span class="fu">#### 2.</span></span>
-<span id="cb1-104"><a href="#cb1-104"></a></span>
-<span id="cb1-105"><a href="#cb1-105"></a>For $dtb_t/dy_t$ to be negative, we need the above expression to be larger than unity.  </span>
-<span id="cb1-106"><a href="#cb1-106"></a>This requires</span>
-<span id="cb1-107"><a href="#cb1-107"></a></span>
-<span id="cb1-108"><a href="#cb1-108"></a>$$</span>
-<span id="cb1-109"><a href="#cb1-109"></a>\alpha &lt; \frac{\rho - 1}{1 - \beta}</span>
-<span id="cb1-110"><a href="#cb1-110"></a>$$</span>
-<span id="cb1-111"><a href="#cb1-111"></a></span>
-<span id="cb1-112"><a href="#cb1-112"></a>So $\alpha$ must be negative. As $\rho \to 1$, $\alpha &lt; 0$ is enough.</span>
-<span id="cb1-113"><a href="#cb1-113"></a></span>
-<span id="cb1-114"><a href="#cb1-114"></a></span>
-<span id="cb1-115"><a href="#cb1-115"></a>::: {.callout-important title="Final Answer Summary (Trade Balance Response)"}</span>
-<span id="cb1-116"><a href="#cb1-116"></a>A positive endowment shock worsens the trade balance if:</span>
-<span id="cb1-117"><a href="#cb1-117"></a></span>
-<span id="cb1-118"><a href="#cb1-118"></a>$$</span>
-<span id="cb1-119"><a href="#cb1-119"></a>\alpha &lt; \frac{\rho - 1}{1 - \beta}</span>
-<span id="cb1-120"><a href="#cb1-120"></a>$$</span>
-<span id="cb1-121"><a href="#cb1-121"></a></span>
-<span id="cb1-122"><a href="#cb1-122"></a>That is, habit formation must be sufficiently negative (external habits).</span>
-<span id="cb1-123"><a href="#cb1-123"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-93"><a href="#cb1-93"></a>$$</span>
+<span id="cb1-94"><a href="#cb1-94"></a>\alpha &lt; \frac{\rho - 1}{1 - \beta}</span>
+<span id="cb1-95"><a href="#cb1-95"></a>$$</span>
+<span id="cb1-96"><a href="#cb1-96"></a></span>
+<span id="cb1-97"><a href="#cb1-97"></a>So $\alpha$ must be negative. As $\rho \to 1$, $\alpha &lt; 0$ is enough.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

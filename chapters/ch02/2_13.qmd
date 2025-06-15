@@ -34,9 +34,9 @@ In period 2, the endowment has no idiosyncratic component and is given by $y_{i2
 
 5. Suppose now that output in period 1 in country $i$ increases by $x > 0$, that is, $\Delta y_{i1} = x$. Derive the effect of this shock on the trade balance and the level of external debt in period 1 in country $i$ and on the world interest rate under the following two alternative cases:
 
-    (a) A country-specific endowment shock, $\Delta y_{i1} = \Delta \varepsilon_i = x$ and $\Delta y_1 = 0$.
+    \(a\) A country-specific endowment shock, $\Delta y_{i1} = \Delta \varepsilon_i = x$ and $\Delta y_1 = 0$.
 
-    (b) A world endowment shock, $\Delta y_{i1} = \Delta y_1 = x$, and $\Delta \varepsilon_i = 0$.
+    \(b\) A world endowment shock, $\Delta y_{i1} = \Delta y_1 = x$, and $\Delta \varepsilon_i = 0$.
 
     Provide a discussion of your results.  
 
@@ -47,53 +47,53 @@ In period 2, the endowment has no idiosyncratic component and is given by $y_{i2
 #### 1.
 
 $$
-\max \ln(c_{i1}) + \beta \ln(c_{i2})
+\max \ln(c_{1}^{i}) + \beta \ln(c_{2}^{i})
 $$
 
 subject to:
 
 $$
-c_{i1} = y_{i1} + d_{i1}
+c_{1}^{i} = y_{1}^{i} + d_{1}^{i}
 $$
 
 $$
-c_{i2} + (1 + r) d_{i1} = y_{i2}
+c_{2}^{i} + (1 + r) d_{1}^{i} = y_{2}^{i}
 $$
 
 $$
-d_{i2} \leq 0
+d_{2}^{i} \leq 0
 $$
 
 Note that the last condition should hold with equality. So, using that the debt in the second period is equal to zero, the optimization problem becomes:
 
 $$
-\max \ln(c_{i1}) + \beta \ln(c_{i2})
+\max \ln(c_{1}^{i}) + \beta \ln(c_{2}^{i})
 $$
 
 subject to:
 
 $$
-c_{i1} = y_{i1} + d_{i1}
+c_{1}^{i} = y_{1}^{i} + d_{1}^{i}
 $$
 
 $$
-c_{i2} + (1 + r) d_{i1} = y_{i2}
+c_{2}^{i} + (1 + r) d_{1}^{i} = y_{2}^{i}
 $$
 
 Lagrangian:
 
 $$
-\mathcal{L} = \ln(c_{i1}) + \beta \ln(c_{i2}) - \lambda_1 (c_{i1} - y_{i1} - d_{i1}) - \lambda_2 (c_{i2} + (1 + r) d_{i1} - y_{i2})
+\mathcal{L} = \ln(c_{1}^{i}) + \beta \ln(c_{2}^{i}) - \lambda_1 (c_{1}^{i} - y_{1}^{i} - d_{1}^{i}) - \lambda_2 (c_{2}^{i} + (1 + r) d_{1}^{i} - y_{2}^{i})
 $$
 
 First-order conditions:
 
 $$
-\frac{1}{c_{i1}} - \lambda_1 = 0
+\frac{1}{c_{1}^{i}} - \lambda_1 = 0
 $$
 
 $$
-\frac{\beta}{c_{i2}} - \lambda_2 = 0
+\frac{\beta}{c_{2}^{i}} - \lambda_2 = 0
 $$
 
 $$
@@ -103,110 +103,88 @@ $$
 Substituting gives Euler equation:
 
 $$
-\frac{1}{c_{i1}} = (1 + r) \beta \frac{1}{c_{i2}} \quad \Rightarrow \quad c_{i2} = c_{i1} (1 + r) \beta
+\frac{1}{c_{1}^{i}} = (1 + r) \beta \frac{1}{c_{2}^{i}}
 $$
+
+$$
+\Rightarrow c_{2}^{i} = c_{1}^{i} (1 + r) \beta
+$$
+
 
 Then using the budget constraints, we obtain:
 
 $$
-c_{i1} = \frac{1}{(1 + r)(1 + \beta)} (y_{i2} + (1 + r) y_{i1})
+c_{1}^{i} = \frac{1}{(1 + r)(1 + \beta)} (y_{2}^{i} + (1 + r) y_{1}^{i})
 $$
 
 $$
-c_{i2} = \frac{\beta}{1 + \beta} (y_{i2} + (1 + r) y_{i1})
+c_{2}^{i} = \frac{\beta}{1 + \beta} (y_{2}^{i} + (1 + r) y_{1}^{i})
 $$
 
 $$
-d_{i1} = \frac{1}{(1 + r)(1 + \beta)} (y_{i2} - \beta(1 + r) y_{i1})
+d_{1}^{i} = \frac{1}{(1 + r)(1 + \beta)} (y_{2}^{i} - \beta(1 + r) y_{1}^{i})
 $$
-
-::: {.callout-important title="Final Answer Summary – Optimal Consumption and Debt"}
-- Euler equation:
-  $$
-  \frac{1}{c_{i1}} = (1 + r)\beta \cdot \frac{1}{c_{i2}} \quad \Rightarrow \quad c_{i2} = (1 + r)\beta \cdot c_{i1}
-  $$
-- Optimal consumption:
-  $$
-  c_{i1} = \frac{1}{(1 + r)(1 + \beta)} (y_{i2} + (1 + r) y_{i1}), \quad
-  c_{i2} = \frac{\beta}{1 + \beta} (y_{i2} + (1 + r) y_{i1})
-  $$
-- Debt:
-  $$
-  d_{i1} = \frac{1}{(1 + r)(1 + \beta)} (y_{i2} - \beta(1 + r)y_{i1})
-  $$
-:::
 
 #### 2.
 
 External debt:
 
 $$
-d_{i1} = \frac{1}{(1 + r)(1 + \beta)} (y_{i2} - \beta(1 + r) y_{i1}), \quad d_{i2} = 0
+d_{1}^{i} = \frac{1}{(1 + r)(1 + \beta)} (y_{2}^{i} - \beta(1 + r) y_{1}^{i}), \quad d_{2}^{i} = 0
 $$
 
 Trade balance:
 
 $$
-tb_{i1} = y_{i1} - c_{i1} = \frac{1}{(1 + r)(1 + \beta)} ( \beta(1 + r) y_{i1} - y_{i2} )
+tb_{1}^{i} = y_{1}^{i} - c_{1}^{i} = \frac{1}{(1 + r)(1 + \beta)} ( \beta(1 + r) y_{1}^{i} - y_{2}^{i} )
 $$
 
 $$
-tb_{i2} = y_{i2} - c_{i2} = \frac{1}{1 + \beta} ( y_{i2} - \beta(1 + r) y_{i1} )
+tb_{2}^{i} = y_{2}^{i} - c_{2}^{i} = \frac{1}{1 + \beta} ( y_{2}^{i} - \beta(1 + r) y_{1}^{i} )
 $$
 
 Current account:
 
 $$
-ca_{i1} = tb_{i1} - r d_{i0} = \frac{1}{(1 + r)(1 + \beta)} ( \beta(1 + r) y_{i1} - y_{i2} )
+ca_{1}^{i} = tb_{1}^{i} - r d_{0}^{i} = \frac{1}{(1 + r)(1 + \beta)} ( \beta(1 + r) y_{1}^{i} - y_{2}^{i} )
 $$
 
 $$
-ca_{i2} = tb_{i2} - r d_{i1} = \frac{1}{(1 + r)(1 + \beta)} ( y_{i2} - \beta(1 + r) y_{i1} )
+ca_{2}^{i} = tb_{2}^{i} - r d_{1}^{i} = \frac{1}{(1 + r)(1 + \beta)} ( y_{2}^{i} - \beta(1 + r) y_{1}^{i} )
 $$
-
-::: {.callout-important title="Final Answer Summary – External Balances"}
-- External debt:
-  $$
-  d_{i1} = \frac{1}{(1 + r)(1 + \beta)} (y_{i2} - \beta(1 + r) y_{i1}), \quad d_{i2} = 0
-  $$
-- Trade balance:
-  $$
-  tb_{i1} = y_{i1} - c_{i1}, \quad tb_{i2} = y_{i2} - c_{i2}
-  $$
-- Current account:
-  $$
-  ca_{i1} = tb_{i1}, \quad ca_{i2} = tb_{i2}
-  $$
-:::
 
 #### 3.
 
 Single country constraints:
 
 $$
-c_{i1} = y_{i1} + d_{i1}, \quad c_{i2} + (1 + r) d_{i1} = y_{i2}
+c_{1}^{i} = y_{1}^{i} + d_{1}^{i} 
+$$
+
+$$
+c_{2}^{i} + (1 + r) d_{1}^{i} = y_{2}^{i}
 $$
 
 Aggregate over all countries:
 
 $$
-\int c_{i1} di = \int y_{i1} di + \int d_{i1} di
+\int c_{1}^{i} di = \int y_{1}^{i} di + \int d_{1}^{i} di
 $$
 
 $$
-\int c_{i2} di + (1 + r) \int d_{i1} di = \int y_{i2} di
+\int c_{2}^{i} di + (1 + r) \int d_{1}^{i} di = \int y_{2}^{i} di
 $$
 
-Bonds are in zero-net supply, so:
+Due to the fact that we consider an endowment economy, bonds are in zero-net supply, therefore
 
 $$
-\int d_{i1} di = 0
+\int d_{1}^{i} di = 0
 $$
 
-And:
+Recalling the formula for the income, we note that
 
 $$
-\int y_{i1} di = y_1, \quad \int y_{i2} di = y_2
+\int y_{1}^{i} di = y_1 + \int \sigma_{1}^i = y_1
 $$
 
 Therefore:
@@ -215,104 +193,79 @@ $$
 c_1 = y_1, \quad c_2 = y_2
 $$
 
-::: {.callout-important title="Final Answer Summary – World Resource Constraints"}
-- No-aggregate-debt condition:
-  $$
-  \int d_{i1} \, di = 0
-  $$
-- Aggregate constraints:
-  $$
-  \int c_{i1} \, di = y_1, \quad \int c_{i2} \, di = y_2
-  $$
-:::
 
 #### 4.
 
-From individual optimality condition:
+Recall from a single country optimization problem that:
 
 $$
-d_{i1} = \frac{1}{(1 + r)(1 + \beta)} ( y_2 - \beta(1 + r) y_1 )
+d_1^i = \frac{1}{(1 + r)(1 + \beta)} \left( y_2^i - \beta(1 + r)y_1^i \right)
 $$
 
-Integrating:
+We then can integrate both sides of the equation to obtain:
 
 $$
-0 = \frac{1}{(1 + r)(1 + \beta)} ( y_2 - \beta(1 + r) y_1 )
+0 = \frac{1}{(1 + r)(1 + \beta)} \left( y_2 - \beta(1 + r)y_1 \right)
 $$
 
-Solving:
+The world interest rate is then given by:
 
 $$
 r = \frac{y_2}{\beta y_1} - 1
 $$
 
-If $y_1 = y_2$, then $(1 + r)\beta = 1$. If $y_1 > y_2$, then $(1 + r)\beta < 1$ ⇒ interest rate falls to encourage less consumption tomorrow.
-
-::: {.callout-important title="Final Answer Summary – Equilibrium Interest Rate"}
-- Zero net foreign asset condition:
-  $$
-  \int d_{i1} \, di = 0
-  $$
-- Solving yields:
-  $$
-  r = \frac{y_2}{\beta y_1} - 1
-  $$
-- Interpretation:
-  - If $y_1 = y_2$, then $(1 + r)\beta = 1$
-  - If $y_1 > y_2$, then $r$ decreases to encourage intertemporal smoothing
-:::
+The equation $(1 + r)\beta = 1$ would hold if $y_1 = y_2$.  
+If $y_1 > y_2$ then $(1 + r)\beta < 1$. The interest rate falls to make consumption tomorrow more costly and making it optimal to consume tomorrow less than will be consumed today.  
+In the reverse case, the interest rate is high to make consumption today more costly and make it optimal to consume more tomorrow.  
+Note that in this case only “shocks to the aggregate income” matter for the value of the interest rate and whether the consumption is perfectly smoothed across periods.
 
 #### 5.
 
 Two cases:
 
-**(a)** Country-specific shock: $\Delta \varepsilon_i = x$, $\Delta y_1 = 0$.
+\(a\) The world interest rate does not depend on the country-level shocks, therefore, the interest rate stays the same.
 
-Since world interest rate doesn't depend on idiosyncratic shocks:
-
-$$
-r \text{ unchanged}
-$$
-
-From above:
+Recall from the previous section that country-level debt can be expressed as:
 
 $$
-d_{i1} = - \frac{\beta \varepsilon_{i1}}{1 + \beta}
+d_1^i = - \frac{\beta \varepsilon_1^i}{1 + \beta}
 $$
 
-So:
+That means that if country-specific component increases, external debt decreases.  
+Since:
 
 $$
-\Delta d_{i1} < 0, \quad \Delta tb_{i1} = \Delta ca_{i1} = \frac{\beta \varepsilon_{i1}}{1 + \beta}
+tb_1^i = ca_1^i = -d_1^i = \frac{\beta \varepsilon_1^i}{1 + \beta}
 $$
 
-Trade balance and current account increase.
+Trade balance and current account both increase.
 
-**(b)** World shock: $\Delta y_1 = x$, $\Delta \varepsilon_i = 0$.
-
-From world interest rate formula:
+\(b\) consider the equation for the world interest rate:
 
 $$
-r = \frac{y_2}{\beta y_1} - 1 \Rightarrow \Delta y_1 ↑ \Rightarrow r ↓
+r = \frac{y_2}{\beta y_1} - 1
 $$
 
-Substitute $r$ back:
+The world interest rate depends negatively on $y_1$, therefore, it will decrease when $y_1$ increases.  
+The external debt of a country $i$ is given by:
 
 $$
-d_{i1} = - \frac{\beta \varepsilon_{i1}}{1 + \beta}
+d_1^i = \frac{1}{(1 + r)(1 + \beta)} \left( y_2^i - \beta(1 + r)y_1^i \right)
 $$
 
-No change in country $i$'s external debt, trade balance, or current account.
+Replace the interest rate in terms of aggregate income to obtain:
 
-::: {.callout-important title="Final Answer Summary – Impact of Endowment Shocks"}
-- (a) Country-specific shock:
-  - $r$: unchanged
-  - $d_{i1}$: decreases
-  - $tb_{i1}$ and $ca_{i1}$: increase
-- (b) World shock:
-  - $r$: decreases
-  - $d_{i1}$, $tb_{i1}$, $ca_{i1}$: unchanged
-- Comparison:
-    - In a world shock, all countries want to save more ⇒ interest rate adjusts;  
-    - In a country-specific shock, world interest rate doesn't react ⇒ only affected country adjusts behavior
-:::  
+$$
+d_1^i = - \frac{\beta \varepsilon_1^i}{1 + \beta}
+$$
+
+Therefore, country debt will not change.
+
+$$
+tb_1^i = ca_1^i = -d_1^i = \frac{\beta \varepsilon_1^i}{1 + \beta}
+$$
+
+Trade balance and current account will not change as well.
+
+Comparison: When the world component of the output increases, the whole world would like to save to ensure consumption smoothing. However, because there is no additional demand for funds, the interest rate goes down to ensure that the world market for savings clears. Consumption in period 2 becomes more expensive and consumers find it optimal consume all the additional income.  
+In the case of the country-specific shock, only one country wants to save more. All the countries are infinitely small, so there is no impact on the world interest rate.

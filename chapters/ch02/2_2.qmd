@@ -146,26 +146,6 @@ $$
 ca_t = tb_t - r d_{t-1} = 0
 $$
 
-::: {.callout-important title="Final Answer Summary"}
-Equilibrium Laws of Motion:
-
-$$
-c_t = \frac{1}{A^2 + 1} \left[ A^2 \bar{c} - r d_{t-1} \right]
-$$
-
-$$
-d_t = (1+r)d_{t-1} + c_t - y_t
-$$
-
-$$
-tb_t = y_t - c_t = r d_{t-1}
-$$
-
-$$
-ca_t = tb_t - r d_{t-1} = 0
-$$
-:::
-
 #### 2.
 
 Recall that:
@@ -186,7 +166,5 @@ $$
 ca_t = tb_t - r d_{t-1} = 0
 $$
 
-Therefore,
-
-consumption will increase once and for all at period $t = 0$, output will also increase, but trade balance and current account will not change.
+Therefore, consumption will increase once and for all at period $t = 0$, output will also increase, but trade balance and current account will not change.
 

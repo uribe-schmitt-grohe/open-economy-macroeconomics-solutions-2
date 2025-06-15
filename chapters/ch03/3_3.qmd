@@ -107,19 +107,3 @@ $$
 
 <img src="figures/3_3_1.png" alt="3_3 (1)" style="display:block; margin:auto; max-width:90%; border:1px solid #ccc; border-radius:8px;" />
 
-::: {.callout-important title="Final Answer Summary – Impact of Temporary Productivity Shock (with Adjustment Costs)"}
-- Capital: constant at $\bar{k}$ throughout
-- Investment: $i_t = 0$ for all $t$
-- Output: $y_0 = A'F(\bar{k}) > \bar{y}$, $y_t = \bar{y}$ for $t > 0$
-- Consumption: jumps to $c_0 > c_{-1}$ and remains constant
-- Trade Balance:
-  - $tb_0 > tb_{-1}$ (procyclical)
-  - $tb' < tb_{-1} < tb_0$ for $t > 0$
-- Debt: decreases in $t = 0$; $d_t = d_0 < \bar{d}$ for $t > 0$
-- Current Account: $ca_0 > ca_{-1}$ (procyclical), $ca_t = 0$ for $t > 0$
-:::
-
-::: {.callout-note title="Interpretation"}
-Despite capital adjustment costs, no capital change occurs because the shock is temporary.  
-Behavior mirrors that of an endowment economy with temporary income shocks.
-:::

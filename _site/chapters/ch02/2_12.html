@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Exercise 2.12 – Open‑Economy Macroeconomics Solutions</title>
+<title>Exercise 2.12 – Open Economy Macroeconomics - Solutions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -144,7 +144,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Open‑Economy Macroeconomics Solutions</span>
+    <span class="navbar-title">Open Economy Macroeconomics - Solutions</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -200,22 +200,12 @@ window.Quarto = {
 <section id="problem" class="level2">
 <h2 class="anchored" data-anchor-id="problem">Problem</h2>
 <ol type="1">
-<li>Consider an endowment, <span class="math inline">\(y_t\)</span>, following the AR(1) process</li>
-</ol>
-<p><span class="math display">\[
+<li><p>Consider an endowment, <span class="math inline">\(y_t\)</span>, following the AR(1) process <span class="math display">\[
 y_t - 1 = \rho (y_{t-1} - 1) + \sigma_\varepsilon \varepsilon_t,
-\]</span></p>
-<p>where <span class="math inline">\(\varepsilon_t\)</span> is an i.i.d. innovation with mean zero and unit variance, <span class="math inline">\(\rho \in [0, 1)\)</span>, and <span class="math inline">\(\sigma_\varepsilon &gt; 0\)</span>.</p>
-<p>Discretize this process by a two-state Markov process defined by the 2-by-1 state vector <span class="math inline">\(Y \equiv [Y_1 \; Y_2]'\)</span> and the 2-by-2 transition probability matrix <span class="math inline">\(\Pi\)</span> with element <span class="math inline">\((i, j)\)</span> denoted <span class="math inline">\(\pi_{ij}\)</span> and given by</p>
-<p><span class="math display">\[
-\pi_{ij} \equiv \text{Prob}\{ y_{t+1} = Y_j \mid y_t = Y_i \}.
-\]</span></p>
-<p>To reduce the number of parameters of the Markov process to two, impose the restrictions <span class="math inline">\(\pi_{11} = \pi_{22} = \pi\)</span>, <span class="math inline">\(Y_1 = 1 + \gamma\)</span>, and <span class="math inline">\(Y_2 = 1 - \gamma\)</span>. Pick <span class="math inline">\(\pi\)</span> and <span class="math inline">\(\gamma\)</span> to match the variance and the serial correlation of <span class="math inline">\(y_t\)</span>. Express <span class="math inline">\(\pi\)</span> and <span class="math inline">\(\gamma\)</span> in terms of the parameters defining the original AR(1) process.</p>
-<ol start="2" type="1">
+\]</span> where <span class="math inline">\(\varepsilon_t\)</span> is an i.i.d. innovation with mean zero and unit variance, <span class="math inline">\(\rho \in [0, 1)\)</span>, and <span class="math inline">\(\sigma_\varepsilon &gt; 0\)</span>. Discretize this process by a two-state Markov process defined by the 2-by-1 state vector <span class="math inline">\(Y \equiv [Y_1 \; Y_2]'\)</span> and the 2-by-2 transition probability matrix <span class="math inline">\(\Pi\)</span> with element <span class="math inline">\((i, j)\)</span> denoted <span class="math inline">\(\pi_{ij}\)</span> and given by <span class="math inline">\(\pi_{ij} \equiv \text{Prob}\{ y_{t+1} = Y_j \mid y_t = Y_i \}\)</span>. To reduce the number of parameters of the Markov process to two, impose the restrictions <span class="math inline">\(\pi_{11} = \pi_{22} = \pi\)</span>, <span class="math inline">\(Y_1 = 1 + \gamma\)</span>, and <span class="math inline">\(Y_2 = 1 - \gamma\)</span>. Pick <span class="math inline">\(\pi\)</span> and <span class="math inline">\(\gamma\)</span> to match the variance and the serial correlation of <span class="math inline">\(y_t\)</span>. Express <span class="math inline">\(\pi\)</span> and <span class="math inline">\(\gamma\)</span> in terms of the parameters defining the original AR(1) process.</p></li>
 <li><p>Calculate the unconditional probability distribution of <span class="math inline">\(Y\)</span> (this is a 2-by-1 vector).</p></li>
 <li><p>Assume that <span class="math inline">\(\rho = 0.4\)</span> and <span class="math inline">\(\sigma_\varepsilon = 0.05\)</span>. Evaluate the vector <span class="math inline">\(Y\)</span> and the matrix <span class="math inline">\(\Pi\)</span>.</p></li>
-<li><p>Now consider a small open economy populated by a large number of identical households with preferences given by</p></li>
-</ol>
+<li><p>Now consider a small open economy populated by a large number of identical households with preferences given by</p>
 <p><span class="math display">\[
 \mathbb{E}_0 \sum_{t=0}^{\infty} \frac{c_t^{1 - \sigma} - 1}{1 - \sigma},
 \]</span></p>
@@ -223,36 +213,53 @@ y_t - 1 = \rho (y_{t-1} - 1) + \sigma_\varepsilon \varepsilon_t,
 <p><span class="math display">\[
 c_t + g + (1 + r) d_{t-1} = y_t + d_t,
 \]</span></p>
-<p>where <span class="math inline">\(c_t\)</span> denotes consumption in period <span class="math inline">\(t\)</span>, <span class="math inline">\(d_t\)</span> denotes one-period debt assumed in period <span class="math inline">\(t\)</span> and maturing in <span class="math inline">\(t + 1\)</span>, <span class="math inline">\(g\)</span> denotes a constant level of domestic absorption that yields no utility to households (possibly wasteful government spending), and <span class="math inline">\(r\)</span> denotes the world interest rate, assumed to be constant and exogenous. Households are subject to the no-Ponzi-game constraint</p>
-<p><span class="math display">\[
-\lim_{j \to \infty} (1 + r)^{-j} d_{t+j} \leq 0.
-\]</span></p>
-<p>Express the household’s problem as a Bellman equation. To this end, drop time subscripts and use instead the notation <span class="math inline">\(d = d_{t-1}\)</span>, <span class="math inline">\(d' = d_t\)</span>, <span class="math inline">\(y = y_t\)</span> and <span class="math inline">\(y' = y_{t+1}\)</span> for all <span class="math inline">\(t\)</span>. Denote the value function in <span class="math inline">\(t\)</span> by <span class="math inline">\(v(y, d)\)</span>.<br>
-[Here it suffices to use the notation <span class="math inline">\(y\)</span> and <span class="math inline">\(y'\)</span> because the endowment process is AR(1). Higher-order processes would require an extended notation.]</p>
-<ol start="5" type="1">
-<li>Let <span class="math inline">\(\sigma = 2\)</span>, <span class="math inline">\(r = 0.04\)</span>, <span class="math inline">\(\beta = 0.954\)</span>, and <span class="math inline">\(g = 0.2\)</span>. And assume that the endowment process follows the two-state Markov process given in item 3. Discretize the debt state, <span class="math inline">\(d\)</span>, using 200 equally spaced points ranging from 15 to 19.</li>
-</ol>
-<p>Calculate the value function and the debt policy function by value function iteration (these are 2 vectors, each of order 400-by-1). Calculate also the policy functions of consumption, the trade balance, and the current account (each of these policy functions is a 400-by-1 vector).</p>
-<p>Calculate the transition probability matrix of the state <span class="math inline">\((y, d)\)</span> (this is a 400-by-400 matrix, whose rows all add up to unity; each row has only 2 nonzero entries).</p>
-<ol start="6" type="1">
-<li>Define the impulse response of the variable <span class="math inline">\(x_t\)</span> to a one-standard-deviation increase in output as</li>
-</ol>
-<p><span class="math display">\[
-\mathbb{E}[x_t \mid y_0 = Y_1] - \mathbb{E}[x_t]
-\]</span></p>
-<p>for <span class="math inline">\(t = 0, 1, 2, \ldots\)</span> (note that these expectations are unconditional with respect to debt; alternatively, we could have conditioned on some value of debt, but we are not pursuing this definition here). Make a figure with 4 subplots (in a 2-by-2 arrangement) showing the impulse responses of output, consumption, the trade balance, and debt for <span class="math inline">\(t = 0, 1, \ldots, 10\)</span>.</p>
-<ol start="7" type="1">
+<p>where <span class="math inline">\(c_t\)</span> denotes consumption in period <span class="math inline">\(t\)</span>, <span class="math inline">\(d_t\)</span> denotes one-period debt assumed in period <span class="math inline">\(t\)</span> and maturing in <span class="math inline">\(t + 1\)</span>, <span class="math inline">\(g\)</span> denotes a constant level of domestic absorption that yields no utility to households (possibly wasteful government spending), and <span class="math inline">\(r\)</span> denotes the world interest rate, assumed to be constant and exogenous. Households are subject to the no-Ponzi-game constraint <span class="math inline">\(\lim_{j \to \infty} (1 + r)^{-j} d_{t+j} \leq 0\)</span>.Express the household’s problem as a Bellman equation. To this end, drop time subscripts and use instead the notation <span class="math inline">\(d = d_{t-1}\)</span>, <span class="math inline">\(d' = d_t\)</span>, <span class="math inline">\(y = y_t\)</span> and <span class="math inline">\(y' = y_{t+1}\)</span> for all <span class="math inline">\(t\)</span>. Denote the value function in <span class="math inline">\(t\)</span> by <span class="math inline">\(v(y, d)\)</span>. [Here it suffices to use the notation <span class="math inline">\(y\)</span> and <span class="math inline">\(y'\)</span> because the endowment process is AR(1). Higher-order processes would require an extended notation.]</p></li>
+<li><p>Let <span class="math inline">\(\sigma = 2\)</span>, <span class="math inline">\(r = 0.04\)</span>, <span class="math inline">\(\beta = 0.954\)</span>, and <span class="math inline">\(g = 0.2\)</span>. And assume that the endowment process follows the two-state Markov process given in item 3. Discretize the debt state, <span class="math inline">\(d\)</span>, using 200 equally spaced points ranging from 15 to 19. Calculate the value function and the debt policy function by value function iteration (these are 2 vectors, each of order 400-by-1). Calculate also the policy functions of consumption, the trade balance, and the current account (each of these policy functions is a 400-by-1 vector). Calculate the transition probability matrix of the state <span class="math inline">\((y, d)\)</span> (this is a 400-by-400 matrix, whose rows all add up to unity; each row has only 2 nonzero entries).</p></li>
+<li><p>Define the impulse response of the variable <span class="math inline">\(x_t\)</span> to a one-standard-deviation increase in output as <span class="math inline">\(\mathbb{E}[x_t \mid y_0 = Y_1] - \mathbb{E}[x_t]\)</span> for <span class="math inline">\(t = 0, 1, 2, \ldots\)</span> (note that these expectations are unconditional with respect to debt; alternatively, we could have conditioned on some value of debt, but we are not pursuing this definition here). Make a figure with 4 subplots (in a 2-by-2 arrangement) showing the impulse responses of output, consumption, the trade balance, and debt for <span class="math inline">\(t = 0, 1, \ldots, 10\)</span>.</p></li>
 <li><p>Plot the unconditional probability distribution of debt.</p></li>
 <li><p>Finally, suppose that government spending, <span class="math inline">\(g\)</span>, increases from 0.2 to 0.22. Plot the resulting unconditional distribution of debt. For comparison superimpose the one corresponding to the baseline case <span class="math inline">\(g = 0.2\)</span>. Provide intuition for the differences you see.</p></li>
 </ol>
 </section>
 <section id="answer" class="level2">
 <h2 class="anchored" data-anchor-id="answer">Answer</h2>
-<p>To be completed.</p>
+<section id="section" class="level4">
+<h4 class="anchored" data-anchor-id="section">1.</h4>
+<p><span class="math display">\[
+\gamma = \sigma_\epsilon / \sqrt{(1 - \rho^2)}; \quad \pi = (1 + \rho)/2
+\]</span></p>
+</section>
+<section id="section-1" class="level4">
+<h4 class="anchored" data-anchor-id="section-1">2.</h4>
+<p>unconditional prob that <span class="math inline">\(Y = Y_1\)</span> is 0.5</p>
+</section>
+<section id="section-2" class="level4">
+<h4 class="anchored" data-anchor-id="section-2">3.</h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource matlab number-lines code-with-copy"><code class="sourceCode matlab"><span id="cb1-1"><a href="#cb1-1"></a><span class="va">pai</span> <span class="op">=</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>    <span class="fl">0.7000</span>    <span class="fl">0.3000</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>    <span class="fl">0.3000</span>    <span class="fl">0.7000</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">ygrid</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="va">ygrid</span> <span class="op">=</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="fl">1.0546</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>    <span class="fl">0.9454</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="section-3" class="level4">
+<h4 class="anchored" data-anchor-id="section-3">4.</h4>
+<p><span class="math display">\[
+v(y, d) = \max_{\{c, d'\}} \left\{ \frac{c^{1 - \sigma} - 1}{1 - \sigma} + \beta E \left[ v(y', d') \mid y \right] \right\}
+\]</span></p>
+<p>subject to: <span class="math display">\[
+c = y + d' - g - (1 + r)d
+\]</span></p>
+</section>
+<section id="section-4" class="level4">
+<h4 class="anchored" data-anchor-id="section-4">5-8.</h4>
+<p>For remaining question, 5.–8., see the Matlab code <code>usgExercise2p12.m</code>.</p>
+<p><a href="code/usgExercise2p12.m" download="" style="display:inline-block;padding:8px 16px;background:#007acc;color:white;text-decoration:none;border-radius:5px;"> 📥 Download MATLAB Code (usgExercise2p12.m) </a></p>
 
 
 <!-- -->
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -735,77 +742,90 @@ c_t + g + (1 + r) d_{t-1} = y_t + d_t,
   }
   loadGiscus();
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "Exercise 2.12"</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="an">subtitle:</span><span class="co"> "Global Approximation of Equilibrium Dynamics"</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="co">---</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> class</span><span class="op">=</span><span class="st">"return-button"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"index.qmd"</span><span class="dt">&gt;</span>⬅ Return<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="fu">## Problem</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="ss">1. </span>Consider an endowment, $y_t$, following the AR(1) process</span>
-<span id="cb1-10"><a href="#cb1-10"></a></span>
-<span id="cb1-11"><a href="#cb1-11"></a>$$</span>
-<span id="cb1-12"><a href="#cb1-12"></a>y_t - 1 = \rho (y_{t-1} - 1) + \sigma_\varepsilon \varepsilon_t,</span>
-<span id="cb1-13"><a href="#cb1-13"></a>$$</span>
-<span id="cb1-14"><a href="#cb1-14"></a></span>
-<span id="cb1-15"><a href="#cb1-15"></a>where $\varepsilon_t$ is an i.i.d. innovation with mean zero and unit variance, $\rho \in [0, 1)$, and $\sigma_\varepsilon &gt; 0$.</span>
-<span id="cb1-16"><a href="#cb1-16"></a></span>
-<span id="cb1-17"><a href="#cb1-17"></a>Discretize this process by a two-state Markov process defined by the 2-by-1 state vector $Y \equiv <span class="co">[</span><span class="ot">Y_1 \; Y_2</span><span class="co">]</span>'$ and the 2-by-2 transition probability matrix $\Pi$ with element $(i, j)$ denoted $\pi_{ij}$ and given by</span>
-<span id="cb1-18"><a href="#cb1-18"></a></span>
-<span id="cb1-19"><a href="#cb1-19"></a>$$</span>
-<span id="cb1-20"><a href="#cb1-20"></a>\pi_{ij} \equiv \text{Prob}<span class="sc">\{</span> y_{t+1} = Y_j \mid y_t = Y_i <span class="sc">\}</span>.</span>
-<span id="cb1-21"><a href="#cb1-21"></a>$$</span>
-<span id="cb1-22"><a href="#cb1-22"></a></span>
-<span id="cb1-23"><a href="#cb1-23"></a>To reduce the number of parameters of the Markov process to two, impose the restrictions $\pi_{11} = \pi_{22} = \pi$, $Y_1 = 1 + \gamma$, and $Y_2 = 1 - \gamma$. Pick $\pi$ and $\gamma$ to match the variance and the serial correlation of $y_t$. Express $\pi$ and $\gamma$ in terms of the parameters defining the original AR(1) process.</span>
-<span id="cb1-24"><a href="#cb1-24"></a></span>
-<span id="cb1-25"><a href="#cb1-25"></a><span class="ss">2. </span>Calculate the unconditional probability distribution of $Y$ (this is a 2-by-1 vector).</span>
-<span id="cb1-26"><a href="#cb1-26"></a></span>
-<span id="cb1-27"><a href="#cb1-27"></a><span class="ss">3. </span>Assume that $\rho = 0.4$ and $\sigma_\varepsilon = 0.05$. Evaluate the vector $Y$ and the matrix $\Pi$.</span>
-<span id="cb1-28"><a href="#cb1-28"></a></span>
-<span id="cb1-29"><a href="#cb1-29"></a><span class="ss">4. </span>Now consider a small open economy populated by a large number of identical households with preferences given by</span>
-<span id="cb1-30"><a href="#cb1-30"></a></span>
-<span id="cb1-31"><a href="#cb1-31"></a>$$</span>
-<span id="cb1-32"><a href="#cb1-32"></a>\mathbb{E}_0 \sum_{t=0}^{\infty} \frac{c_t^{1 - \sigma} - 1}{1 - \sigma},</span>
-<span id="cb1-33"><a href="#cb1-33"></a>$$</span>
-<span id="cb1-34"><a href="#cb1-34"></a></span>
-<span id="cb1-35"><a href="#cb1-35"></a>Suppose that households face the sequential budget constraint</span>
-<span id="cb1-36"><a href="#cb1-36"></a></span>
-<span id="cb1-37"><a href="#cb1-37"></a>$$</span>
-<span id="cb1-38"><a href="#cb1-38"></a>c_t + g + (1 + r) d_{t-1} = y_t + d_t,</span>
-<span id="cb1-39"><a href="#cb1-39"></a>$$</span>
-<span id="cb1-40"><a href="#cb1-40"></a></span>
-<span id="cb1-41"><a href="#cb1-41"></a>where $c_t$ denotes consumption in period $t$, $d_t$ denotes one-period debt assumed in period $t$ and maturing in $t + 1$, $g$ denotes a constant level of domestic absorption that yields no utility to households (possibly wasteful government spending), and $r$ denotes the world interest rate, assumed to be constant and exogenous. Households are subject to the no-Ponzi-game constraint</span>
-<span id="cb1-42"><a href="#cb1-42"></a></span>
-<span id="cb1-43"><a href="#cb1-43"></a>$$</span>
-<span id="cb1-44"><a href="#cb1-44"></a>\lim_{j \to \infty} (1 + r)^{-j} d_{t+j} \leq 0.</span>
-<span id="cb1-45"><a href="#cb1-45"></a>$$</span>
-<span id="cb1-46"><a href="#cb1-46"></a></span>
-<span id="cb1-47"><a href="#cb1-47"></a>Express the household’s problem as a Bellman equation. To this end, drop time subscripts and use instead the notation $d = d_{t-1}$, $d' = d_t$, $y = y_t$ and $y' = y_{t+1}$ for all $t$. Denote the value function in $t$ by $v(y, d)$.  </span>
-<span id="cb1-48"><a href="#cb1-48"></a><span class="co">[</span><span class="ot">Here it suffices to use the notation $y$ and $y'$ because the endowment process is AR(1). Higher-order processes would require an extended notation.</span><span class="co">]</span></span>
-<span id="cb1-49"><a href="#cb1-49"></a></span>
-<span id="cb1-50"><a href="#cb1-50"></a><span class="ss">5. </span>Let $\sigma = 2$, $r = 0.04$, $\beta = 0.954$, and $g = 0.2$. And assume that the endowment process follows the two-state Markov process given in item 3. Discretize the debt state, $d$, using 200 equally spaced points ranging from 15 to 19.</span>
-<span id="cb1-51"><a href="#cb1-51"></a></span>
-<span id="cb1-52"><a href="#cb1-52"></a>Calculate the value function and the debt policy function by value function iteration (these are 2 vectors, each of order 400-by-1). Calculate also the policy functions of consumption, the trade balance, and the current account (each of these policy functions is a 400-by-1 vector).</span>
-<span id="cb1-53"><a href="#cb1-53"></a></span>
-<span id="cb1-54"><a href="#cb1-54"></a>Calculate the transition probability matrix of the state $(y, d)$ (this is a 400-by-400 matrix, whose rows all add up to unity; each row has only 2 nonzero entries).</span>
-<span id="cb1-55"><a href="#cb1-55"></a></span>
-<span id="cb1-56"><a href="#cb1-56"></a><span class="ss">6. </span>Define the impulse response of the variable $x_t$ to a one-standard-deviation increase in output as</span>
-<span id="cb1-57"><a href="#cb1-57"></a></span>
-<span id="cb1-58"><a href="#cb1-58"></a>$$</span>
-<span id="cb1-59"><a href="#cb1-59"></a>\mathbb{E}<span class="co">[</span><span class="ot">x_t \mid y_0 = Y_1</span><span class="co">]</span> - \mathbb{E}<span class="co">[</span><span class="ot">x_t</span><span class="co">]</span></span>
-<span id="cb1-60"><a href="#cb1-60"></a>$$</span>
-<span id="cb1-61"><a href="#cb1-61"></a></span>
-<span id="cb1-62"><a href="#cb1-62"></a>for $t = 0, 1, 2, \ldots$ (note that these expectations are unconditional with respect to debt; alternatively, we could have conditioned on some value of debt, but we are not pursuing this definition here). Make a figure with 4 subplots (in a 2-by-2 arrangement) showing the impulse responses of output, consumption, the trade balance, and debt for $t = 0, 1, \ldots, 10$.</span>
-<span id="cb1-63"><a href="#cb1-63"></a></span>
-<span id="cb1-64"><a href="#cb1-64"></a><span class="ss">7. </span>Plot the unconditional probability distribution of debt.</span>
-<span id="cb1-65"><a href="#cb1-65"></a></span>
-<span id="cb1-66"><a href="#cb1-66"></a><span class="ss">8. </span>Finally, suppose that government spending, $g$, increases from 0.2 to 0.22. Plot the resulting unconditional distribution of debt. For comparison superimpose the one corresponding to the baseline case $g = 0.2$. Provide intuition for the differences you see.</span>
-<span id="cb1-67"><a href="#cb1-67"></a></span>
-<span id="cb1-68"><a href="#cb1-68"></a></span>
-<span id="cb1-69"><a href="#cb1-69"></a><span class="fu">## Answer</span></span>
-<span id="cb1-70"><a href="#cb1-70"></a></span>
-<span id="cb1-71"><a href="#cb1-71"></a>To be completed.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="an">title:</span><span class="co"> "Exercise 2.12"</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="an">subtitle:</span><span class="co"> "Global Approximation of Equilibrium Dynamics"</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="co">---</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> class</span><span class="op">=</span><span class="st">"return-button"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"index.qmd"</span><span class="dt">&gt;</span>⬅ Return<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="fu">## Problem</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="ss">1. </span>Consider an endowment, $y_t$, following the AR(1) process</span>
+<span id="cb2-10"><a href="#cb2-10"></a>$$</span>
+<span id="cb2-11"><a href="#cb2-11"></a>y_t - 1 = \rho (y_{t-1} - 1) + \sigma_\varepsilon \varepsilon_t,</span>
+<span id="cb2-12"><a href="#cb2-12"></a>$$</span>
+<span id="cb2-13"><a href="#cb2-13"></a>where $\varepsilon_t$ is an i.i.d. innovation with mean zero and unit variance, $\rho \in [0, 1)$, and $\sigma_\varepsilon &gt; 0$.</span>
+<span id="cb2-14"><a href="#cb2-14"></a>Discretize this process by a two-state Markov process defined by the 2-by-1 state vector $Y \equiv <span class="co">[</span><span class="ot">Y_1 \; Y_2</span><span class="co">]</span>'$ and the 2-by-2 transition probability matrix $\Pi$ with element $(i, j)$ denoted $\pi_{ij}$ and given by $\pi_{ij} \equiv \text{Prob}\{ y_{t+1} = Y_j \mid y_t = Y_i \}$. To reduce the number of parameters of the Markov process to two, impose the restrictions $\pi_{11} = \pi_{22} = \pi$, $Y_1 = 1 + \gamma$, and $Y_2 = 1 - \gamma$. Pick $\pi$ and $\gamma$ to match the variance and the serial correlation of $y_t$. Express $\pi$ and $\gamma$ in terms of the parameters defining the original AR(1) process.</span>
+<span id="cb2-15"><a href="#cb2-15"></a></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="ss">2. </span>Calculate the unconditional probability distribution of $Y$ (this is a 2-by-1 vector).</span>
+<span id="cb2-17"><a href="#cb2-17"></a></span>
+<span id="cb2-18"><a href="#cb2-18"></a><span class="ss">3. </span>Assume that $\rho = 0.4$ and $\sigma_\varepsilon = 0.05$. Evaluate the vector $Y$ and the matrix $\Pi$.</span>
+<span id="cb2-19"><a href="#cb2-19"></a></span>
+<span id="cb2-20"><a href="#cb2-20"></a><span class="ss">4. </span>Now consider a small open economy populated by a large number of identical households with preferences given by</span>
+<span id="cb2-21"><a href="#cb2-21"></a></span>
+<span id="cb2-22"><a href="#cb2-22"></a>    $$</span>
+<span id="cb2-23"><a href="#cb2-23"></a>    \mathbb{E}_0 \sum_{t=0}^{\infty} \frac{c_t^{1 - \sigma} - 1}{1 - \sigma},</span>
+<span id="cb2-24"><a href="#cb2-24"></a>    $$</span>
+<span id="cb2-25"><a href="#cb2-25"></a></span>
+<span id="cb2-26"><a href="#cb2-26"></a>    Suppose that households face the sequential budget constraint</span>
+<span id="cb2-27"><a href="#cb2-27"></a></span>
+<span id="cb2-28"><a href="#cb2-28"></a>    $$</span>
+<span id="cb2-29"><a href="#cb2-29"></a>    c_t + g + (1 + r) d_{t-1} = y_t + d_t,</span>
+<span id="cb2-30"><a href="#cb2-30"></a>    $$</span>
+<span id="cb2-31"><a href="#cb2-31"></a></span>
+<span id="cb2-32"><a href="#cb2-32"></a>    where $c_t$ denotes consumption in period $t$, $d_t$ denotes one-period debt assumed in period $t$ and maturing in $t + 1$, $g$ denotes a constant level of domestic absorption that yields no utility to households (possibly wasteful government spending), and $r$ denotes the world interest rate, assumed to be constant and exogenous. Households are subject to the no-Ponzi-game constraint $\lim_{j \to \infty} (1 + r)^{-j} d_{t+j} \leq 0$.Express the household’s problem as a Bellman equation. To this end, drop time subscripts and use instead the notation $d = d_{t-1}$, $d' = d_t$, $y = y_t$ and $y' = y_{t+1}$ for all $t$. Denote the value function in $t$ by $v(y, d)$. <span class="co">[</span><span class="ot">Here it suffices to use the notation $y$ and $y'$ because the endowment process is AR(1). Higher-order processes would require an extended notation.</span><span class="co">]</span></span>
+<span id="cb2-33"><a href="#cb2-33"></a></span>
+<span id="cb2-34"><a href="#cb2-34"></a><span class="ss">5. </span>Let $\sigma = 2$, $r = 0.04$, $\beta = 0.954$, and $g = 0.2$. And assume that the endowment process follows the two-state Markov process given in item 3. Discretize the debt state, $d$, using 200 equally spaced points ranging from 15 to 19. Calculate the value function and the debt policy function by value function iteration (these are 2 vectors, each of order 400-by-1). Calculate also the policy functions of consumption, the trade balance, and the current account (each of these policy functions is a 400-by-1 vector). Calculate the transition probability matrix of the state $(y, d)$ (this is a 400-by-400 matrix, whose rows all add up to unity; each row has only 2 nonzero entries).</span>
+<span id="cb2-35"><a href="#cb2-35"></a></span>
+<span id="cb2-36"><a href="#cb2-36"></a><span class="ss">6. </span>Define the impulse response of the variable $x_t$ to a one-standard-deviation increase in output as $\mathbb{E}<span class="co">[</span><span class="ot">x_t \mid y_0 = Y_1</span><span class="co">]</span> - \mathbb{E}<span class="co">[</span><span class="ot">x_t</span><span class="co">]</span>$ for $t = 0, 1, 2, \ldots$ (note that these expectations are unconditional with respect to debt; alternatively, we could have conditioned on some value of debt, but we are not pursuing this definition here). Make a figure with 4 subplots (in a 2-by-2 arrangement) showing the impulse responses of output, consumption, the trade balance, and debt for $t = 0, 1, \ldots, 10$.</span>
+<span id="cb2-37"><a href="#cb2-37"></a></span>
+<span id="cb2-38"><a href="#cb2-38"></a><span class="ss">7. </span>Plot the unconditional probability distribution of debt.</span>
+<span id="cb2-39"><a href="#cb2-39"></a></span>
+<span id="cb2-40"><a href="#cb2-40"></a><span class="ss">8. </span>Finally, suppose that government spending, $g$, increases from 0.2 to 0.22. Plot the resulting unconditional distribution of debt. For comparison superimpose the one corresponding to the baseline case $g = 0.2$. Provide intuition for the differences you see.</span>
+<span id="cb2-41"><a href="#cb2-41"></a></span>
+<span id="cb2-42"><a href="#cb2-42"></a></span>
+<span id="cb2-43"><a href="#cb2-43"></a><span class="fu">## Answer</span></span>
+<span id="cb2-44"><a href="#cb2-44"></a></span>
+<span id="cb2-45"><a href="#cb2-45"></a><span class="fu">#### 1.</span></span>
+<span id="cb2-46"><a href="#cb2-46"></a></span>
+<span id="cb2-47"><a href="#cb2-47"></a>$$</span>
+<span id="cb2-48"><a href="#cb2-48"></a>\gamma = \sigma_\epsilon / \sqrt{(1 - \rho^2)}; \quad \pi = (1 + \rho)/2</span>
+<span id="cb2-49"><a href="#cb2-49"></a>$$</span>
+<span id="cb2-50"><a href="#cb2-50"></a></span>
+<span id="cb2-51"><a href="#cb2-51"></a><span class="fu">#### 2.</span></span>
+<span id="cb2-52"><a href="#cb2-52"></a></span>
+<span id="cb2-53"><a href="#cb2-53"></a>unconditional prob that $Y = Y_1$ is 0.5</span>
+<span id="cb2-54"><a href="#cb2-54"></a></span>
+<span id="cb2-55"><a href="#cb2-55"></a><span class="fu">#### 3.</span></span>
+<span id="cb2-56"><a href="#cb2-56"></a></span>
+<span id="cb2-57"><a href="#cb2-57"></a><span class="in">```{.matlab}</span></span>
+<span id="cb2-58"><a href="#cb2-58"></a><span class="va">pai</span> <span class="op">=</span></span>
+<span id="cb2-59"><a href="#cb2-59"></a>    <span class="fl">0.7000</span>    <span class="fl">0.3000</span></span>
+<span id="cb2-60"><a href="#cb2-60"></a>    <span class="fl">0.3000</span>    <span class="fl">0.7000</span></span>
+<span id="cb2-61"><a href="#cb2-61"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">ygrid</span></span>
+<span id="cb2-62"><a href="#cb2-62"></a><span class="va">ygrid</span> <span class="op">=</span></span>
+<span id="cb2-63"><a href="#cb2-63"></a>    <span class="fl">1.0546</span></span>
+<span id="cb2-64"><a href="#cb2-64"></a>    <span class="fl">0.9454</span></span>
+<span id="cb2-65"><a href="#cb2-65"></a>```</span>
+<span id="cb2-66"><a href="#cb2-66"></a></span>
+<span id="cb2-67"><a href="#cb2-67"></a>#### <span class="fl">4</span>.</span>
+<span id="cb2-68"><a href="#cb2-68"></a></span>
+<span id="cb2-69"><a href="#cb2-69"></a>$$</span>
+<span id="cb2-70"><a href="#cb2-70"></a><span class="va">v</span>(<span class="va">y</span><span class="op">,</span> <span class="va">d</span>) <span class="op">=</span> <span class="op">\</span><span class="va">max_</span>{<span class="op">\</span>{<span class="va">c</span><span class="op">,</span> <span class="va">d</span><span class="op">'\</span>}} <span class="op">\</span><span class="va">left</span><span class="op">\</span>{ <span class="op">\</span><span class="va">frac</span>{<span class="va">c</span><span class="op">^</span>{<span class="fl">1</span> <span class="op">-</span> <span class="op">\</span><span class="va">sigma</span>} <span class="op">-</span> <span class="fl">1</span>}{<span class="fl">1</span> <span class="op">-</span> <span class="op">\</span><span class="va">sigma</span>} <span class="op">+</span> <span class="op">\</span><span class="va">beta</span> <span class="va">E</span> <span class="op">\</span><span class="va">left</span>[ <span class="va">v</span>(<span class="va">y</span><span class="op">',</span> <span class="va">d</span><span class="op">'</span>) <span class="op">\</span><span class="va">mid</span> <span class="va">y</span> <span class="op">\</span><span class="va">right</span>] <span class="op">\</span><span class="va">right</span><span class="op">\</span>}</span>
+<span id="cb2-71"><a href="#cb2-71"></a>$$</span>
+<span id="cb2-72"><a href="#cb2-72"></a></span>
+<span id="cb2-73"><a href="#cb2-73"></a><span class="va">subject</span> <span class="va">to</span><span class="op">:</span></span>
+<span id="cb2-74"><a href="#cb2-74"></a>$$</span>
+<span id="cb2-75"><a href="#cb2-75"></a><span class="va">c</span> <span class="op">=</span> <span class="va">y</span> <span class="op">+</span> <span class="va">d</span><span class="op">'</span> <span class="op">-</span> <span class="va">g</span> <span class="op">-</span> (<span class="fl">1</span> <span class="op">+</span> <span class="va">r</span>)<span class="va">d</span></span>
+<span id="cb2-76"><a href="#cb2-76"></a>$$</span>
+<span id="cb2-77"><a href="#cb2-77"></a></span>
+<span id="cb2-78"><a href="#cb2-78"></a>#### <span class="fl">5</span><span class="op">-</span><span class="fl">8</span>.</span>
+<span id="cb2-79"><a href="#cb2-79"></a></span>
+<span id="cb2-80"><a href="#cb2-80"></a><span class="va">For</span> <span class="va">remaining</span> <span class="va">question</span><span class="op">,</span> <span class="fl">5</span>.–<span class="fl">8</span>.<span class="op">,</span> <span class="va">see</span> <span class="va">the</span> <span class="va">Matlab</span> <span class="va">code</span> `<span class="va">usgExercise2p12</span>.<span class="va">m</span>`.</span>
+<span id="cb2-81"><a href="#cb2-81"></a></span>
+<span id="cb2-82"><a href="#cb2-82"></a><span class="op">&lt;</span><span class="va">a</span> <span class="va">href</span><span class="op">=</span><span class="st">"code/usgExercise2p12.m"</span> <span class="va">download</span> <span class="va">style</span><span class="op">=</span><span class="st">"display:inline-block;padding:8px 16px;background:#007acc;color:white;text-decoration:none;border-radius:5px;"</span><span class="op">&gt;</span></span>
+<span id="cb2-83"><a href="#cb2-83"></a>📥 <span class="va">Download</span> <span class="va">MATLAB</span> <span class="va">Code</span> (<span class="va">usgExercise2p12</span>.<span class="va">m</span>)</span>
+<span id="cb2-84"><a href="#cb2-84"></a><span class="op">&lt;/</span><span class="va">a</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

@@ -44,20 +44,22 @@ Each period, everybody receives a positive amount of consumption goods $y > 0$, 
 
 #### 1.
 
-::: {.callout-important title="Final Answer Summary – Optimization Problem"}
 Maximize discounted utility:
 $$
 \max_{\{c_t, d_t\}} \sum_{t=0}^{\infty} \beta^t \ln(c_t - \bar{c})
 $$
+
 subject to:
 $$
 c_t + (1 + r)d_{t-1} = y + d_t,\quad \lim_{j \to \infty} \frac{d_{t+j}}{(1 + r)^j} \leq 0
 $$
-:::
+
+given $d_{-1}$.
 
 #### 2.
 
-::: {.callout-important title="Final Answer Summary – Optimality Conditions"}
+For all $t \ge 0$
+
 - Euler equation:
   $$
   c_{t+1} - \bar{c} = \beta(1 + r)(c_t - \bar{c})
@@ -66,7 +68,7 @@ $$
   $$
   \lim_{j \to \infty} \frac{d_{t+j}}{(1 + r)^j} = 0
   $$
-:::
+
 
 #### 3.
 
@@ -79,37 +81,27 @@ $$
 Use $c_t = \bar{c} + (\beta(1 + r))^t(c_0 - \bar{c})$
 
 $$
-c_0 - \bar{c} = \frac{(1 - \beta)(1 + r)}{r} [y - \bar{c} - r d_{-1}] \tag{2.33}
+c_0 - \bar{c} = \frac{(1 - \beta)(1 + r)}{r} [y - \bar{c} - r d_{-1}] \tag{1}
 $$
 
 $c_0 \geq \bar{c}$ iff $d_{-1} \leq \frac{y - \bar{c}}{r}$
 
-::: {.callout-important title="Final Answer Summary – Maximal Initial Debt"}
-An equilibrium exists if:
-$$
-d_{-1} \leq \frac{y - \bar{c}}{r}
-$$
-This ensures $c_0 \geq \bar{c}$ given the solution for $c_0$ from the intertemporal budget constraint.
-:::
-
 #### 4.
 
-::: {.callout-important title="Final Answer Summary – Long-Run Equilibrium"}
 - $\lim_{t \to \infty} c_t = \bar{c}$
 - $\lim_{t \to \infty} d_t = \frac{y - \bar{c}}{r}$
 - $\lim_{t \to \infty} tb_t = y - \bar{c}$
 - $\lim_{t \to \infty} ca_t = 0$
 
-Long-run debt is independent of initial $d_{-1}$ because $\beta(1 + r) < 1$ ensures eventual convergence.
-If instead $\beta(1 + r) = 1$, then in the present economy $d_t = d_{-1}$ for all $t \geq 0$, that is, the long-run value of external debt would be dependent on initial conditions.
-:::
+The key factor is the assumption that $\beta(1 + r) < 1$. If instead $\beta(1 + r) = 1$, then in the present economy $d_t = d_{-1}$ for all $t \geq 0$, that is, the long-run value of external debt would be dependent on initial conditions.
 
 #### 5.
 
-::: {.callout-important title="Final Answer Summary – Dynamic Equilibrium Paths"}
+For all $t \ge 0$
+
 - Consumption:
   $$
-    c_t = \bar{c} + (\beta(1 + r))^t(c_0 - \bar{c}); \quad \text{with } c_0 \text{ given in (2.33)}
+    c_t = \bar{c} + (\beta(1 + r))^t(c_0 - \bar{c})
     $$
 - Debt:
   $$
@@ -123,11 +115,11 @@ If instead $\beta(1 + r) = 1$, then in the present economy $d_t = d_{-1}$ for al
   $$
   ca_t = d_{t-1} - d_t
   $$
-:::
+
 
 #### 6.
 
-Set $d_{-1} = \frac{y - \bar{c}}{r}$. Let $x'_0$ denote the value of variable $x$ in period 0 after the permanent increase in $y$. By (2.33):
+Set $d_{-1} = \frac{y - \bar{c}}{r}$. Let $x'_0$ denote the value of variable $x$ in period 0 after the permanent increase in $y$. By (1):
 
 $$
 c'_0 - c_0 = \frac{(1 - \beta)(1 + r)}{r}(y' - y) > (y' - y)
@@ -153,13 +145,6 @@ $$
 
 Debt expands on impact.
 
-
-::: {.callout-important title="Final Answer Summary – Impact of Permanent Endowment Shock"}
-- $c_0$ increases more than one-for-one with $y'$ due to $\beta(1 + r) < 1$
-- $tb_0$ and $ca_0$ deteriorate on impact
-- $d_0$ increases due to higher consumption than income
-- Compared to $\beta(1 + r) = 1$, consumption responds more strongly
-:::
 
 #### 7.
 
@@ -203,8 +188,3 @@ $$
 
 In the long run the difference in the trade balance converges to $y' - y$. This means that the entirety of the increase in output will go to pay interest on the permanently higher level of external debt. Note that initially the response of the trade balance is negative, but at some $t$ it flips sign from negative to positive. That is, first it deteriorates relative to before the shock, and later the trade balance is higher than before the shock.
 
-::: {.callout-important title="Final Answer Summary – Post-Shock Dynamics"}
-- $c_t \to \bar{c}$, $ca_t \to 0$, $d_t \to \frac{y' - \bar{c}}{r}$
-- $tb_t \to y' - \bar{c}$
-- Debt grows, trade balance flips from negative to positive relative to pre-shock
-:::

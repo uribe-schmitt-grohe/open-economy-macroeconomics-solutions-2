@@ -36,7 +36,6 @@ with $\rho=0.9$, $\bar{y}=1$, and $\epsilon_t$ is distributed normally with mean
 
 #### 1-4: Stimulate the economy for 100 years
 
-::: {.callout-important title="Simulation Results (Single Run)"}
 $$
 \sigma_{gy} = 3.2897
 $$
@@ -49,11 +48,9 @@ $$
 $$
 \rho_{gy,tby} = 0.2564
 $$
-:::
 
-#### 6-7: Replicate 10,000 times
+#### 5-6: Replicate 10,000 times
 
-::: {.callout-important title="Simulation Results (Average of 10,000 Replications)"}
 $$
 \sigma_{gy} = 3.1075
 $$
@@ -66,7 +63,10 @@ $$
 $$
 \rho_{gy,tby} = 0.2955
 $$
-:::
+
+#### 7.
+
+consumption growth is less volatile than output growth and the trade balance is procyclical.
 
 
 <a href="code/2_7.py" download style="display:inline-block;padding:8px 16px;background:#007acc;color:white;text-decoration:none;border-radius:5px;">

@@ -56,16 +56,14 @@ $$
 c_{t+1} - c_t = \frac{r}{1 + r - \rho} ((\rho - 1) y_t + \epsilon_{t+1}) - r \cdot \frac{1 - \rho}{1 + r - \rho} y_t \tag{5}
 $$
 
-The terms involving \( y_t \) cancel:
+The terms involving $ y_t $ cancel:
 
 $$
 c_{t+1} - c_t = \frac{r}{1 + r - \rho} \epsilon_{t+1} \tag{6}
 $$
 
-::: {.callout-important title="Final Answer Summary"}
 The innovation term is:
 
 $$
 \mu_{t+1} = c_{t+1} - c_t = \frac{r}{1 + r - \rho} \epsilon_{t+1}
 $$
-:::

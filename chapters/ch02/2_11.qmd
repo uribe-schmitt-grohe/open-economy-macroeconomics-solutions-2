@@ -82,24 +82,6 @@ Recall that $y$ is the constant equilibrium path of consumption under the more s
 
 Intuitively, households in this economy are impatient relative to the market discount factor $1/(1 + r)$, and, as a result, consume a lot at the beginning and nothing at the ‘end’ of their never-ending lives. A story similar to that in the 1995 movie *Leaving Las Vegas*, but in infinite horizon.
 
-::: {.callout-important title="Final Answer Summary – Consumption Path"}
-- Consumption growth:
-  $$
-  \frac{c_{t+1}}{c_t} = \beta(1 + r) < 1
-  $$
-- Long-run consumption:
-  $$
-  \lim_{t \to \infty} c_t = 0
-  $$
-- Initial consumption:
-  $$
-  c_0 = (1 - \beta) \frac{1 + r}{r} y > y
-  $$
-- Comparison:
-  - When $\beta(1 + r) = 1$, $c_t = y$ for all $t$;
-  - When $\beta(1 + r) < 1$, consumption starts above $y$ and declines over time.
-:::
-
 #### 2.
 
 In period 0, we have that
@@ -148,36 +130,7 @@ $$
 
 Suppose one had been unsure that debt converges to a constant, the above solution for $d_t$ also shows it.
 
-::: {.callout-important title="Final Answer Summary – Debt Dynamics"}
-- Initial debt:
-  $$
-  d_0 = \left( 1 - \beta(1 + r) \right) \frac{y}{r} > 0
-  $$
-- Long-run debt:
-  $$
-  \lim_{t \to \infty} d_t = \frac{y}{r}
-  $$
-- Debt increases monotonically and converges to its steady-state level:
-  $$
-  d_t = \frac{y}{r} \left[ 1 - (\beta(1 + r))^{t+1} \right]
-  $$
-:::
-
 #### 3.
 
 
 The trade balance is defined as $tb_t = y - c_t$. The initial trade balance is negative, since, as shown above, $c_0 > y$. Since consumption is monotonically decreasing, we have that the trade balance improves monotonically. At some point it turns into a surplus. In the long run, the trade balance equals the endowment $y$.
-
-::: {.callout-important title="Final Answer Summary – Trade Balance Dynamics"}
-- Trade balance:
-  $$
-  tb_t = y - c_t
-  $$
-- Initially negative since $c_0 > y$
-- Improves monotonically as $c_t$ declines
-- Eventually turns positive
-- Long-run value:
-  $$
-  \lim_{t \to \infty} tb_t = y
-  $$
-:::  

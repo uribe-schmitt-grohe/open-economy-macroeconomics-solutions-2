@@ -66,26 +66,26 @@ $$
 A_t^{1 - \alpha} K_t^{\alpha} + D_t = C_t + K_{t+1} - K_t + \frac{1 + r}{\gamma} D_{t-1},
 $$
 
-given $D_{-1}, K_0, A_0$, and $A_{t+1} = \gamma A_t$ for all $t$.
+given $D_{-1}, K_0, A_0$, and $A_{t+1} = \gamma A_t$.
 
 #### 2.
 
 Let $\Lambda_t$ denote the Lagrange multiplier on the household’s budget constraint. The first-order conditions wrt $C_t$, $D_t$, $K_{t+1}$ and the transversality condition are
 
 $$
-\frac{1}{2} C_t^{-1/2} = \Lambda_t \tag{3.10}
+\frac{1}{2} C_t^{-1/2} = \Lambda_t
 $$
 
 $$
-\Lambda_t = \beta(1 + r) \Lambda_{t+1} \tag{3.11}
+\Lambda_t = \beta(1 + r) \Lambda_{t+1}
 $$
 
 $$
-\Lambda_t = \beta \Lambda_{t+1} \left[ \alpha A_{t+1}^{1 - \alpha} K_{t+1}^{\alpha - 1} + 1 \right] \tag{3.12}
+\Lambda_t = \beta \Lambda_{t+1} \left[ \alpha A_{t+1}^{1 - \alpha} K_{t+1}^{\alpha - 1} + 1 \right] 
 $$
 
 $$
-\lim_{j \to \infty} \frac{D_t}{(1 + r)^j} = 0 \tag{3.13}
+\lim_{j \to \infty} \frac{D_t}{(1 + r)^j} = 0 
 $$
 
 holding for all $t \geq 0$
@@ -97,29 +97,29 @@ Let $c_t \equiv C_t / A_t$ ; $k_t \equiv K_t / A_t$ ; $y_t \equiv Y_t / A_t$ ; $
 Now write the FOCs in terms of these variables:
 
 $$
-\frac{1}{2} c_t^{-1/2} = \lambda_t \tag{3.14}
+\frac{1}{2} c_t^{-1/2} = \lambda_t 
 $$
 
 $$
-\lambda_t = \beta(1 + r)/\sqrt{\gamma} \cdot \lambda_{t+1} \tag{3.15}
+\lambda_t = \beta(1 + r)/\sqrt{\gamma} \cdot \lambda_{t+1} 
 $$
 
 $$
-\lambda_t = \beta / \sqrt{\gamma} \cdot \lambda_{t+1} \left[ \alpha k_{t+1}^{\alpha - 1} + 1 \right] \tag{3.16}
+\lambda_t = \beta / \sqrt{\gamma} \cdot \lambda_{t+1} \left[ \alpha k_{t+1}^{\alpha - 1} + 1 \right] 
 $$
 
 Use $\beta / \sqrt{\gamma} = 1 / (1 + r)$. Then we have:
 
 $$
-c_t = c_0 \tag{3.17}
+c_t = c_0 
 $$
 
 $$
-\lambda_t = \lambda_0 \tag{3.18}
+\lambda_t = \lambda_0 
 $$
 
 $$
-r = \alpha k_{t+1}^{\alpha - 1} \tag{3.19}
+r = \alpha k_{t+1}^{\alpha - 1}
 $$
 
 Solve the last equation for $k_{t+1}$, thus we have that $k_t = k_1$ for all $t > 0$. With $k_1$ in hand, and $k_0 = K_0 / A_0$ given, we have
@@ -146,13 +146,7 @@ $$
 k_0^{\alpha} + k_0 - \gamma k_1 + \frac{\gamma}{1 + r - \gamma} \left[ k_1^{\alpha} + k_1 - \gamma k_1 \right] = (1 + r) D_{-1} / A_0 + \frac{1 + r}{1 + r - \gamma} c_0
 $$
 
-With $k_0$ and $k_1$ known, we can solve for $c_0$. We then also have found $C_t = \gamma^t A_0 c_0$ for all $t \geq 0$. $K_{t+1} = k_1 A_{t+1} = k_1 \gamma^{t+1} A_0$ ; $Y_t = k_t^{\alpha} \gamma^t A_0$. It follows that for $t > 0$ the economy follows a balanced growth path in which consumption, capital, output, and investment all grow at the same rate, $\gamma - 1 > 0$. The trade balance is:
-
-$$
-TB_t = Y_t - C_t - I_t
-$$
-
-Since every variable on the right-hand side is growing at the rate $\gamma - 1$, the trade balance is also growing at that rate. Specifically, for $t > 0$:
+With $k_0$ and $k_1$ known, we can solve for $c_0$. We then also have found $C_t = \gamma^t A_0 c_0$ for all $t \geq 0$. $K_{t+1} = k_1 A_{t+1} = k_1 \gamma^{t+1} A_0$ ; $Y_t = k_t^{\alpha} \gamma^t A_0$. It follows that for $t > 0$ the economy follows a balanced growth path in which consumption, capital, output, and investment all grow at the same rate, $\gamma - 1 > 0$. The trade balance is: $TB_t = Y_t - C_t - I_t$. Since every variable on the right-hand side is growing at the rate $\gamma - 1$, the trade balance is also growing at that rate. Specifically, for $t > 0$:
 
 $$
 TB_t = A_t \left[ k_1^{\alpha} - c_0 - (\gamma - 1) k_1 \right]
@@ -192,32 +186,7 @@ $$
 
 This means that the current account also has a trend, and also the same one as output, implying that the current account to output ratio is constant over time.
 
-::: {.callout-important title="Final Answer Summary – Equilibrium Dynamics and Balanced Growth"}
-
-- Scaled variables:  
-  $c_t = C_t / A_t$, $k_t = K_t / A_t$, $d_t = D_t / A_t$, $\lambda_t = \Lambda_t A_t^{1/2}$  
-- Optimality conditions yield:  
-  $c_t = c_0$ and $k_t = k_1$ for all $t \geq 1$  
-  $r = \alpha k_{t+1}^{\alpha - 1}$  
-- Consumption path:  
-  $C_t = \gamma^t A_0 c_0$  
-- Capital path:  
-  $K_{t} = \gamma^t A_0 k_1$  
-- Output and Investment:  
-  $Y_t = \gamma^t A_0 k_1^{\alpha}$, $I_t = (\gamma - 1) K_t$  
-- Trade Balance:  
-  $TB_t = A_t (k_1^{\alpha} - c_0 - (\gamma - 1) k_1)$  
-- Debt path:  
-  $D_t = A_t d_0$ ⇒ debt has the same trend as output  
-- Current Account:  
-  $CA_t = -A_t \cdot \frac{\gamma - 1}{\gamma} d_0$ ⇒ also grows at rate $\gamma$  
-:::
-
 #### 4. 
 
-::: {.callout-note title="Growth Trend Summary"}
+$C_t$, $Y_t$, $K_t$, $I_t$, $TB_t$, and $CA_t$ all grow at the same rate, $\gamma - 1$. So yes, the equilibrium displays balanced growth.
 
-All macro variables—$C_t$, $K_t$, $Y_t$, $I_t$, $TB_t$, $CA_t$, and $D_t$—grow at the same gross rate $\gamma$  
-⇒ This confirms the economy follows a **balanced growth path**  
-⇒ Ratios like $TB_t / Y_t$, $CA_t / Y_t$, and $D_t / Y_t$ remain constant over time  
-:::

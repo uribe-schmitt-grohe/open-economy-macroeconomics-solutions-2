@@ -44,19 +44,9 @@ $$
 c_1 = y
 $$
 
-::: {.callout-important title="Final Answer Summary (No Habits)"}
-$$
-c_1 = y,\quad c_2 = y
-$$
-Trade balance in period 1:
-$$
-tb_1 = y - c_1 = 0
-$$
-:::
-
 #### 2.
 
-with internal habits the household’s problem is to pick $c_1$ to maximize $\ln c_1 + \ln(2y - 1.5c_1)$. The optimality condition is
+With internal habits the household’s problem is to pick $c_1$ to maximize $\ln c_1 + \ln(2y - 1.5c_1)$. The optimality condition is
 
 $$
 \frac{1}{c_1} = \frac{1.5}{2y - 1.5c_1}
@@ -67,16 +57,6 @@ which yields
 $$
 c_1 = \frac{2}{3}y
 $$
-
-::: {.callout-important title="Final Answer Summary (Internal Habits)"}
-$$
-c_1 = \frac{2}{3}y,\quad c_2 = \frac{4}{3}y
-$$
-Trade balance in period 1:
-$$
-tb_1 = y - c_1 = \frac{1}{3}y
-$$
-:::
 
 #### 3.
 
@@ -91,16 +71,6 @@ In equilibrium, $c_1 = \tilde{c}_1$. Using this expression to eliminate $\tilde{
 $$
 c_1 = \frac{4}{5}y
 $$
-
-::: {.callout-important title="Final Answer Summary (External Habits)"}
-$$
-c_1 = \frac{4}{5}y,\quad c_2 = \frac{6}{5}y
-$$
-Trade balance in period 1:
-$$
-tb_1 = y - c_1 = \frac{1}{5}y
-$$
-:::
 
 **Comparison of no habits with internal habits:**  
 Internal habits delivers less consumption in period 1, because households internalize that the more they consume in period 1, the less happy they are in period 2.

@@ -21,31 +21,31 @@ where $\delta$ denotes the depreciation rate. The case considered in section 3.1
 An equilibrium are time paths for $y_t$, $k_{t+1}$, $i_t$, $c_t$, $\lambda_t$, and $d_t$ satisfying
 
 $$
-y_t = A_t F(k_t) \tag{3.1}
+y_t = A_t F(k_t) \tag{1}
 $$
 
 $$
-k_{t+1} = (1 - \delta)k_t + i_t \tag{3.2}
+k_{t+1} = (1 - \delta)k_t + i_t \tag{2}
 $$
 
 $$
-U'(c_t) = \lambda_t \tag{3.3}
+U'(c_t) = \lambda_t \tag{3}
 $$
 
 $$
-\lambda_t = \beta (1 + r)\lambda_{t+1} \tag{3.4}
+\lambda_t = \beta (1 + r)\lambda_{t+1} \tag{4}
 $$
 
 $$
-\lambda_t = \beta \lambda_{t+1} [A_{t+1} F'(k_{t+1}) + 1 - \delta] \tag{3.5}
+\lambda_t = \beta \lambda_{t+1} [A_{t+1} F'(k_{t+1}) + 1 - \delta] \tag{5}
 $$
 
 $$
-c_t + i_t + (1 + r)d_{t-1} = A_t F(k_t) + d_t \tag{3.6}
+c_t + i_t + (1 + r)d_{t-1} = A_t F(k_t) + d_t \tag{6}
 $$
 
 $$
-\lim_{j \to \infty} \frac{d_{t+j}}{(1 + r)^j} = 0 \tag{3.7}
+\lim_{j \to \infty} \frac{d_{t+j}}{(1 + r)^j} = 0 \tag{7}
 $$
 
 given $d_{-1}$, $k_0$, and the assumption that $\beta (1 + r) = 1$. The case analyzed thus far is $\delta = 0$. We now solve for a given $\delta \in [0, 1]$. Combining the Euler equations for debt and capital yields for all $t \geq 0$
@@ -69,7 +69,7 @@ $$
 To find $c_0$, use the intertemporal budget constraint which now is
 
 $$
-c_0 + rd_{-1} = \frac{r}{1 + r} \sum_{t=0}^{\infty} \frac{A_t F(k_t) + (1 - \delta)k_t - k_{t+1}}{(1 + r)^t} \tag{3.8}
+c_0 + rd_{-1} = \frac{r}{1 + r} \sum_{t=0}^{\infty} \frac{A_t F(k_t) + (1 - \delta)k_t - k_{t+1}}{(1 + r)^t} \tag{8}
 $$
 
 With $c_t$ in hand, we have the trade balance: $tb_t = y_t - c_t - i_t$.
@@ -107,7 +107,7 @@ c_0 + rd_{-1} &= \frac{r}{1 + r} \sum_{t=0}^{\infty} \frac{A_t F(k_t) - i_t}{(1 
 \end{aligned}
 $$
 
-By concavity of $F$, the bracketed term is positive:
+By concavity of $F$,
 
 $$
 \frac{A'}{1 + r} \left[ F(k_1) - F(k_0) - F'(k_1)(k_1 - k_0) \right] > 0
@@ -121,26 +121,3 @@ tb_0 - tb_{-1} &= y_0 - c_0 - i_0 - rd_{-1} \\
 &= - (k_1 - k_0) - \frac{A'}{1 + r} \left[ F(k_1) - F(k_0) - F'(k_1)(k_1 - k_0) \right] < 0
 \end{aligned}
 $$
-
-
-::: {.callout-important title="Final Answer Summary – Impact of a Permanent Productivity Shock"}
-
-- The Euler equation for capital and debt jointly implies:
-  $$
-  r + \delta = A_{t+1} F'(k_{t+1})
-  $$
-- Capital jumps immediately to a higher level due to higher productivity:
-  $$
-  k_t = \kappa\left(\frac{A'}{r + \delta}\right)
-  $$
-- Investment rises sharply in period 0:
-  $$
-  i_0 = (1 - \delta)(k_1 - k_0) + \delta k_1 > \delta k_1 = i_1
-  $$
-- Consumption remains constant: $c_t = c_0$
-- Trade balance drops on impact:
-  $$
-  tb_0 - tb_{-1} = - (k_1 - k_0) - \frac{A'}{1 + r} \left[ F(k_1) - F(k_0) - F'(k_1)(k_1 - k_0) \right] < 0
-  $$
-- The trade balance deterioration is **independent of depreciation rate** $\delta$, holding for all $\delta \in [0, 1]$.
-:::

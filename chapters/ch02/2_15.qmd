@@ -1,0 +1,105 @@
+---
+title: "Exercise 2.15"
+subtitle: "An Economy With Labor and Technological Progress"
+---
+<a class="return-button" href="index.qmd">⬅ Return</a>
+
+## Problem
+
+Consider a small open economy inhabited by a large number of identical households with preferences described by the utility function
+
+$$
+\sum_{t=0}^{\infty} \beta^t \ln \left( C_t - \frac{X_t}{2} h_t^2 \right),
+$$
+
+where $C_t$ denotes consumption in period $t$, $h_t$ denotes hours worked in period $t$, $\beta \in (0, 1)$ is a subjective discount factor, and $X_t$ is an exogenous and deterministic factor governing household and market technological progress, which evolves according to the expression
+
+$$
+X_t = \mu X_{t-1},
+$$
+
+for all $t \geq 0$, where $\mu > 1$ is a parameter, and $X_{-1} = 1$. Households face the sequential budget constraint
+
+$$
+C_t + D_{t-1} (1 + r_{t-1}) = Y_t + D_t,
+$$
+
+where $D_t$ denotes the amount of one-period debt assumed in period $t$, $r_t$ denotes the interest rate in period $t$, and $Y_t$ denotes output in period $t$, which is produced via the technology
+
+$$
+Y_t = X_t h_t.
+$$
+
+Households are subject to the no-Ponzi-game constraint $\lim_{j \to \infty} \frac{D_{t+j}}{\prod_{s=0}^{j-1} (1 + r_{t+s})} \leq 0, \quad \text{for all } t.$
+
+The country interest rate, $r_t$, is the sum of a constant world interest rate, $r^*$, and a country spread, denoted $\rho \left( \hat{D}_t / X_t \right)$, where $\hat{D}_t$ denotes the cross-sectional average of $D_t$.  
+Assume the functional form $\rho(x) = \gamma \left[ \exp(x - \bar{d}) - 1 \right]$, where $\gamma, \bar{d} > 0$ are parameters.
+
+Finally, assume that
+
+$$
+1 + r^* = \frac{\mu}{\beta} \quad \text{and that} \quad (1 + r_{t-1}) D_{-1} / X_{-1} = (1 + r^*) \bar{d}.
+$$
+
+1. State the household’s maximization problem.
+
+2. Derive the optimality conditions associated with the household’s problem.
+
+3. Derive the complete set of equilibrium conditions in stationary form by appropriately scaling variables that display perpetual growth in equilibrium.
+
+4. Derive equilibrium paths of consumption, hours, the trade balance, the current account, and external debt. Provide intuition.
+
+
+## Answer
+
+**Answer:** The household’s problem is
+
+$$
+\max_{\{C_t, h_t\}} \sum_{t=0}^{\infty} \beta^t \ln \left( C_t - \frac{X_t}{2} h_t^2 \right),
+$$
+
+subject to
+
+$$
+C_t + D_{t-1}(1 + r_{t-1}) = X_t h_t + D_t,
+$$
+
+$$
+\lim_{j \to \infty} \frac{D_{t+j}}{\prod_{s=0}^{j-1} (1 + r_{t+s})} \leq 0
+$$
+
+The associated first-order conditions are
+
+$$
+h_t = 1
+$$
+
+$$
+\left( C_{t+1} - \frac{X_{t+1}}{2} \right) = \beta(1 + r_t) \left( C_t - \frac{X_t}{2} \right)
+$$
+
+The complete set of equilibrium conditions in stationary form are
+
+$$
+c_{t+1} - 1/2 = \left[ 1 + \frac{e^{d_t - \bar{d}} - 1}{1 + r^*} \right] (c_t - 1/2)
+$$
+
+$$
+c_t + d_{t-1} \left( \frac{1 + r_{t-1}}{\mu} \right) = 1 + d_t
+$$
+
+Since $d_{t-1}(1 + r_{t-1}) = \bar{d}(1 + r^*)$, the equilibrium (i.e., a solution to the above system) is
+
+$$
+d_t = \bar{d}
+$$
+
+$$
+c_t = 1 + \bar{d}(1 - 1 / \beta)
+$$
+
+$$
+r_t = r^*
+$$
+
+for all $t \geq 0$. So both $C_t$ and $D_t$ are proportional to $X_t$, which means that both variables grow at the gross rate $\mu$.
